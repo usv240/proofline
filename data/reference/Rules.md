@@ -18,6 +18,54 @@
 
 ---
 
+# PART 0 — LATEST: ORGANIZER RULINGS, CORRECTIONS AND RECONCILIATION (updated Sun Oct 4, 2026, about 3:45 AM ET)
+
+## 0.1 Organizer rulings (RealPage, Discord #challenge-02-realpage, Oct 3, 2026)
+
+These override the older Hack-Nation brief wherever they differ.
+
+| # | Ruling | Effect on us |
+|---|---|---|
+| R1 | The current participant materials are the **v5 participant guide** and the **clean participant ZIP** ("MIT-hackathon-PARTICIPANT-PACK-CLEAN-NO-HOUR16"). The older Hack-Nation brief is superseded. | Checked: the clean ZIP is byte-identical to our starter copy (plus the v5 PDF). Nothing to re-run. |
+| R2 | **Five change tests only: T1 to T5**, all defined at kickoff. The **hour-16 surprise ordinance (T6) is removed**. | `changes.json` contains T1 to T5 only. The new-law flow is shown with a real new city instead (0.4). |
+| R3 | `score.py`, the dev answer key, expected dev outputs and citation self-test files **will not be shared**; they stay with judges. | Videos show our own validation: `npm test` (golden checks from the organizers' statements) and `npm run verify`. |
+| R4 | Participant videos should show **the team's own system output and validation**, not score.py output. | Covered in the submission kit. |
+| R5 | Link-only texts saved independently may be used for research if site terms allow, but **do not count toward the citation metric** unless officially added. **The citation metric is based on the supplied, verifiable corpus text.** | Every rule keeps its source label. Proofs re-anchored to official-pack text wherever it exists (0.3). |
+| R6 | Teams may capture link-only pages and report rules from secondary sources with lower confidence ("feel free to do both"). | Fetched pages are labeled "Fetched by Proofline"; second-check verdicts lower confidence when partial. |
+| R7 | Submit on app.hack-nation.ai (Team and Submission) **and** the Google form by **9:00 AM ET Sun Oct 4**. Repo public, video links open without login. Judging: technical depth, communication, innovation and creativity. Finalists pitch Sat Oct 10 (1 to 2 slides + demo, 3 minutes). | Submission kit updated. |
+
+## 0.2 Corrections to the reference below, found while building
+
+| Item | Reference below said | Corrected by | Status in pipeline output |
+|---|---|---|---|
+| Los Angeles RSO coverage | Coverage: certificate of occupancy on or before 1978-10-01 | Unchanged, but the pipeline first merged the RSO with the yearly rate notice (period 2025-07-01 to 2026-06-30) and read the period end as the law ending | Fixed: a rate period never ends a law. LA RSO applies to pre-1978 LA buildings; 1978 builds are "unknown" (golden tests) |
+| San Francisco rent control cutoff | Coverage: first CO on or before 1979-06-13 | The cutoff is stated in the just-cause page (D079), not the rate notice (D080) | Fixed: rules stated in another topic's page are extracted; post-1979 SF buildings are not covered (golden tests) |
+| California rent cap and just cause | Applies to most multifamily buildings | Tenancy length is a tenant fact, not a building fact; "subsidized" comes from the assessor use class | Fixed: 245 CA homes no longer "unknown" for these two rules (98 remain, from genuinely missing year built in San Diego and Berkeley) |
+| San Diego source-of-income (SDMC ch. 9 art. 8 div. 8) | Rule exists (O-20986, eff. 2018-10-18) | The link-only page D075 returned almost no text | Fixed: read from the City of San Diego's official code PDF; SD-SCREEN-01 |
+| New Jersey deposit exemption (N.J.S.A. 46:8-26) | Owner-occupied exemption | The official DCA guide (D067) states it; earlier quote matching failed on PDF line breaks inside hyphenated words | Fixed: proof now quotes D067 (official pack) |
+| Cambridge ch. 8.71 (tenant notice) | Listed under just_cause_eviction | It is a notice-of-rights duty, not a just-cause rule; the pipeline consistently declines it | Open, ambiguous: Boston's equivalent (HSNA, CBC 10-11.7) is in our output as just cause. Flag for human review |
+
+## 0.3 Citation status under ruling R5
+
+- **93.0%** of "applies" answers in `lookups.json` (4,618 of 4,967) quote text found word for word in the supplied corpus.
+- The remaining 7% come from rules whose only text is link-only in the pack: Hoboken Code ch. 155 and § 158-1/-2, Newark Code ch. 19:2 and ch. 2:31, Jersey City § 218-12, 254 CMR 7.00 (MA broker licensing). An automated search of every official document for that place and state found no sentence stating these rules (`out/pipeline/anchors.json`). They stay in the output, labeled, because the brief says missing an applicable rule costs twice as much as other errors.
+
+## 0.4 Added after the brief (not in the submission files)
+
+- **Bayonne, NJ** (rent control, Bayonne Mun. Code ch. 16): read live from the city's official 28-page ordinance PDF with `npm run new-law -- --real`. Shown on the site and in live lookups; excluded from `rules.json`, which covers only the 13 places in scope.
+
+## 0.5 Reconciliation: pipeline output vs this reference
+
+| | This reference (research) | Pipeline output (`out/rules.json`) | Answer key (per brief) |
+|---|---|---|---|
+| Rule records | 192 enacted entries + 7 pending/failed + 18 no-rule blocks (very fine-grained: notice periods, relocation amounts and registration duties are separate entries) | 73 records (one per statute or ordinance per topic; secondary duties kept as quoted details) | 58 rules + 19 "no rule at this level" findings |
+| Place-topic cells with an enacted rule | about 60 | 45 | about 58 |
+| Pending and failed measures | MA S.2983, H.5222 (pending); IP 25-21 (struck 2026-06-23); Boston H.3744 (failed); LA CF 24-1031 (motion) | All present with the same status | T4, T5 |
+
+Cells where this reference has a city-level entry and the pipeline reports "no rule at this level" are mostly cells where the reference restates state law at city level (for example Jersey City or Hoboken deposits = N.J.S.A. 46:8-21.2). The pipeline reports those under the state rule, which applies to the same addresses. Genuine misses whose source text is not available as text: Los Angeles source-of-income (LAMC §§ 45.65 to 45.69; the code publisher blocks automated access).
+
+---
+
 # PART 1 — CALIFORNIA (STATE)
 
 # California — STATE-level rental housing rules (exhaustive extraction)
