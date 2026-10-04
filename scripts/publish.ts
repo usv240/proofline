@@ -87,7 +87,11 @@ for (const a of addrs) for (const n of noRuleCells) {
 
 const audit = existsSync(path.join(OUT, "audit.log.jsonl")) ? verifyChain(readFileSync(path.join(OUT, "audit.log.jsonl"), "utf8")) : null;
 
+const baselineFile = path.join(OUT, "eval_baseline.json");
+const baseline = existsSync(baselineFile) ? JSON.parse(readFileSync(baselineFile, "utf8")).summary : null;
+
 const metrics = {
+  baseline,
   generated_at: new Date().toISOString(),
   as_of: "2026-10-01",
   documents: { manifest: manifest.length, with_text: corpus.length, official: corpus.filter((d) => d.kind === "official_corpus").length, fetched: corpus.filter((d) => d.kind === "fetched_link_only").length },

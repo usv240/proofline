@@ -70,6 +70,27 @@ export default function HowItWorks() {
         </dl>
       </section>
 
+      {m.baseline && (
+        <section className="mt-8" aria-labelledby="base-h">
+          <h2 id="base-h" className="text-[24px] font-semibold">Compared with the obvious alternative</h2>
+          <p className="mt-1 max-w-3xl text-muted">
+            The same model, given the same law documents through search, asked the same questions in plain language with a request to cite.
+            Questions come from places and topics where no rule is in force, and from buildings whose coverage depends on a missing fact.
+          </p>
+          <div className="mt-3 overflow-x-auto rounded-xl border border-border">
+            <table className="w-full text-left text-[15px]">
+              <thead className="bg-surface text-muted"><tr><th className="p-3">Measure</th><th className="p-3">AI plus search</th><th className="p-3">Proofline</th></tr></thead>
+              <tbody>
+                <tr className="border-t border-border"><td className="p-3">Said a rule is in force where none is ({m.baseline.questions.no_rule} questions)</td><td className="p-3 tabular">{m.baseline.baseline.invented_in_force} ({Math.round((m.baseline.baseline.invented_in_force / m.baseline.questions.no_rule) * 100)}%)</td><td className="p-3 tabular font-semibold">{m.baseline.proofline.invented_in_force}</td></tr>
+                <tr className="border-t border-border"><td className="p-3">Quotes not found in the sources</td><td className="p-3 tabular">{m.baseline.baseline.quotes_not_found} of {m.baseline.baseline.quotes}</td><td className="p-3 tabular font-semibold">{m.baseline.proofline.quotes_not_found} of {m.baseline.proofline.quotes}</td></tr>
+                <tr className="border-t border-border"><td className="p-3">Gave yes or no where a fact is missing ({m.baseline.questions.unknown_coverage} questions)</td><td className="p-3 tabular">{m.baseline.baseline.confident_on_unknown}</td><td className="p-3 tabular font-semibold">{m.baseline.proofline.confident_on_unknown}</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-[14px] text-muted">Method: {m.baseline.method} Full answers: out/eval_baseline.json in the repository.</p>
+        </section>
+      )}
+
       <section className="mt-8" aria-labelledby="lim-h">
         <h2 id="lim-h" className="flex items-center text-[24px] font-semibold">Measured limits <InfoButton k="missing" /></h2>
         <p className="mt-1 text-muted">Where public records leave out facts, answers say &ldquo;Not sure yet&rdquo;. This is how often, by city, as of {m.as_of}.</p>

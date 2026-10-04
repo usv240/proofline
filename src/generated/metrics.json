@@ -1,5 +1,26 @@
 {
-  "generated_at": "2026-10-04T02:01:20.388Z",
+  "baseline": {
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-10-04T02:06:52.146Z",
+    "questions": {
+      "no_rule": 34,
+      "unknown_coverage": 5
+    },
+    "baseline": {
+      "invented_in_force": 3,
+      "confident_on_unknown": 0,
+      "quotes": 16,
+      "quotes_not_found": 3
+    },
+    "proofline": {
+      "invented_in_force": 0,
+      "confident_on_unknown": 0,
+      "quotes": 78,
+      "quotes_not_found": 0
+    },
+    "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
+  },
+  "generated_at": "2026-10-04T02:07:22.960Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
@@ -70,7 +91,7 @@
   },
   "audit": {
     "ok": true,
-    "entries": 210,
+    "entries": 212,
     "brokenAt": null
   },
   "change_tests": {

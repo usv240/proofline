@@ -42,6 +42,13 @@ export interface SourceEntry {
 }
 
 export interface Metrics {
+  baseline: {
+    model: string;
+    questions: { no_rule: number; unknown_coverage: number };
+    baseline: { invented_in_force: number; confident_on_unknown: number; quotes: number; quotes_not_found: number };
+    proofline: { invented_in_force: number; confident_on_unknown: number; quotes: number; quotes_not_found: number };
+    method: string;
+  } | null;
   generated_at: string;
   as_of: string;
   documents: { manifest: number; with_text: number; official: number; fetched: number };

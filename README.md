@@ -6,7 +6,8 @@ RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Ha
 
 | | |
 |---|---|
-| Live demo | _added after deploy_ |
+| Live demo | https://proofline-opal.vercel.app |
+| Code | https://github.com/usv240/proofline |
 | Submission files | [`out/rules.json`](out/rules.json) · [`out/lookups.json`](out/lookups.json) · [`out/changes.json`](out/changes.json) |
 | Check it yourself | `npm run verify` |
 
@@ -85,6 +86,14 @@ npm run new-law -- --file ordinance.pdf --place "Cambridge, MA" --test T6 --url 
 | `data/addresses_resolved.csv` | 500 addresses with legal city and method |
 | `out/` | Submission files, audit log, pipeline intermediates |
 | `mcp/` | MCP server |
+
+## Known gaps (measured, not hidden)
+- **San Diego source-of-income ordinance (SDMC ch. 9 art. 8 div. 8):** the link-only page (D075) returned almost no text, so the pipeline reports no city screening rule for San Diego. Found by the baseline comparison. State law (Gov. Code 12955) still applies and is reported.
+- **Six link-only sources blocked automated access** (four Justia mirrors of statutes already in the corpus, the Los Angeles code publisher, and a mass.gov regulation). They were not worked around.
+- **Owner facts** (owner-occupied, corporate owner, number of properties) are never in public records, so rules that depend on them are "unknown" unless a user supplies the fact in Pre-Flight.
+
+## Baseline comparison
+`npx tsx scripts/eval_baseline.ts`: the same model given the same corpus through BM25 search, asked in plain language. On 34 questions where no rule is in force at that level it claimed one 3 times (9%), and 3 of its 16 quotes were not in the sources. Proofline: 0 and 0 of 78. Full answers in `out/eval_baseline.json`.
 
 ## Responsible design
 - Every interface, API response and export says **Not legal advice**.
