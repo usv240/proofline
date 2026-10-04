@@ -70,8 +70,10 @@ async function legiscanLive(b: Tracked) {
   const key = process.env.LEGISCAN_API_KEY;
   if (!key) return null;
   try {
-    const r = await fetch(`https://api.legiscan.com/?key=${key}&op=getSearch&state=${b.state}&query=${encodeURIComponent(b.number)}`, { signal: AbortSignal.timeout(8000) });
+    // `bill` is LegiScan's exact bill number search; `query` is full text and does not match numbers.
+    const r = await fetch(`https://api.legiscan.com/?key=${key}&op=getSearch&state=${b.state}&bill=${encodeURIComponent(b.number)}`, { signal: AbortSignal.timeout(8000) });
     const j = await r.json();
+    if (j?.status !== "OK") return null;
     const hit = Object.values<any>(j?.searchresult ?? {}).find((x) => x?.bill_number?.replace(/\s/g, "") === b.number);
     return hit ? { source: "LegiScan", last_action: hit.last_action, last_action_date: hit.last_action_date, url: hit.url } : null;
   } catch {
