@@ -85,15 +85,23 @@ export function RuleCard({ rule, result, addressId, lang = "en" }: { rule: RuleR
   const [open, setOpen] = useState(false);
   const kind = result.result as VerdictKind;
   const pfCats = ["rent_increase_limits", "security_deposits", "application_screening_fees", "algorithmic_rent_setting"];
+  // A known open question gets its own box; any other conflict note keeps the red line.
+  const oq = rule.x_open_question;
+  const otherConflict = (result.conflict_note ?? "").split("Open question:")[0].trim();
   return (
     <article className={`card accent-${kind} p-4 sm:p-5`}>
       <div className="flex flex-wrap items-center gap-2">
         <VerdictChip kind={kind} lang={lang} />
         <span className="text-muted"><InfoButton k={`v.${kind}` as never} /></span>
         <span className="rounded-md bg-surface-2 px-2 py-0.5 text-[12.5px] font-medium text-muted">{rule.level === "state" ? `State: ${rule.jurisdiction}` : `City: ${rule.jurisdiction}`}</span>
-        {result.conflict_flag && (
+        {result.conflict_flag && otherConflict && (
           <span className="inline-flex items-center rounded-md px-2 py-0.5 text-[13px]" style={{ background: "var(--bad-bg)", color: "var(--bad-fg)" }}>
             Possible conflict <InfoButton k="conflict" />
+          </span>
+        )}
+        {oq && (
+          <span className="inline-flex items-center rounded-md px-2 py-0.5 text-[13px] font-medium" style={{ background: "var(--unk-bg)", color: "var(--unk-fg)" }}>
+            Open question
           </span>
         )}
       </div>
@@ -101,10 +109,25 @@ export function RuleCard({ rule, result, addressId, lang = "en" }: { rule: RuleR
       <p className="mt-1" lang={lang}>{lang === "es" && rule.x_plain_es ? rule.x_plain_es : rule.x_plain || rule.requirement}</p>
       {lang === "es" && <p className="mt-1 text-[13px] text-muted">La cita legal y los detalles estan en ingles, como en la fuente original.</p>}
       {rule.key_value && (
-        <p className="mt-2 text-[15px]"><span className="text-muted">Key number: </span><span className="font-medium tabular">{rule.key_value}</span></p>
+        <p className="mt-2 text-[15px]"><span className="text-muted">Key number: </span><span className="font-medium tabular">{rule.key_value}</span>{oq && <span className="text-muted"> (open question, see below)</span>}</p>
       )}
       <p className="mt-2 text-[15px] text-muted">{result.explanation}</p>
-      {result.conflict_note && result.conflict_flag && <p className="mt-2 text-[15px]" style={{ color: "var(--bad-fg)" }}>{result.conflict_note}</p>}
+      {otherConflict && result.conflict_flag && <p className="mt-2 text-[15px]" style={{ color: "var(--bad-fg)" }}>{otherConflict}</p>}
+      {oq && (
+        <div className="mt-3 rounded-lg border p-3" style={{ borderColor: "var(--unk-line)", background: "var(--unk-bg)" }}>
+          <p className="font-medium" style={{ color: "var(--unk-fg)" }}>Open question in the law</p>
+          <p className="mt-0.5 text-[15px] text-text">{oq.question}</p>
+          <ul className="mt-1.5 list-disc space-y-1.5 pl-5 text-[15px] text-text">
+            {oq.positions.map((p) => (
+              <li key={p.claim}>
+                {p.claim} <span className="text-muted">({p.source_doc ? `source ${p.source_doc}` : p.source})</span>
+                {p.quote && <span className="mt-0.5 block font-serif text-[14px] text-muted">&ldquo;{p.quote}&rdquo;</span>}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1.5 text-[14.5px] text-text">{oq.effect} Flagged for human review.</p>
+        </div>
+      )}
       {result.deciding && (
         <div className="mt-3 rounded-lg p-3" style={{ background: "var(--unk-bg)", color: "var(--unk-fg)" }}>
           <p className="flex items-center font-medium">One fact settles it <InfoButton k="settle" /></p>

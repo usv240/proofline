@@ -1,0 +1,60 @@
+{
+  "_about": "Known open questions in the law, listed by the organizers (starter pack README, section 9). Each one flags the matching rule for human review and shows every published position. Quotes are checked word for word against their source document when the rules are assembled; a position with no document in the pack names where it was published instead. The FAIR Act preemption question is handled by the state-versus-local conflict flags (change test T3), so it is not repeated here.",
+  "questions": [
+    {
+      "id": "OQ-BERKELEY-ALG-DATE",
+      "jurisdiction": "Berkeley, CA",
+      "category": "algorithmic_rent_setting",
+      "question": "Berkeley's algorithmic pricing ban (ch. 13.63) has two published effective dates.",
+      "positions": [
+        {
+          "claim": "January 2026, per a law-firm alert",
+          "source_doc": "D002",
+          "quote": "Berkeley Mun. Code ch. 13.63 (effective January 2026)"
+        },
+        {
+          "claim": "March 1, 2026, per the ordinance text",
+          "source": "as reported in the organizers' starter pack README; the pack's copy of the ordinance (D001) records the first reading and does not state a date"
+        }
+      ],
+      "effect": "Both dates are before the 2026-10-01 as-of date, so today's answer is the same either way; answers dated between them depend on which is right."
+    },
+    {
+      "id": "OQ-LA-RSO-DATE",
+      "jurisdiction": "Los Angeles, CA",
+      "category": "rent_increase_limits",
+      "question": "Los Angeles's new rent stabilization formula has two published effective dates.",
+      "positions": [
+        {
+          "claim": "February 2, 2026, per LAHD",
+          "source_doc": "D041",
+          "quote": "Effective February 2, 2026, the landlord can no longer include an additional percentage increase for utilities."
+        },
+        {
+          "claim": "January 24, 2026, per a landlord association",
+          "source": "as reported in the organizers' starter pack README; not in the pack"
+        }
+      ],
+      "effect": "Both dates are before the 2026-10-01 as-of date, so today's answer is the same either way; answers dated between them depend on which is right."
+    },
+    {
+      "id": "OQ-CA-SCREENING-FEE",
+      "jurisdiction": "CA",
+      "category": "application_screening_fees",
+      "question": "California's screening-fee cap has no single official 2026 dollar figure.",
+      "positions": [
+        {
+          "claim": "$68.96 for 2026, per a city rent board page",
+          "source_doc": "D005",
+          "quote": "fee for 2026 is $68.96"
+        },
+        {
+          "claim": "$30 adjusted each year by the Consumer Price Index since 1998, with no official 2026 figure, per the statute",
+          "source_doc": "D026",
+          "quote": "The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998."
+        }
+      ],
+      "effect": "The cap applies either way; treat $68.96 as an estimate, not an official figure."
+    }
+  ]
+}

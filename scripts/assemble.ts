@@ -6,6 +6,8 @@ import path from "node:path";
 import { statusAt } from "../src/lib/engine/lookup";
 import type { Category, NoRuleFinding, RuleRecord } from "../src/lib/engine/types";
 import { audit, sha } from "./lib/audit";
+import { loadCorpus } from "./lib/corpus";
+import { findSpan } from "../src/lib/engine/span";
 
 export const AS_OF = "2026-10-01";
 const ROOT = process.cwd();
@@ -241,6 +243,25 @@ export function assemble() {
       l.overrides = [...new Set([...l.overrides, s.team_rule_id])];
     }
   }
+  // Known open questions (organizers' starter pack README, section 9): flag the rule for human review and show
+  // every published position. Quotes must be found word for word in their source, or assembly stops.
+  const oqFile = path.join(ROOT, "data", "open_questions.json");
+  if (existsSync(oqFile)) {
+    const corpusText = new Map(loadCorpus().map((d) => [d.doc_id, d.text]));
+    for (const q of JSON.parse(readFileSync(oqFile, "utf8")).questions as OpenQuestionIn[]) {
+      for (const p of q.positions) {
+        if (p.source_doc && !findSpan(corpusText.get(p.source_doc) ?? "", p.quote ?? "")) throw new Error(`${q.id}: quote not found in ${p.source_doc}`);
+      }
+      const targets = rules.filter((r) => r.jurisdiction === q.jurisdiction && r.category === q.category && r.x_lifecycle.kind === "enacted");
+      if (!targets.length) throw new Error(`${q.id}: no enacted rule for ${q.jurisdiction} ${q.category}`);
+      for (const r of targets) {
+        r.conflict_flag = true;
+        const sides = q.positions.map((p) => `${p.claim} (${p.source_doc ? `source ${p.source_doc}` : p.source})`).join("; versus ");
+        r.conflict_note = [r.conflict_note, `Open question: ${q.question} ${sides}. ${q.effect} Human review needed.`].filter(Boolean).join(" ");
+        r.x_open_question = { id: q.id, question: q.question, positions: q.positions, effect: q.effect, raised_by: "Organizers' starter pack README, section 9" };
+      }
+    }
+  }
   for (const s of rules.filter((r) => r.level === "state" && r.x_yields_to_local)) {
     const locals = rules.filter((r) => r.level === "city" && r.category === s.category && r.jurisdiction.endsWith(`, ${s.jurisdiction}`) && r.x_lifecycle.kind === "enacted");
     s.overrides = [...new Set([...s.overrides, ...locals.map((l) => l.team_rule_id)])];
@@ -300,3 +321,12 @@ export function assemble() {
 }
 
 assemble();
+
+interface OpenQuestionIn {
+  id: string;
+  jurisdiction: string;
+  category: Category;
+  question: string;
+  positions: { claim: string; source_doc?: string; quote?: string; source?: string }[];
+  effect: string;
+}

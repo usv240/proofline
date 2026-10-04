@@ -1,5 +1,5 @@
 {
-  "rules_sha256": "8753dddcb9810e78cadbb5f8ddea8a6f3f45d5cdbd9471170741fb8405b6c5ad",
+  "rules_sha256": "9f409b880e714519fcd06630723291dc85528c1f70bafb14213e4403ed8eee8f",
   "citations": {
     "applies": 5047,
     "official_pack": 4618,
@@ -26,7 +26,7 @@
     },
     "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
   },
-  "generated_at": "2026-10-04T04:28:23.641Z",
+  "generated_at": "2026-10-04T06:56:55.098Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
@@ -98,7 +98,7 @@
   },
   "audit": {
     "ok": true,
-    "entries": 73,
+    "entries": 77,
     "brokenAt": null
   },
   "change_tests": {

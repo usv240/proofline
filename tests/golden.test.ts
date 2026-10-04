@@ -81,3 +81,28 @@ describe("README 7 and change_tests.json", () => {
     }
   });
 });
+
+describe("README section 9: known open questions in the law are surfaced", () => {
+  const flagged = (jur: string, cat: string) => rules.filter((r) => r.jurisdiction === jur && r.category === cat && r.x_lifecycle.kind === "enacted");
+  it("Berkeley algorithmic ban: both published effective dates shown and flagged", () => {
+    for (const r of flagged("Berkeley, CA", "algorithmic_rent_setting")) {
+      expect(r.conflict_flag).toBe(true);
+      expect(r.x_open_question?.positions.map((p) => p.claim).join(" ")).toMatch(/January 2026.*March 1, 2026/);
+    }
+  });
+  it("New Jersey FAIR Act: conflict flags on Jersey City and Hoboken (T3)", () => {
+    expect(changes.T3.conflict_flag_address_ids.length).toBeGreaterThan(0);
+  });
+  it("Los Angeles RSO formula: both published effective dates shown and flagged", () => {
+    for (const r of flagged("Los Angeles, CA", "rent_increase_limits")) {
+      expect(r.conflict_flag).toBe(true);
+      expect(r.x_open_question?.positions.map((p) => p.claim).join(" ")).toMatch(/February 2, 2026.*January 24, 2026/);
+    }
+  });
+  it("California screening-fee cap: the 2026 dollar figure is marked unofficial", () => {
+    for (const r of flagged("CA", "application_screening_fees")) {
+      expect(r.conflict_flag).toBe(true);
+      expect(r.x_open_question?.effect).toMatch(/estimate, not an official figure/);
+    }
+  });
+});

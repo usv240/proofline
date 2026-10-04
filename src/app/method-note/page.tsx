@@ -40,7 +40,7 @@ export default function MethodNote() {
         <li>{inScope} rules in the 13 places in scope, every one with its quote found word for word in its source; {m.documents.with_text} of {m.documents.manifest} manifest documents read.</li>
         <li>Negative control: <strong>{m.negative_control.invented_applies} &ldquo;applies&rdquo; answers in {m.negative_control.checks.toLocaleString()} checks</strong> where the right answer is no rule, failed, or not law yet.</li>
         {m.baseline && <li>Baseline (same model, BM25 search over the same corpus): claimed an in-force rule in {m.baseline.baseline.invented_in_force} of {m.baseline.questions.no_rule} no-rule questions and gave {m.baseline.baseline.quotes_not_found} quote(s) not in the sources; Proofline 0 and 0.</li>}
-        <li>32 automated checks, including golden checks taken only from the organizers&apos; statements (brief example, README cutoffs, T1 to T5). They caught two real bugs during the event, both fixed. <code>npm run verify</code> re-checks the hash-chained audit log, every quote, and that the engine reproduces lookups.json.</li>
+        <li>36 automated checks, including golden checks taken only from the organizers&apos; statements (brief example, README cutoffs, T1 to T5, the README&apos;s four known open questions, all surfaced and flagged). They caught two real bugs during the event, both fixed. <code>npm run verify</code> re-checks the hash-chained audit log, every quote, and that the engine reproduces lookups.json.</li>
       </ul>
 
       <h2 className="mt-3 font-bold">Responsible design and limits</h2>

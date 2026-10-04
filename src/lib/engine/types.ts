@@ -99,6 +99,14 @@ export interface RuleRecord {
   x_source_kind: "official_corpus" | "fetched_link_only";
   x_span: { start: number; end: number; match: "exact" | "normalized" } | null;
   x_challenge: { verdict: "support" | "partial" | "contradict"; note: string } | null;
+  /** A known open question in the law (organizers' README, section 9), with every published position. */
+  x_open_question?: {
+    id: string;
+    question: string;
+    positions: { claim: string; source_doc?: string; quote?: string; source?: string }[];
+    effect: string;
+    raised_by: string;
+  };
 }
 
 export interface NoRuleFinding {

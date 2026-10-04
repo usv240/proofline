@@ -20,8 +20,8 @@
       "source_url": "https://berkeleyca.gov/sites/default/files/documents/2025-12-02%20Item%2001%20Ordinance%207992.pdf",
       "quoted_span": "It shall be unlawful for a landlord to use a coordinated pricing algorithm described \nin subsection A when setting rents or occupancy levels for residential dwelling units in \nthe City of Berkeley.",
       "confidence": 0.7,
-      "conflict_flag": false,
-      "conflict_note": null,
+      "conflict_flag": true,
+      "conflict_note": "Open question: Berkeley's algorithmic pricing ban (ch. 13.63) has two published effective dates. January 2026, per a law-firm alert (source D002); versus March 1, 2026, per the ordinance text (as reported in the organizers' starter pack README; the pack's copy of the ordinance (D001) records the first reading and does not state a date). Both dates are before the 2026-10-01 as-of date, so today's answer is the same either way; answers dated between them depend on which is right. Human review needed.",
       "x_lifecycle": {
         "kind": "enacted",
         "enacted_date": null,
@@ -83,6 +83,23 @@
       "x_challenge": {
         "verdict": "partial",
         "note": "The quote, requirement, $1,000-per-violation penalty, and separate-violation rule are all supported by §§ 13.63.030 and 13.63.040. However, the document only records that the ordinance was passed to print at first reading on Nov 18, 2025. It does not show final adoption or an effective date, so 'enacted' is not established by this text."
+      },
+      "x_open_question": {
+        "id": "OQ-BERKELEY-ALG-DATE",
+        "question": "Berkeley's algorithmic pricing ban (ch. 13.63) has two published effective dates.",
+        "positions": [
+          {
+            "claim": "January 2026, per a law-firm alert",
+            "source_doc": "D002",
+            "quote": "Berkeley Mun. Code ch. 13.63 (effective January 2026)"
+          },
+          {
+            "claim": "March 1, 2026, per the ordinance text",
+            "source": "as reported in the organizers' starter pack README; the pack's copy of the ordinance (D001) records the first reading and does not state a date"
+          }
+        ],
+        "effect": "Both dates are before the 2026-10-01 as-of date, so today's answer is the same either way; answers dated between them depend on which is right.",
+        "raised_by": "Organizers' starter pack README, section 9"
       }
     },
     {
@@ -1220,8 +1237,8 @@
       "source_url": "https://rentboard.berkeleyca.gov/laws-regulations/city-berkeley-ordinances-affecting-rental-properties/tenant-screening-and",
       "quoted_span": "Landlords may use screening fees to obtain information about a prospective tenant like a consumer credit report.",
       "confidence": 0.88,
-      "conflict_flag": false,
-      "conflict_note": null,
+      "conflict_flag": true,
+      "conflict_note": "Open question: California's screening-fee cap has no single official 2026 dollar figure. $68.96 for 2026, per a city rent board page (source D005); versus $30 adjusted each year by the Consumer Price Index since 1998, with no official 2026 figure, per the statute (source D026). The cap applies either way; treat $68.96 as an estimate, not an official figure. Human review needed.",
       "x_lifecycle": {
         "kind": "enacted",
         "enacted_date": "2025",
@@ -1323,6 +1340,24 @@
       "x_challenge": {
         "verdict": "support",
         "note": "The page summarizes state Civ. Code 1950.6 and gives the $68.96 cap for 2026. Credit report within 7 days, receipt and itemization, refund of unused portion, reusable report, no fee when no unit is available, and return of fees or a first-qualified policy are all stated."
+      },
+      "x_open_question": {
+        "id": "OQ-CA-SCREENING-FEE",
+        "question": "California's screening-fee cap has no single official 2026 dollar figure.",
+        "positions": [
+          {
+            "claim": "$68.96 for 2026, per a city rent board page",
+            "source_doc": "D005",
+            "quote": "fee for 2026 is $68.96"
+          },
+          {
+            "claim": "$30 adjusted each year by the Consumer Price Index since 1998, with no official 2026 figure, per the statute",
+            "source_doc": "D026",
+            "quote": "The thirty dollar ($30) application screening fee may be adjusted annually by the landlord or their agent commensurate with an increase in the Consumer Price Index, beginning on January 1, 1998."
+          }
+        ],
+        "effect": "The cap applies either way; treat $68.96 as an estimate, not an official figure.",
+        "raised_by": "Organizers' starter pack README, section 9"
       }
     },
     {
@@ -3020,8 +3055,8 @@
       "source_url": "https://housing.lacity.gov/residents/rso-overview",
       "quoted_span": "Rent may be increased once every 12 months by the allowable rent increase percentage",
       "confidence": 0.85,
-      "conflict_flag": false,
-      "conflict_note": null,
+      "conflict_flag": true,
+      "conflict_note": "Open question: Los Angeles's new rent stabilization formula has two published effective dates. February 2, 2026, per LAHD (source D041); versus January 24, 2026, per a landlord association (as reported in the organizers' starter pack README; not in the pack). Both dates are before the 2026-10-01 as-of date, so today's answer is the same either way; answers dated between them depend on which is right. Human review needed.",
       "x_lifecycle": {
         "kind": "enacted",
         "enacted_date": null,
@@ -3117,6 +3152,23 @@
       "x_challenge": {
         "verdict": "support",
         "note": "Quote is verbatim. The once-per-12-months limit, the February 2, 2026 removal of the utilities add-on, and the market-rate resets on vacancy or eviction are all stated."
+      },
+      "x_open_question": {
+        "id": "OQ-LA-RSO-DATE",
+        "question": "Los Angeles's new rent stabilization formula has two published effective dates.",
+        "positions": [
+          {
+            "claim": "February 2, 2026, per LAHD",
+            "source_doc": "D041",
+            "quote": "Effective February 2, 2026, the landlord can no longer include an additional percentage increase for utilities."
+          },
+          {
+            "claim": "January 24, 2026, per a landlord association",
+            "source": "as reported in the organizers' starter pack README; not in the pack"
+          }
+        ],
+        "effect": "Both dates are before the 2026-10-01 as-of date, so today's answer is the same either way; answers dated between them depend on which is right.",
+        "raised_by": "Organizers' starter pack README, section 9"
       }
     },
     {
