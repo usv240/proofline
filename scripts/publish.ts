@@ -23,6 +23,11 @@ if (existsSync(paramsFile)) {
   const params = JSON.parse(readFileSync(paramsFile, "utf8"));
   for (const r of rules) r.x_params = params[`${r.jurisdiction}|${r.category}|${r.citation}`]?.params ?? null;
 }
+const esFile = path.join(OUT, "pipeline", "plain_es.json");
+if (existsSync(esFile)) {
+  const es = JSON.parse(readFileSync(esFile, "utf8"));
+  for (const r of rules as (RuleRecord & { x_plain_es?: string })[]) r.x_plain_es = es[r.team_rule_id]?.en === r.x_plain ? es[r.team_rule_id].es : undefined;
+}
 const noRule = JSON.parse(readFileSync(path.join(OUT, "no_rule_findings.json"), "utf8"));
 const changesFull = JSON.parse(readFileSync(path.join(OUT, "pipeline", "changes_full.json"), "utf8"));
 const addrs = parseAddressesCsv(readFileSync(path.join(ROOT, "data", "addresses_resolved.csv"), "utf8"));

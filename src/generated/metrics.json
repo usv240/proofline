@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T01:34:47.255Z",
+  "generated_at": "2026-10-04T02:01:20.388Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
@@ -8,10 +8,10 @@
     "fetched": 27
   },
   "extraction": {
-    "candidates": 114,
-    "rejected": 1,
-    "rules": 80,
-    "quotes_verified": 80,
+    "candidates": 111,
+    "rejected": 0,
+    "rules": 78,
+    "quotes_verified": 78,
     "quote_rate": 1
   },
   "addresses": {
@@ -20,9 +20,9 @@
     "fallback": 23
   },
   "results": {
-    "applies": 5194,
-    "unknown": 1549,
-    "pending": 350,
+    "applies": 5080,
+    "unknown": 1403,
+    "pending": 460,
     "not_yet_effective": 140
   },
   "unknown_by_city": {
@@ -31,16 +31,16 @@
       "total": 1142
     },
     "Hoboken, NJ": {
-      "unknown": 90,
-      "total": 675
+      "unknown": 84,
+      "total": 515
     },
     "Newark, NJ": {
-      "unknown": 687,
-      "total": 786
+      "unknown": 547,
+      "total": 686
     },
     "Berkeley, CA": {
       "unknown": 160,
-      "total": 800
+      "total": 880
     },
     "Boston, MA": {
       "unknown": 34,
@@ -48,7 +48,7 @@
     },
     "Jersey City, NJ": {
       "unknown": 22,
-      "total": 622
+      "total": 522
     },
     "Cambridge, MA": {
       "unknown": 0,
@@ -56,21 +56,21 @@
     },
     "San Francisco, CA": {
       "unknown": 238,
-      "total": 1278
+      "total": 1358
     },
     "San Diego, CA": {
       "unknown": 150,
-      "total": 550
+      "total": 600
     }
   },
   "negative_control": {
-    "checks": 2140,
+    "checks": 2250,
     "invented_applies": 0,
     "no_rule_cells": 34
   },
   "audit": {
     "ok": true,
-    "entries": 112,
+    "entries": 210,
     "brokenAt": null
   },
   "change_tests": {

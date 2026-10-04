@@ -5,17 +5,17 @@
       "jurisdiction": "MA",
       "level": "state",
       "category": "rent_increase_limits",
-      "reason": "Massachusetts state law (M.G.L. c. 40P § 4) bars cities and towns from enacting, maintaining or enforcing rent control of any kind. The only exception is for a municipality that accepts the chapter. Even then, compliance is voluntary after six months. It cannot cover owners of fewer than ten rental units or units with fair market rent over $400. The municipality must also pay owners the difference from market rent out of general funds. No mandatory rent control is in effect under this section.",
+      "reason": "Massachusetts state law bars cities and towns from enacting, maintaining or enforcing rent control of any kind. The only exception is a narrow optional scheme. Under it, owner compliance becomes voluntary after six months, owners of fewer than ten units and units with fair market rent over $400 are excluded, and the municipality must compensate owners from general funds. The section itself sets no statewide rent cap.",
       "citation": "Mass. Gen. Laws ch. 40P, § 4",
       "source_doc_id": "D048",
-      "quoted_span": "Section 4. No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
+      "quoted_span": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides:",
       "qualified_by": []
     },
     {
       "jurisdiction": "NJ",
       "level": "state",
       "category": "rent_increase_limits",
-      "reason": "New Jersey has no statewide rent control or rent cap law; rent control exists only through municipal ordinances. Qualified: related enacted rules exist at this level: NJ-RENT-01 (N.J.S.A. 2A:18-61.1(f)): No numeric cap; increase must not be unconscionable; NJ-RENT-02 (N.J.S.A. 2A:42-84.5): 30 years after completion of construction.",
+      "reason": "New Jersey has no statewide rent control or rent cap law; rent control exists only through municipal ordinances. Qualified: related enacted rules exist at this level: NJ-RENT-01 (N.J.S.A. 2A:18-61.1(f)): Rent increases must not be unconscionable; NJ-RENT-02 (N.J.S.A. 2A:42-84.5): 30 years after completion of construction.",
       "citation": null,
       "source_doc_id": "D067",
       "quoted_span": "The State of New Jersey has no laws that establish, govern or control rents.",
@@ -46,7 +46,7 @@
       "jurisdiction": "Los Angeles, CA",
       "level": "city",
       "category": "algorithmic_rent_setting",
-      "reason": "No enacted rule at this level. Proposals only: LA-ALG-P1 Los Angeles Council File 24-1031 (Motion, Hutt) (pending).",
+      "reason": "No enacted rule at this level. Proposals only: LA-ALG-P1 L.A. City Council File No. 24-1031 (Motion, Sept. 3, 2024) (pending).",
       "citation": null,
       "source_doc_id": null,
       "quoted_span": null
@@ -316,7 +316,7 @@
       "jurisdiction": "MA",
       "level": "state",
       "category": "algorithmic_rent_setting",
-      "reason": "No enacted rule at this level. Proposals only: MA-ALG-P1 Mass. H.5222, 194th General Court (pending); MA-ALG-P2 Mass. Senate Bill S.2983 (194th General Court) (pending).",
+      "reason": "No enacted rule at this level. Proposals only: MA-ALG-P1 Mass. H.5222 (194th General Court) (pending); MA-ALG-P2 Mass. S.2983 (194th General Court) (pending); MA-ALG-P3 Massachusetts House and Senate bills (bill numbers not stated) (pending).",
       "citation": null,
       "source_doc_id": null,
       "quoted_span": null

@@ -1,6 +1,6 @@
 // Loads the official corpus (starter pack) and the link-only sources Proofline fetched itself.
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 export const ROOT = process.cwd();
@@ -29,6 +29,7 @@ export interface CorpusDoc {
   kind: "official_corpus" | "fetched_link_only";
   text: string; // full file contents, including the SOURCE/RETRIEVED header
   sha256: string;
+  operator_note?: string;
 }
 
 export function parseCsv(text: string): Record<string, string>[] {
@@ -86,6 +87,21 @@ export function loadCorpus(): CorpusDoc[] {
       text,
       sha256: createHash("sha256").update(text).digest("hex"),
     });
+  }
+  // New documents released during the event (for example the hour-16 ordinance), added with
+  // `npm run new-law`. Each has a small JSON sidecar with its place and source.
+  const NEW = path.join(ROOT, "data", "corpus_new");
+  if (existsSync(NEW)) {
+    for (const f of readdirSync(NEW).filter((x) => x.endsWith(".json"))) {
+      const meta = JSON.parse(readFileSync(path.join(NEW, f), "utf8"));
+      const text = readFileSync(path.join(NEW, meta.text_file), "utf8");
+      docs.push({
+        doc_id: meta.doc_id, ...jur(meta.jurisdiction), url: meta.url, retrieved_at: meta.retrieved_at,
+        // The note is part of the cache key: changing it re-reads the document.
+        kind: "official_corpus", text, sha256: createHash("sha256").update(text + (meta.operator_note ?? "")).digest("hex"),
+        operator_note: meta.operator_note,
+      });
+    }
   }
   return docs;
 }

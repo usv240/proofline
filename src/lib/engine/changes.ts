@@ -13,6 +13,7 @@ export interface ChangeTest {
   states?: string[];
   conflict_with?: string[];
   expected_behavior?: string;
+  source_doc_ids?: string[];
 }
 
 export interface ChangeOutput {
@@ -48,7 +49,10 @@ function resultFor(rules: RuleRecord[], f: AddressFacts, asOf: string, ids: Set<
 }
 
 export function runChangeTest(t: ChangeTest, rules: RuleRecord[], addrs: AddressFacts[]): ChangeOutput {
-  const targets = t.rule_ids.flatMap((id) => resolveKeyRule(id, rules));
+  const targets = [
+    ...t.rule_ids.flatMap((id) => resolveKeyRule(id, rules)),
+    ...rules.filter((r) => r.source_doc_id && t.source_doc_ids?.includes(r.source_doc_id)),
+  ];
   const ids = new Set(targets.map((r) => r.team_rule_id));
   const conflictTargets = (t.conflict_with ?? []).flatMap((id) => resolveKeyRule(id, rules));
   const conflictJur = new Set(conflictTargets.map((r) => r.jurisdiction));

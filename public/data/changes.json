@@ -440,7 +440,7 @@
       "A0490",
       "A0495"
     ],
-    "notes": "HOB-ALG-01 (Hoboken City Code § 158-2, enacted); JC-ALG-01 (Jersey City Code § 218-12, enacted, effective 2025-06). Each local rule applies only inside its own city: Hoboken, NJ 40, Jersey City, NJ 50. Addresses in other cities are not affected."
+    "notes": "HOB-ALG-01 (Hoboken City Code § 158-2 (Ord. No. B-781), enacted); JC-ALG-01 (Jersey City Code § 218-12, enacted, effective 2025-06). Each local rule applies only inside its own city: Hoboken, NJ 40, Jersey City, NJ 50. Addresses in other cities are not affected."
   },
   "T3": {
     "affected_address_ids": [
@@ -677,7 +677,7 @@
       "A0490",
       "A0495"
     ],
-    "notes": "NJ-ALG-01 (N.J.S.A. 56:9-20 to 56:9-26 (P.L. 2026, c.43, §4), enacted, effective 2027-07-01). Before 2026-10-01: not yet effective. After 2027-07-02: applies to 140 addresses. 90 addresses also carry a conflict flag with local rules (Jersey City, NJ, Hoboken, NJ) for human review."
+    "notes": "NJ-ALG-01 (P.L. 2026, c.43 (A3497 1R ACS), N.J.S.A. 56:9-20 to 56:9-26 (§4, N.J.S.A. 56:9-23), enacted, effective 2027-07-01). Before 2026-10-01: not yet effective. After 2027-07-02: applies to 140 addresses. 90 addresses also carry a conflict flag with local rules (Jersey City, NJ, Hoboken, NJ) for human review."
   },
   "T4": {
     "affected_address_ids": [
@@ -793,11 +793,11 @@
       "A0488"
     ],
     "conflict_flag_address_ids": [],
-    "notes": "MA-ALG-P1 (Mass. H.5222, 194th General Court, pending); MA-ALG-P2 (Mass. Senate Bill S.2983 (194th General Court), pending); MA-ALG-P1 (Mass. H.5222, 194th General Court, pending); MA-ALG-P2 (Mass. Senate Bill S.2983 (194th General Court), pending). Pending, not in force on 2026-10-01. These 110 addresses would be covered if enacted."
+    "notes": "MA-ALG-P1 (Mass. H.5222 (194th General Court), pending); MA-ALG-P2 (Mass. S.2983 (194th General Court), pending); MA-ALG-P3 (Massachusetts House and Senate bills (bill numbers not stated), pending); MA-ALG-P1 (Mass. H.5222 (194th General Court), pending); MA-ALG-P2 (Mass. S.2983 (194th General Court), pending); MA-ALG-P3 (Massachusetts House and Senate bills (bill numbers not stated), pending). Pending, not in force on 2026-10-01. These 110 addresses would be covered if enacted."
   },
   "T5": {
     "affected_address_ids": [],
     "conflict_flag_address_ids": [],
-    "notes": "MA-RENT-P1 (Massachusetts 2026 initiative petition on rent control (Supreme Judicial Court decision, June 23, 2026), failed). Not in force: affected set is empty. No rent cap is reported for any address in this jurisdiction."
+    "notes": "MA-RENT-P1 (Initiative Petition 25-21; Cella v. Attorney General, SJC-13893 (2026), failed). Not in force: affected set is empty. No rent cap is reported for any address in this jurisdiction."
   }
 }

@@ -114,7 +114,8 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
         </fieldset>
 
         <details className="rounded-xl border border-border p-4">
-          <summary className="flex cursor-pointer items-center font-medium">3. Building facts (optional) <InfoButton k="pf.facts" /></summary>
+          <summary className="cursor-pointer font-medium">3. Building facts (optional)</summary>
+          <p className="mt-2 flex items-center text-[15px] text-muted">Used for this check only, never saved. <InfoButton k="pf.facts" /></p>
           <div className="mt-3 grid gap-3 sm:grid-cols-3">
             <label className="block"><span className="text-[15px]">Homes in building</span><input inputMode="numeric" className={input} placeholder={address.units.min ? String(address.units.min) : "unknown"} value={units} onChange={(e) => setUnits(e.target.value)} /></label>
             <label className="block"><span className="text-[15px]">Year first approved</span><input inputMode="numeric" className={input} placeholder={address.year_built ? String(address.year_built) : "unknown"} value={yearBuilt} onChange={(e) => setYearBuilt(e.target.value)} /></label>
