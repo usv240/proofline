@@ -66,7 +66,7 @@ AI reads each law **once**. After that, every answer comes from tested code, the
 
 ```mermaid
 flowchart LR
-  subgraph ONCE["Once per law: the pipeline"]
+  subgraph ONCE["1. Once per law: the pipeline"]
     direction TB
     A["Law documents"] --> B["Read<br/>Claude Opus 5.5<br/>(Sonnet 5.5 for laws pasted live)"]
     B --> C{"Quote found word for word<br/>in the source? (code)"}
@@ -75,15 +75,15 @@ flowchart LR
     D --> E["Merge, status from dates,<br/>flag conflicts (code)"]
     E --> F[("rules.json<br/>+ audit log")]
   end
-  subgraph EVERY["Every answer: no AI"]
+  subgraph EVERY["2. Every answer: no AI"]
     direction TB
     G["Address"] --> H["Legal city<br/>US Census Geocoder"]
     H --> I["Building facts<br/>public assessor records"]
-    I --> J["Engine<br/>three-valued logic"]
+    I --> J["Engine: tests every rule<br/>three-valued logic"]
     J --> K["Check an address · Pre-Flight<br/>Law Watch · API · MCP"]
+    L["Legislature · LegiScan<br/>Open States"] -- "pending bills" --> K
   end
-  F --> J
-  L["Legislature · LegiScan<br/>Open States"] -- "pending bills" --> K
+  ONCE -- "published rules" --> EVERY
 ```
 
 1. **Read.** Claude with structured outputs turns each document into rule records in the official schema, plus a coverage test over a fixed set of facts (units, year built, building type, owner occupancy, subsidy, tenancy length).
