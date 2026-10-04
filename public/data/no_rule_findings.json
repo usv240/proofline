@@ -28,16 +28,7 @@
       "jurisdiction": "Los Angeles, CA",
       "level": "city",
       "category": "application_screening_fees",
-      "reason": "No rule at this level was found in the 6 source documents for Los Angeles, CA. State law applies.",
-      "citation": null,
-      "source_doc_id": null,
-      "quoted_span": null
-    },
-    {
-      "jurisdiction": "Los Angeles, CA",
-      "level": "city",
-      "category": "screening_restrictions",
-      "reason": "No rule at this level was found in the 6 source documents for Los Angeles, CA. State law applies.",
+      "reason": "No rule at this level was found in the 7 source documents for Los Angeles, CA. State law applies.",
       "citation": null,
       "source_doc_id": null,
       "quoted_span": null

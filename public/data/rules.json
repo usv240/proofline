@@ -3120,6 +3120,75 @@
       }
     },
     {
+      "team_rule_id": "LA-SCREEN-01",
+      "jurisdiction": "Los Angeles, CA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Source of income discrimination ban (including Section 8 vouchers)",
+      "requirement": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income.",
+      "key_value": null,
+      "coverage_conditions": "All housing accommodations in the City of Los Angeles rented or offered for rent, including dwelling units, guest rooms, duplexes, condominiums, single family residences and mobile homes; applies to any person offering for rent, renting, or listing housing.",
+      "exemptions": null,
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2020-01-01",
+      "citation": "L.A. Mun. Code §§ 45.65–45.69",
+      "x_citation_full": "L.A. Mun. Code §§ 45.65–45.69 (Art. 5.6.1)",
+      "source_doc_id": "D038",
+      "source_url": "https://codelibrary.amlegal.com/codes/los_angeles/latest/lamc/0-0-0-322208",
+      "quoted_span": "It shall be unlawful for any person offering for rent, renting, or listing any housing \r\naccommodation to do or attempt to do any of the following:",
+      "confidence": 0.88,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "x_lifecycle": {
+        "kind": "enacted",
+        "enacted_date": null,
+        "effective_date": "2020-01-01",
+        "ended_date": null
+      },
+      "x_coverage": {
+        "all": [],
+        "exempt_if_any": []
+      },
+      "x_yields_to_local": false,
+      "x_may_conflict_with_local": false,
+      "x_details": [
+        {
+          "text": "Source of income includes any lawful income, rental assistance or subsidy, such as Section 8 vouchers, LAHSA Rapid Re-Housing, other housing subsidy, homeless assistance or security deposit assistance programs.",
+          "quoted_span": "Source of Income. Any lawful source of income, rental \r\nassistance, subsidy, or financial aid from any person, including but not limited to \r\na federal, state or local government, or non-profit or charitable agency, whether \r\npaid directly to the program participant, landlord or his or her representative, \r\nincluding but not limited to the Section 8 voucher program, the Los Angeles \r\nHomeless Services Authority’s Rapid Re-Housing program or any other housing \r\nsubsidy program, homeless assistance or prevention program or security deposit \r\nassistance program."
+        },
+        {
+          "text": "Advertisements, applications and listings may not indicate a preference or limitation based on source of income, including accepted forms of payment.",
+          "quoted_span": "Make,  print, or publish, or cause to be made,  printed, or published \r\nthrough any medium,  any notice, statement, sign, advertisement, application, or \r\ncontract, with regard to any housing accommodation offered for rent, including \r\nbut not limited to the accepted form(s) of payment for the housing \r\naccommodation, that indicates any preference, limitation, or discrimination based \r\nupon a person’s source of income."
+        },
+        {
+          "text": "Aggrieved persons may sue for injunctive relief and damages.",
+          "quoted_span": "An  aggrieved person may  bring a civil action for injunctive \r\nrelief and damages."
+        },
+        {
+          "text": "A violation may be raised as a defense to an eviction (unlawful detainer) case.",
+          "quoted_span": "Any person may  assert a violation of this article as \r\nan affirmative defense to an unlawful detainer action brought pursuant to California \r\nCode of Civil Procedure Section 1161, as amended."
+        },
+        {
+          "text": "The ordinance takes effect January 1, 2020.",
+          "quoted_span": "The provisions of this ordinance shall take effect on January 1,2020."
+        }
+      ],
+      "x_plain": "Your landlord in Los Angeles cannot refuse to rent to you, treat you differently, or evict you because you pay rent with a Section 8 voucher or other lawful income or rental help.",
+      "x_retrieved_at": "2026-10-04",
+      "x_source_kind": "fetched_link_only",
+      "x_span": {
+        "start": 6332,
+        "end": 6479,
+        "match": "normalized"
+      },
+      "x_challenge": {
+        "verdict": "support",
+        "note": "Quote matches Sec. 45.67, and the summary accurately reflects subsections A–D, including the termination ban. Sec. 45.69 states the effective date as January 1, 2020. The text is a draft transmitted for adoption, but the source note says the article is codified today, so 'enacted' holds."
+      }
+    },
+    {
       "team_rule_id": "LA-DEP-01",
       "jurisdiction": "Los Angeles, CA",
       "level": "city",

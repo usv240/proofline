@@ -1,9 +1,9 @@
 {
-  "rules_sha256": "d058f2c3b8283c49c5f669005352dbc3d40acd5564aed653d1f0c2e6794f5f18",
+  "rules_sha256": "8753dddcb9810e78cadbb5f8ddea8a6f3f45d5cdbd9471170741fb8405b6c5ad",
   "citations": {
-    "applies": 4967,
+    "applies": 5047,
     "official_pack": 4618,
-    "share": 0.9297362593114556
+    "share": 0.9149990093124628
   },
   "baseline": {
     "model": "claude-opus-5-5",
@@ -26,19 +26,19 @@
     },
     "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
   },
-  "generated_at": "2026-10-04T03:52:29.111Z",
+  "generated_at": "2026-10-04T04:28:23.641Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
-    "with_text": 82,
+    "with_text": 83,
     "official": 55,
-    "fetched": 27
+    "fetched": 28
   },
   "extraction": {
-    "candidates": 113,
+    "candidates": 114,
     "rejected": 3,
-    "rules": 74,
-    "quotes_verified": 74,
+    "rules": 75,
+    "quotes_verified": 75,
     "quote_rate": 1
   },
   "addresses": {
@@ -47,7 +47,7 @@
     "fallback": 23
   },
   "results": {
-    "applies": 4967,
+    "applies": 5047,
     "superseded": 265,
     "pending": 350,
     "not_yet_effective": 140,
@@ -56,7 +56,7 @@
   "unknown_by_city": {
     "Los Angeles, CA": {
       "unknown": 38,
-      "total": 1197
+      "total": 1277
     },
     "Hoboken, NJ": {
       "unknown": 86,
@@ -92,13 +92,13 @@
     }
   },
   "negative_control": {
-    "checks": 2090,
+    "checks": 2010,
     "invented_applies": 0,
-    "no_rule_cells": 38
+    "no_rule_cells": 37
   },
   "audit": {
     "ok": true,
-    "entries": 59,
+    "entries": 73,
     "brokenAt": null
   },
   "change_tests": {

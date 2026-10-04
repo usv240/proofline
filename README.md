@@ -17,12 +17,12 @@ RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Ha
 
 | | |
 |---|---|
-| Documents read | 82 of 87 in the manifest (55 with official text, 27 link-only pages fetched once read-only; 5 sites blocked automated access and are recorded as such) |
+| Documents read | 83 of 87 in the manifest (55 with official text, 28 link-only pages fetched once read-only; 4 sites blocked automated access and are recorded as such) |
 | Rules extracted | 74 in the 13 places in scope, every one with a quote found word for word in its source (100%); short official citations ("Cal. Civ. Code § 1947.12") |
 | Candidates rejected | quotes not found, wrong jurisdiction, or refuted by the second check are dropped and logged in `out/pipeline/rejected.json` |
 | Addresses | 500 placed in their legal city: 477 by the US Census Geocoder, 23 by mailing city |
-| Citations (organizers' definition) | 93% of "applies" answers quote the supplied corpus text. The other 7% come from city codes the pack lists only as links (Hoboken, Newark, Jersey City ban); they stay, labeled "Fetched by Proofline", because dropping an applicable rule costs more than an unverified citation |
-| Negative control | **0** "applies" answers in 2,090 checks where the right answer is "no rule", "failed" or "not law yet" |
+| Citations (organizers' definition) | 91% of "applies" answers quote the supplied corpus text. The other 9% come from city codes the pack lists only as links (Hoboken, Newark, the Jersey City ban, and the Los Angeles source-of-income ordinance, whose code site blocks automated access); they stay, labeled "Fetched by Proofline", because dropping an applicable rule costs more than an unverified citation |
+| Negative control | **0** "applies" answers in 2,010 checks where the right answer is "no rule", "failed" or "not law yet" |
 | Change cases (T1 to T5, the organizers' final set) | T1 250 CA addresses · T2 90 (Jersey City 50, Hoboken 40, Newark 0) · T3 140 NJ, 90 conflict flags · T4 110 MA pending · T5 0 |
 | Audit log | hash chained, every pipeline step recorded |
 
@@ -31,7 +31,7 @@ RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Ha
 - **Proof receipts.** A sealed, hash-fingerprinted record of an answer (rule set version, facts used, date, results). Post it back to `/api/receipt/verify` and the server recomputes the answer and reports whether the file is intact, whether the rules changed, and whether any result changed. A tampered copy is detected.
 - **Rent Pre-Flight** checks a rent increase, deposit, fee or pricing software before it happens, and can draft a neutral note that quotes the law and asks how the charge was calculated. It never advises or demands.
 - **The AI is unplugged at answer time.** Lookups, Pre-Flight, what-if and receipts run from tested code in the browser. The AI only reads new law text.
-- **Measured refusal:** 0 invented rules in 2,090 checks; against the same model with search (2 of 33 invented, 1 bad quote), 0 and 0.
+- **Measured refusal:** 0 invented rules in 2,010 checks; against the same model with search (2 of 33 invented, 1 bad quote), 0 and 0.
 
 ## How it works
 
@@ -113,7 +113,7 @@ npm run new-law -- --file ordinance.pdf --place "Bayonne, NJ" --test J1 --real -
 
 ## Known gaps (measured, not hidden)
 - **San Diego source-of-income ordinance:** the link-only page (D075) returned almost no text. Found by the baseline comparison; fixed by reading the same Division 8 from the City of San Diego's official code PDF, labeled as such.
-- **Six link-only sources blocked automated access** (four Justia mirrors of statutes already in the corpus, the Los Angeles code publisher, and a mass.gov regulation). They were not worked around.
+- **Link-only sources that blocked automated access** (four Justia mirrors of statutes already in the corpus, and a mass.gov regulation) were not worked around. The Los Angeles source-of-income article (manifest D038, blocked at the code publisher) was read from the City Clerk's official council file 18-0462 instead, labeled as such.
 - **Owner facts** (owner-occupied, corporate owner, number of properties) are never in public records, so rules that depend on them are "unknown" unless a user supplies the fact in Pre-Flight.
 
 ## Baseline comparison

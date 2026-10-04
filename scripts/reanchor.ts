@@ -31,7 +31,8 @@ async function main() {
   const out: RuleRecord[] = JSON.parse(readFileSync(path.join(process.cwd(), "out", "rules_all.json"), "utf8")).rules;
   const corpus = loadCorpus().filter((d) => d.kind === "official_corpus");
   const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : {};
-  const result: Record<string, unknown> = {};
+  // Keep earlier anchors: an anchored rule is no longer a target, but its anchor must survive the rewrite.
+  const result: Record<string, unknown> = { ...prev };
   const targets = out.filter((r) => r.x_source_kind !== "official_corpus" && r.x_lifecycle.kind === "enacted");
 
   await mapLimit(targets, 6, async (r) => {

@@ -94,6 +94,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -331,6 +337,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -619,6 +631,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -1119,6 +1137,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -1796,6 +1820,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0023": [
@@ -1875,6 +1905,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -2560,6 +2596,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -2872,6 +2914,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0036": [
@@ -3013,6 +3061,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -3623,6 +3677,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -4712,6 +4772,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -5178,6 +5244,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0067": [
@@ -5269,6 +5341,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -5814,6 +5892,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -6172,6 +6256,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -6255,6 +6345,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -8502,6 +8598,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -8849,6 +8951,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -9404,6 +9512,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -9795,6 +9909,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -10195,6 +10315,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -10642,6 +10768,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -11054,6 +11186,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -11371,6 +11509,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -12212,6 +12356,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -12984,6 +13134,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0163": [
@@ -13576,6 +13732,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0171": [
@@ -13732,6 +13894,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -13827,6 +13995,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -14176,6 +14350,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -14274,6 +14454,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -14357,6 +14543,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -14719,6 +14911,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -15742,6 +15940,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -16083,6 +16287,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -16766,6 +16976,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -16973,6 +17189,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -17213,6 +17435,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -18099,6 +18327,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -19030,6 +19264,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -19321,6 +19561,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -20118,6 +20364,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -20424,6 +20676,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0253": [
@@ -20687,6 +20945,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -21725,6 +21989,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -22920,6 +23190,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -23291,6 +23567,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -24602,6 +24884,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -25088,6 +25376,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -25464,6 +25758,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -25547,6 +25847,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -26310,6 +26616,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -26642,6 +26954,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -26885,6 +27203,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -27688,6 +28012,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -28061,6 +28391,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -28746,6 +29082,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -28891,6 +29233,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -30130,6 +30478,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -30477,6 +30831,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -33048,6 +33408,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0406": [
@@ -33210,6 +33576,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -33305,6 +33677,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -34058,6 +34436,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -34423,6 +34807,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -34886,6 +35276,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0428": [
@@ -35318,6 +35714,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "unknown",
         "explanation": "Coverage depends on year built, which the public records do not include. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -35413,6 +35815,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -35745,6 +36153,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -36164,6 +36578,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0443": [
@@ -36397,6 +36817,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -36836,6 +37262,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0452": [
@@ -36927,6 +37359,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -37087,6 +37525,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -37431,6 +37875,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
@@ -38672,6 +39122,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -39075,6 +39531,12 @@
         "team_rule_id": "LA-EVICT-02",
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       }
     ],
@@ -40122,6 +40584,12 @@
         "result": "applies",
         "explanation": "A landlord who demolishes a Protected Unit for new construction must pay relocation assistance at the higher of state Housing Crisis Act or City amounts, with lower income tenants receiving enhanced standardized payments ($115,480 extremely low, $96,750 very low, $87,450 low income for July 1, 2026 to June 30, 2027), and must provide other occupant protections. Above-low-income tenants receive the RSO/JCO amounts. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Ordinances No. 188481 and No. 188482.",
         "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
       }
     ],
     "A0493": [
@@ -40708,6 +41176,12 @@
         "conflict_flag": false
       },
       {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
+        "conflict_flag": false
+      },
+      {
         "team_rule_id": "LA-DEP-01",
         "result": "applies",
         "explanation": "The RSO covers interest payments on security deposits for RSO units. This page does not state the rate or timing. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
@@ -40803,6 +41277,12 @@
         "team_rule_id": "LA-RENT-01",
         "result": "applies",
         "explanation": "For RSO units, rent may be increased only once every 12 months, by the allowable rent increase percentage set by LAHD. As of February 2, 2026, landlords may no longer add an extra percentage for utilities, and rent can reset to market rate only after certain vacancies or evictions. Covers this Los Angeles, CA building as of 2026-10-01. Source: Los Angeles Municipal Code Chapter XV, Article 1.",
+        "conflict_flag": false
+      },
+      {
+        "team_rule_id": "LA-SCREEN-01",
+        "result": "applies",
+        "explanation": "Anyone offering for rent, renting, or listing housing in Los Angeles may not refuse to rent, renew, or sign voucher contracts, set different terms or deposits, misrepresent availability, or publish ads showing a preference based on a person's lawful source of income, including Section 8 vouchers and other rental assistance. Landlords also may not end a tenancy based on source of income. Covers this Los Angeles, CA building as of 2026-10-01. Source: L.A. Mun. Code §§ 45.65–45.69.",
         "conflict_flag": false
       },
       {
