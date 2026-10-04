@@ -51,17 +51,17 @@
       "scenes": [
         {
           "id": "t1",
-          "say": "I'm Ujwal, Team USV. Proofline isn't a chatbot. AI reads the law once; a deterministic engine answers, so the same address always gets the same answer."
+          "say": "I'm Ujwal, Team USV. Proofline isn't a chatbot: AI reads the law once, then a deterministic engine answers, and missing facts give 'unknown', never 'no'."
         },
         {
           "id": "t2",
-          "say": "Claude Opus 5.5 turns each law into structured rules with a coverage test. Then code checks every quote word for word against the source: no quote, no rule. A second pass tries to disprove each one.",
+          "say": "Claude turns each law into structured rules with a coverage test: Opus 5.5 for the corpus, Sonnet 5.5 for laws added live. Then code checks every quote word for word against the source: no quote, no rule. A second pass tries to disprove each one.",
           "callout": "No quote, no rule",
           "callout_at": "quote"
         },
         {
           "id": "t3",
-          "say": "Missing facts give 'unknown', never 'no'. 32 tests include checks from the organizers' own statements. Verify re-hashes the audit log, re-finds every quote, and reproduces all 500 addresses with zero differences.",
+          "say": "32 tests include checks from the organizers' own statements. Verify re-hashes the audit log, re-finds every quote, and reproduces all 500 addresses with zero differences.",
           "callout": "32 tests passed  ·  verify: all checks PASS",
           "callout_at": "verify"
         },
