@@ -20,7 +20,7 @@
     },
     "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
   },
-  "generated_at": "2026-10-04T03:10:12.810Z",
+  "generated_at": "2026-10-04T03:12:44.952Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,

@@ -120,7 +120,8 @@ const sources = manifest.map((m) => {
 });
 
 // Source texts for the proof panel: only the documents cited by a rule.
-const cited = new Set(rules.map((r) => r.source_doc_id));
+// Cited sources, plus the bill-history snapshots Law Watch compares against.
+const cited = new Set([...rules.map((r) => r.source_doc_id), "D045", "D046", "D047"]);
 const texts = Object.fromEntries(corpus.filter((d) => cited.has(d.doc_id)).map((d) => [d.doc_id, d.text]));
 
 writeFileSync(path.join(GEN, "rules.json"), JSON.stringify(rules));
