@@ -1,6 +1,7 @@
 // Copies pipeline outputs into src/generated for the web app, and computes the metrics shown on the
 // How it works page. Every number on the site comes from here, not from hand-typed copy.
 //   npx tsx scripts/publish.ts
+import { createHash } from "node:crypto";
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { parseAddressesCsv } from "../src/lib/engine/addresses";
@@ -23,7 +24,7 @@ const rules: (RuleRecord & { x_params?: unknown })[] = JSON.parse(readFileSync(p
 const paramsFile = path.join(OUT, "pipeline", "params.json");
 if (existsSync(paramsFile)) {
   const params = JSON.parse(readFileSync(paramsFile, "utf8"));
-  for (const r of rules) r.x_params = params[`${r.jurisdiction}|${r.category}|${r.citation}`]?.params ?? null;
+  for (const r of rules) r.x_params = (params[r.team_rule_id] ?? params[`${r.jurisdiction}|${r.category}|${r.citation}`])?.params ?? null;
 }
 const esFile = path.join(OUT, "pipeline", "plain_es.json");
 if (existsSync(esFile)) {
@@ -99,6 +100,7 @@ const appliesAll = Object.values<any[]>(subLookups).flat().filter((r) => r.resul
 const appliesOfficial = appliesAll.filter((r) => submitted.find((x) => x.team_rule_id === r.team_rule_id)?.x_source_kind === "official_corpus").length;
 
 const metrics = {
+  rules_sha256: createHash("sha256").update(JSON.stringify(rules)).digest("hex"),
   citations: { applies: appliesAll.length, official_pack: appliesOfficial, share: appliesOfficial / appliesAll.length },
   baseline,
   generated_at: new Date().toISOString(),

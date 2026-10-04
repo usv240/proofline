@@ -1,0 +1,36 @@
+import { chromium } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+const base = "http://localhost:3126";
+const b = await chromium.launch({ channel: "chrome" });
+const ctx = await b.newContext({ viewport: { width: 1440, height: 1000 } });
+const p = await ctx.newPage();
+const issues = [];
+p.on("pageerror", (e) => issues.push(`JS ${e.message}`));
+await p.goto(base + "/check?address=A0107", { waitUntil: "networkidle" });
+const before = await p.locator("text=Not sure yet").count();
+await p.getByRole("button", { name: /Around 1977/ }).first().click();
+await p.waitForTimeout(300);
+const after = await p.locator("text=Not sure yet").count();
+console.log("unknown chips before/after what-if:", before, after);
+await p.screenshot({ path: "out/screens/whatif.png" });
+await p.getByRole("button", { name: "Get a receipt" }).click();
+await p.getByRole("button", { name: "Verify it now" }).click();
+await p.waitForSelector("text=Verified", { timeout: 15000 });
+console.log("verify:", (await p.locator("[role=status]").last().textContent()).slice(0, 80));
+await p.getByRole("button", { name: "Try a tampered copy" }).click();
+await p.waitForSelector("text=altered", { timeout: 15000 });
+console.log("tamper:", (await p.locator("[role=status]").last().textContent()).slice(0, 80));
+await p.screenshot({ path: "out/screens/receipt.png" });
+await p.goto(base + "/preflight?address=A0016", { waitUntil: "networkidle" });
+await p.getByRole("button", { name: "Check this change" }).click();
+await p.getByRole("button", { name: "Draft a note to send" }).click();
+const note = await p.locator("textarea[readonly]").inputValue();
+console.log("note:", note.split("\n").slice(0, 6).join(" | ").slice(0, 300));
+await p.screenshot({ path: "out/screens/note.png" });
+for (const path of ["/check?address=A0107", "/preflight?address=A0016"]) {
+  await p.goto(base + path, { waitUntil: "networkidle" });
+  const r = await new AxeBuilder({ page: p }).withTags(["wcag2a", "wcag2aa", "wcag22aa"]).analyze();
+  for (const v of r.violations.filter((v) => ["serious", "critical"].includes(v.impact))) issues.push(`axe ${path}: ${v.id} ${v.nodes[0]?.target}`);
+}
+await b.close();
+console.log(issues.length ? issues.join("\n") : "no issues");

@@ -52,7 +52,7 @@ async function main() {
   const targets = rules.filter((r) => ["rent_increase_limits", "security_deposits", "application_screening_fees", "algorithmic_rent_setting"].includes(r.category));
 
   await mapLimit(targets, 8, async (r) => {
-    const key = `${r.jurisdiction}|${r.category}|${r.citation}`;
+    const key = r.team_rule_id;
     const doc = corpus.find((d) => d.doc_id === r.source_doc_id);
     if (!doc) return;
     const hash = createHash("sha256").update(JSON.stringify([r.requirement, r.key_value, r.quoted_span, r.x_details, doc.sha256, SYSTEM, MODEL])).digest("hex").slice(0, 16);

@@ -20,6 +20,26 @@ const FROM_CATEGORY: Record<string, Kind> = {
 
 const VERDICT_KIND: Record<string, VerdictKind> = { allowed: "allowed", not_allowed: "blocked", needs_person: "person", info: "none", no_rules: "none" };
 
+/** A neutral note that quotes the law and asks a question. It never gives advice or instructions. */
+function draftNote(r: PreflightResult, a: AddressFacts, kind: Kind): string {
+  const where = `${a.street_address}, ${a.city}, ${a.state}`;
+  const what = { rent_increase: "the rent increase", security_deposit: "the security deposit", application_fee: "the application fee", pricing_tool: "the rent-setting software" }[kind];
+  const blocked = r.lines.filter((l) => l.verdict === "not_allowed");
+  const open = r.lines.filter((l) => l.verdict === "needs_person");
+  const parts = ["Hello,", "", `I am writing about ${what} for ${where}, effective ${r.as_of}.`];
+  if (blocked.length) {
+    parts.push("", "From the public law text I have read, the following seems to apply here:");
+    for (const l of blocked) parts.push(`- ${l.citation}: "${l.quote.length > 300 ? l.quote.slice(0, 300) + "..." : l.quote}"${l.asked && l.limit ? ` (requested: ${l.asked}; limit stated: ${l.limit})` : ""}`);
+    parts.push("", `Could you let me know how ${what} was calculated, and point me to the rule it relies on?`);
+  }
+  if (open.length) {
+    parts.push("", "To understand which rules apply, could you confirm:");
+    for (const l of open) if (l.deciding) parts.push(`- ${l.deciding.question}`);
+  }
+  parts.push("", "Thank you.", "", "(Prepared with Proofline from public law text. Not legal advice.)");
+  return parts.join("\n");
+}
+
 export function PreflightForm({ address, rules, initialKind }: { address: AddressFacts; rules: RuleWithParams[]; initialKind?: string }) {
   const [kind, setKind] = useState<Kind>(FROM_CATEGORY[initialKind ?? ""] ?? "rent_increase");
   const [asOf, setAsOf] = useState("2026-10-01");
@@ -33,6 +53,7 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
   const [yearBuilt, setYearBuilt] = useState("");
   const [ownerLives, setOwnerLives] = useState("");
   const [result, setResult] = useState<PreflightResult | null>(null);
+  const [note, setNote] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
   const facts = useMemo<AddressFacts>(() => {
@@ -57,6 +78,7 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
       if (!(+fee >= 0)) return setErr("Please enter the fee as a number.");
       a = { kind, fee: +fee };
     } else a = { kind, uses_nonpublic_competitor_data: tool };
+    setNote(null);
     setResult(preflight(rules, facts, asOf, a));
   }
 
@@ -170,6 +192,22 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
               className="h-11 rounded-lg border border-border px-4 hover:bg-surface">
               Copy summary with sources
             </button>
+            {(result.verdict === "not_allowed" || result.verdict === "needs_person") && (
+              <button type="button" onClick={() => setNote(draftNote(result, address, kind))} className="ml-2 h-11 rounded-lg border border-border px-4 hover:bg-surface">
+                Draft a note to send
+              </button>
+            )}
+            {note && (
+              <div className="rounded-xl border border-border p-4">
+                <p className="flex items-center font-semibold">A note you can send <InfoButton k="note" /></p>
+                <textarea readOnly value={note} rows={10} className="mt-2 w-full rounded-lg border border-border bg-bg p-3 text-[15px]" />
+                <div className="mt-2 flex gap-2">
+                  <button type="button" onClick={() => navigator.clipboard?.writeText(note)} className="h-11 rounded-lg bg-brand px-4 font-medium text-brand-ink">Copy note</button>
+                  <button type="button" onClick={() => setNote(null)} className="h-11 rounded-lg border border-border px-4">Close</button>
+                </div>
+                <p className="mt-2 text-[13px] text-muted">The note asks a question and quotes the law. It does not give legal advice or tell anyone what to do.</p>
+              </div>
+            )}
           </div>
         )}
       </section>

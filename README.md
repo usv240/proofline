@@ -26,6 +26,13 @@ RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Ha
 | Change cases (T1 to T5, the organizers' final set) | T1 250 CA addresses · T2 90 (Jersey City 50, Hoboken 40, Newark 0) · T3 140 NJ, 90 conflict flags · T4 110 MA pending · T5 0 |
 | Audit log | hash chained, every pipeline step recorded |
 
+## What no other entry is likely to have
+- **Answer what you know, and the page recomputes.** For every fact the public record is missing, the engine works out which answers are worth asking about and what each would change ("around 1977: 4 rules would protect you; around 1979: 4 would not apply"). Tap one and every verdict on the page updates. Answers are used for the visit only.
+- **Proof receipts.** A sealed, hash-fingerprinted record of an answer (rule set version, facts used, date, results). Post it back to `/api/receipt/verify` and the server recomputes the answer and reports whether the file is intact, whether the rules changed, and whether any result changed. A tampered copy is detected.
+- **Rent Pre-Flight** checks a rent increase, deposit, fee or pricing software before it happens, and can draft a neutral note that quotes the law and asks how the charge was calculated. It never advises or demands.
+- **The AI is unplugged at answer time.** Lookups, Pre-Flight, what-if and receipts run from tested code in the browser. The AI only reads new law text.
+- **Measured refusal:** 0 invented rules in 2,090 checks; against the same model with search (2 of 33 invented, 1 bad quote), 0 and 0.
+
 ## How it works
 
 ```

@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { decidingFactForAddress, lookupAddress } from "@/lib/engine/lookup";
+import { applyPatch, whatIf, type Option } from "@/lib/engine/whatif";
 import type { AddressFacts, NoRuleFinding, RuleRecord } from "@/lib/engine/types";
 import { InfoButton } from "./InfoButton";
+import { ReceiptButton } from "./ReceiptButton";
 import { RuleCard } from "./RuleCard";
 import { CATEGORY_LABEL, CATEGORY_LABEL_ES, CATEGORY_ORDER, VerdictChip, type VerdictKind } from "./Verdict";
 
@@ -22,11 +24,15 @@ export function unitsText(a: AddressFacts) {
   return `${n} (from ${src})`;
 }
 
-export function AddressResult({ address, rules, noRule, initialAsOf }: { address: AddressFacts; rules: RuleRecord[]; noRule: NoRuleFinding[]; initialAsOf: string }) {
+export function AddressResult({ address: base, rules, noRule, initialAsOf, rulesSha }: { address: AddressFacts; rules: RuleRecord[]; noRule: NoRuleFinding[]; initialAsOf: string; rulesSha: string }) {
+  // Facts the renter adds on this page. Applied to this visit only, never saved.
+  const [answers, setAnswers] = useState<{ fact: string; label: string; patch: Option["patch"] }[]>([]);
+  const address = useMemo(() => answers.reduce((f, a) => applyPatch(f, a.patch), base), [base, answers]);
   const [asOf, setAsOf] = useState(initialAsOf);
   const [lang, setLang] = useState<"en" | "es">("en");
   const results = useMemo(() => lookupAddress(rules, address, asOf), [rules, address, asOf]);
   const deciding = useMemo(() => decidingFactForAddress(rules, address, asOf, results), [rules, address, asOf, results]);
+  const options = useMemo(() => whatIf(rules, address, asOf), [rules, address, asOf]);
   const byId = useMemo(() => new Map(rules.map((r) => [r.team_rule_id, r])), [rules]);
   const counts = results.reduce<Record<string, number>>((m, r) => ((m[r.result] = (m[r.result] ?? 0) + 1), m), {});
   const unknownCount = counts.unknown ?? 0;
@@ -88,16 +94,47 @@ export function AddressResult({ address, rules, noRule, initialAsOf }: { address
             <li key={k} className="flex items-center gap-1"><VerdictChip kind={k} lang={lang} /><span className="tabular text-[15px]">x {counts[k]}</span></li>
           ))}
         </ul>
-        {deciding && unknownCount > 0 && (
-          <div className="mt-4 rounded-xl p-4" style={{ background: "var(--unk-bg)", color: "var(--unk-fg)" }}>
-            <p className="flex items-center font-semibold">One fact would settle most &ldquo;Not sure yet&rdquo; answers here <InfoButton k="settle" /></p>
-            <p className="mt-1 text-text">{deciding.question}</p>
-            <p className="mt-1 text-[15px] text-text">How to find out: {deciding.how_to_find}</p>
-            <p className="mt-2 text-[15px] text-text">
-              Know it already? <Link className="underline underline-offset-2" href={`/preflight?address=${address.address_id}`}>Add it in Pre-Flight</Link> to get a clear answer.
+        {(options.length > 0 || answers.length > 0) && (
+          <div className="mt-4 rounded-xl p-4" style={{ background: "var(--unk-bg)" }}>
+            <p className="flex items-center font-semibold" style={{ color: "var(--unk-fg)" }}>
+              {lang === "es" ? "Responda lo que sepa y la pagina se recalcula" : "Answer what you know and the page recomputes"} <InfoButton k="settle" />
             </p>
+            {deciding && unknownCount > 0 && <p className="mt-1 text-[15px]">{lang === "es" ? "Como averiguarlo" : "How to find out"}: {deciding.how_to_find}</p>}
+            {answers.length > 0 && (
+              <ul className="mt-2 flex flex-wrap gap-2">
+                {answers.map((a) => (
+                  <li key={a.fact}>
+                    <button type="button" onClick={() => setAnswers(answers.filter((x) => x.fact !== a.fact))} className="rounded-full border border-border bg-bg px-3 py-1 text-[14px]">
+                      {a.label} <span aria-hidden>x</span><span className="sr-only">remove</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {options.map((w) => (
+              <div key={w.fact} className="mt-3">
+                <p className="font-medium">{w.question}</p>
+                <div className="mt-1 flex flex-wrap gap-2">
+                  {w.options.map((o) => {
+                    const gains = o.changes.filter((c) => c.after === "applies").length;
+                    const drops = o.changes.filter((c) => c.before === "applies" || (c.before === "unknown" && c.after === "none")).length;
+                    return (
+                      <button key={o.label} type="button" onClick={() => setAnswers([...answers.filter((x) => x.fact !== w.fact), { fact: w.fact, label: o.label, patch: o.patch }])}
+                        className="rounded-lg border border-border bg-bg px-3 py-2 text-left text-[15px] hover:border-brand">
+                        <span className="block font-medium">{o.label}</span>
+                        <span className="block text-[13px] text-muted">
+                          {gains ? `${gains} rule${gains === 1 ? "" : "s"} would protect you` : ""}{gains && drops ? ", " : ""}{drops ? `${drops} would not apply` : ""}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+            <p className="mt-3 text-[13px] text-muted">{lang === "es" ? "Sus respuestas se usan solo en esta visita y no se guardan." : "Your answers are used for this visit only and are never saved."}</p>
           </div>
         )}
+        <div className="mt-4"><ReceiptButton facts={address} asOf={asOf} results={results} rulesSha={rulesSha} /></div>
         <div className="mt-4 flex flex-wrap gap-2 no-print">
           <Link href={`/preflight?address=${address.address_id}`} className="inline-flex h-11 items-center rounded-lg bg-brand px-4 font-medium text-brand-ink">Check a rent change</Link>
           <Link href={`/card/${address.address_id}`} className="inline-flex h-11 items-center rounded-lg border border-border px-4 hover:bg-surface">Get a Rights Card</Link>

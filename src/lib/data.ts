@@ -42,6 +42,7 @@ export interface SourceEntry {
 }
 
 export interface Metrics {
+  rules_sha256: string;
   citations: { applies: number; official_pack: number; share: number };
   baseline: {
     model: string;

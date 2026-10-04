@@ -107,7 +107,9 @@ export function assemble() {
 
   const rank = (c: Cand) =>
     (c.d.kind === "official_corpus" ? 2 : 0) + (c.r.challenge?.verdict === "support" ? 1 : 0) + (c.r.confidence ?? 0) +
-    (c.r.span?.match === "exact" ? 0.1 : 0);
+    (c.r.span?.match === "exact" ? 0.1 : 0) +
+    // A record that states the headline number is the better face of the rule.
+    (c.r.key_value ? 1.5 : 0);
 
   // Records of the same enacted law in the same place and topic are one rule even if the cluster step
   // kept them apart (for example a yearly rate notice and the page that states who is covered, both
@@ -127,13 +129,18 @@ export function assemble() {
   const merged: Omit<RuleRecord, "team_rule_id">[] = [];
   for (const cands of bySection.values()) {
     // Prefer a source that states who is covered; a rate announcement often has no coverage test.
-    const hasCov = (c: Cand) => (c.r.coverage.all.length + c.r.coverage.exempt_if_any.length > 0 ? 1 : 0);
-    cands.sort((a, b) => hasCov(b) - hasCov(a) || rank(b) - rank(a));
+    // The best-supported source gives the headline (requirement, key number). The coverage test comes
+    // from whichever source states who is covered, which is often a different page.
+    const hasCov = (c: Cand) => c.r.coverage.all.length + c.r.coverage.exempt_if_any.length > 0;
+    cands.sort((a, b) => rank(b) - rank(a));
     const { r, d } = cands[0];
+    const covSrc = hasCov(cands[0]) ? cands[0] : cands.find(hasCov) ?? cands[0];
+    const keySrc = cands.find((c) => c.r.key_value) ?? cands[0];
     // Proof anchor: the quote shown as the rule's proof comes from the official pack whenever any source
     // in the group is from it. Coverage and dates still come from the best source above.
     const anchor = d.kind === "official_corpus" ? cands[0] : cands.find((c) => c.d.kind === "official_corpus") ?? cands[0];
     const details = new Map<string, { text: string; quoted_span: string }>();
+    if (covSrc !== cands[0]) details.set(`cov:${covSrc.d.doc_id}`, { text: `Coverage from ${covSrc.d.doc_id}: ${covSrc.r.coverage_conditions ?? covSrc.r.requirement}`, quoted_span: covSrc.r.quoted_span });
     if (anchor !== cands[0]) details.set(r.quoted_span, { text: `Also stated in ${d.doc_id} (fetched by Proofline): ${r.requirement}`, quoted_span: r.quoted_span });
     for (const c of cands) for (const x of c.r.details ?? []) details.set(x.quoted_span, x);
     // Status evidence: a source showing enactment (or failure) outranks an earlier draft marked pending.
@@ -176,9 +183,9 @@ export function assemble() {
       status: "in_force",
       title: r.title,
       requirement: r.requirement,
-      key_value: r.key_value ?? null,
-      coverage_conditions: r.coverage_conditions ?? null,
-      exemptions: r.exemptions ?? null,
+      key_value: keySrc.r.key_value ?? null,
+      coverage_conditions: covSrc.r.coverage_conditions ?? r.coverage_conditions ?? null,
+      exemptions: covSrc.r.exemptions ?? r.exemptions ?? null,
       overrides: [],
       interaction: r.yields_to_local
         ? "Yields to a stricter local rule on the same topic where that rule covers the unit."
@@ -195,7 +202,7 @@ export function assemble() {
       conflict_flag: !!dateConflict,
       conflict_note: dateConflict,
       x_lifecycle: lifecycle,
-      x_coverage: { all: r.coverage.all, exempt_if_any: r.coverage.exempt_if_any.map((g: any) => g.conds) },
+      x_coverage: { all: covSrc.r.coverage.all, exempt_if_any: covSrc.r.coverage.exempt_if_any.map((g: any) => g.conds) },
       x_yields_to_local: !!r.yields_to_local,
       // A state law that defers to local rules does not conflict with them; deference wins.
       x_may_conflict_with_local: !!r.may_conflict_with_local && !r.yields_to_local,

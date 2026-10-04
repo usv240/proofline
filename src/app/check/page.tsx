@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AddressResult } from "@/components/AddressResult";
 import { AddressSearch } from "@/components/AddressSearch";
 import { SampleChips } from "@/components/SampleChips";
-import { addressBundle, addressIndex, NO_RULE, RULES } from "@/lib/data";
+import { addressBundle, addressIndex, METRICS, NO_RULE, RULES } from "@/lib/data";
 import { rulesForAddress } from "@/lib/engine/lookup";
 import type { AddressFacts } from "@/lib/engine/types";
 
@@ -39,7 +39,7 @@ export default async function CheckPage(props: PageProps<"/check">) {
             This page shows which rules cover this building on the date you pick. Tap any <strong>i</strong> to learn more.
             Tap <strong>Show proof</strong> to read the law&apos;s own words.
           </div>
-          <AddressResult address={bundle.address} rules={bundle.rules} noRule={bundle.noRule} initialAsOf={asOf} />
+          <AddressResult address={bundle.address} rules={bundle.rules} noRule={bundle.noRule} initialAsOf={asOf} rulesSha={METRICS.rules_sha256} />
         </>
       ) : (
         <div className="space-y-4">
