@@ -1,0 +1,317 @@
+SOURCE: https://gocodebook.com/library/us/ca/san-diego-zoning/division-11-prohibition-of-anti-competitive-automated-rent-price-fixing/98.1103-use-and-sale-of-algorithmic-devices-prohibited
+RETRIEVED: 2026-10-03 (fetched by Proofline; link-only in official manifest)
+SHA256: 100f3fdd5e6425e21dab120cdc936fc3c46d15cc3bc3c96a8b911778acd8bce8
+NOTE: excerpt of Chapter 9 Article 8 Division 11 (sections 98.1101 to 98.1104) from the full code page.
+
+e and contact information of the owner;
+
+(3) a statement of the owner’s intention to accept an offer to purchase
+from a third-party;
+
+(4) the terms and conditions of the pending third-party offer to purchase
+the assisted housing development; and
+
+(5) a statement that the qualified entity has seven days to submit a
+counteroffer to purchase the assisted housing development on
+substantially the same terms and conditions as the pending third-party
+offer.
+
+(c) The owner shall accept a qualified entity’s counteroffer made under section
+98.1007 and shall execute a purchase agreement for the assisted housing
+development within 30 days of offer acceptance. If multiple qualified entities
+submit counteroffers that meet the requirements of section 98.1007, the owner
+may accept any such offer.
+
+(d) Once a purchase agreement is executed, the owner and qualified entity have
+120 days to close escrow, unless a different timeline is mutually agreed to by
+the parties. Prior to the close of escrow, the qualified entity shall:
+
+ Ch. Art. Div.
+ 9 8 10 6
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(3-2025)
+
+(1) Obligate itself and any successors in interest to maintain the existing
+affordability of the assisted housing development for very low-, low-,
+or moderate-income households on substantially the same terms and
+conditions; and
+
+(2) Commit to renew governmental assistance or subsidies, if available
+and economically feasible, to maintain the affordability of the assisted
+housing development for its remaining useful life; and
+
+(3) Agree to record a deed restriction that documents the maximum rents
+ that may be charged for dwelling units within the assisted housing
+ development and other use restrictions that shall be binding on the
+ qualified entity and its successors in interest and assigns; and
+
+(4) If the qualified entity is a local nonprofit organization or local public
+agency, ensure no officers or directors will have a financial interest in
+the assisted housing development to be purchased.
+(“Qualified Entity Right of First Refusal” added 2-27-2025 by O–21917 N.S.;
+effective 3-29-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1008 Enforcement¶
+
+Any qualified entity entitled to notice and an opportunity to purchase an assisted
+ housing development under this Division may bring an action for injunctive relief,
+ damages, or any other remedy. In any judicial action brought to enforce this Division,
+ the court may award reasonable attorney’s fees and costs to a qualified entity.
+ (“Enforcement” added 2-27-2025 by O–21917 N.S.; effective 3-29-2025.)
+
+Ch. Art. Div.
+9 8 10 7
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(6-2025)
+
+Article 8: Housing
+
+Division 11: Prohibition of Anti-Competitive Automated Rent Price-Fixing
+ (“Prohibition of Anti-Competitive Automated Rent Price-Fixing”
+ added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1101 Purpose and Intent¶
+
+The purpose and intent of this Division is to protect San Diegans from artificially
+ inflated rental rates and unfair rent increases by prohibiting the sale, licensing, and
+ use of algorithmic devices. This Division also provides tenants with remedies for
+ violations of this Division.
+ (“Purpose and Intent” added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1102 Definitions¶
+
+For purposes of this Division, defined terms appear in italics. The following
+ definitions apply in this Division:
+
+Algorithmic device means a software or product that uses or incorporates one or more
+algorithms to perform calculations of nonpublic competitor data of two or more
+landlords to advise a landlord on, or recommend to a landlord, rental rates or
+occupancy levels that may be achieved for a residential rental property in the City of
+San Diego. Algorithmic device does not include the following:
+
+(a) A software or product used by a person to publish reports regarding rental
+rates or occupancy levels from aggregated historical nonpublic competitor
+data that is more than 90 days old, or from information available to the
+general public, and does not recommend rental rates or occupancy levels for
+future residential rental property leases or renewals.
+
+(b) A software or product used by a person to establish rental rates or income
+limits in accordance with local, state, or federal affordable housing program
+guidelines.
+
+(c) A software or product used by a person conducting an appraisal that does not
+recommend rental rates during the runtime operation of the software or
+product.
+
+Landlord has the same meaning as in San Diego Municipal Code section 98.0702, as
+may be amended.
+
+Ch. Art. Div.
+9 8 11 1
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(6-2025)
+
+ Lease has the same meaning as in San Diego Municipal Code section 98.0702, as
+may be amended.
+
+ Nonpublic competitor data means information that is not available to the general
+ public, whether the information is attributable to a specific competitor or anonymized
+ or whether the information is derived from or otherwise provided by another person.
+ Nonpublic competitor data includes information about actual rental rates, rental rate
+ changes, residential rental property supply levels, occupancy levels, or lease start
+ and end dates.
+
+ Person has the same meaning as in San Diego Municipal Code section 11.0210, as
+may be amended.
+
+Residential rental property has the same meaning as in San Diego Municipal Code
+section 98.0702, as may be amended.
+
+ Tenant has the same meaning as in San Diego Municipal Code section 98.0702, as
+may be amended.
+ (“Definitions” added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1103 Use and Sale of Algorithmic Devices Prohibited¶
+
+(a) It is unlawful for a person to sell, license, or otherwise provide an algorithmic
+ device to a landlord.
+
+(b) It is unlawful for a landlord to use an algorithmic device to set rental rates or
+occupancy levels for residential rental property.
+
+For each month a violation of section 98.1103(b) exists or continues, and for
+each residential rental property a landlord uses an algorithmic device, it shall
+constitute a separate and distinct violation.
+(“Use and Sale of Algorithmic Devices Prohibited” added 5-22-2025 by
+O-21955 N.S.; effective 6-21-2025.)
+
+ Ch. Art. Div.
+ 9 8 1 2
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(6-2025)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1104 Remedies¶
+
+(a) A tenant may seek injunctive relief, damages, or civil penalties of up to
+ $1,000 per violation of this Division, in a civil action against a landlord. In an
+ action brought under this Division, a prevailing landlord or tenant shall
+ recover costs and reasonable attorney’s fees. A prevailing tenant includes a
+ tenant granted an order for injunctive relief. A lease provision that limits a
+ landlord or tenant from recovering attorney’s fees shall not be enforceable
+ against a landlord’s or tenant’s claim for attorney’s fees that arise under this
+ Division.
+
+(b) The remedies under section 98.1104 are cumulative and are in addition to any
+other remedies in this Division or at law, statute, or ordinance.
+
+(c) The City may enforce this Division under Chapter 1, Article 2 of this Code,
+including civil and criminal remedies.
+(“Remedies” added 5-22-2025 by O-21955 N.S.; effective 6-21-2025.)
+
+Ch. Art. Div.
+9 8 11 3
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(8-2025)
+
+Article 8: Housing
+
+Division 12: Residential Tenant Utility Fees
+
+(“Residential Tenant Utility Fees” added 7-18-2025 by O–21987 N.S.; effective 8-17-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1201 Purpose and Intent¶
+
+The purpose and intent of this Division is to promote fairness, equity, and
+ transparency regarding how landlords charge utility fees to residential tenants. This
+ Division protects tenant rights by limiting how much landlords can charge tenants for
+ utility fees the landlord pays for utility services. This Division provides transparency
+ by requiring landlords, upon a tenant’s written request, to provide copies of utility
+ bills or tax roll billing reports that show actual utility fees the landlord paid for utility
+ services, and calculations for the amount charged to the tenant. The rights conferred
+ by this Division are in addition to any existing rights provided to tenants by state or
+ federal law.
+ (“Purpose and Intent” added 7-18-2025 by O–21987 N.S.; effective 8-17-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1202 Definitions¶
+
+All defined terms in this Division appear in italics. For the purposes of this Division,
+ the following definitions apply:
+
+City has the same meaning as in San Diego Municipal Code section 11.0210, as may
+be amended.
+
+Landlord has the same meaning as in San Diego Municipal Code section 98.0702, as
+may be amended.
+
+Lease has the same meaning as in San Diego Municipal Code section 98.0702, as
+may be amended.
+
+Identified parcel means a parcel of real property that the City has identified as having
+a special benefit conferred upon it and upon which a property-related fee has been
+imposed.
+
+Sensitive personal information includes confidential financial data, bank account
+numbers, credit card or debit card numbers, account log-in information, intellectual
+property, and identification numbers such as social security number, passport
+number, driver’s license number, and individual or business taxpayer identification
+numbers.
+
+Residential rental property has the same meaning as in San Diego Municipal Code
+section 98.0702, as may be amended.
+
+Ch. Art. Div.
+9 8 12 1
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(8-2025)
+
+ Tax roll billing report means a report published pursuant to California Health and
+ Safety Code section 5473 that contains a description of identified parcels of real
+ property receiving services billed on the tax roll and the amount of the charge for
+ each identified parcel for the year.
+
+ Tenant has the same meaning as in San Diego Municipal Code section 98.0702, as
+may be amended.
+
+Utility fee means the amount the City charges for utility services.
+
+Utility services means City-provided water, sewer, stormwater, or solid waste
+
+ management services.
+
+(“Definitions” added 7-18-2025 by O–21987 N.S.; effective 8-17-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1203 Tenant Utility Fees¶
+
+(a) A landlord may charge a tenant the cost of a utility fee the landlord pays for
+ utility services the tenant consumes. The utility fee the landlord charges the
+ tenant shall be no greater than the amount the landlord pays for the tenant’s
+ utility services. Nothing in this Ordinance shall be interpreted to prohibit the
+ landlord from charging the tenant an otherwise lawful late fee for unpaid
+ utility fees.
+
+(b) Notwithstanding any other provision of this Division, a landlord that utilizes
+submeters pursuant to Chapter 2.5 of Title 5 of Part 4 of Division 3 of the
+California Civil Code is not subject to this Division with respect to utility fees
+for utility services covered under that Chapter. Nothing in this section should
+be interpreted to exempt landlords from any other provision of the Division,
+including charges for any other utility services regulated by this Division.
+(“Tenant Utility Fees” added 7-18-2025 by O–21987 N.S.; effective 8-17-2025.)
+
+Related rules in San Diego →Exceptions & meaning →
+
+§98.1204 Written Notice¶
+
+(a) To charge utility fees to a tenant as authorized by section 98.1203, the
+ landlord shall either:
+
+(1) Provide the tenant written notice in the lease that the tenant will be
+charged a utility fee for utility services the tenant consumes; or
+
+ Ch. Art. Div.
+ 9 8 12 2
+
+San Diego Municipal Code Chapter 9: Building, Housing and Sign Regulations
+(8-2025)
+
+(2) Provide written notice, by delivering a copy to the tenant personally or
+by serving a copy by mail under the procedures prescribed in
+section 1162(a) of the Code of Civil Procedure, to all tenants residing
+at the residential rental property that will be charged a utility fee for
+utility services the tenant consumes. Landlords providing written
+notice under subsection 98.1204(a)(2) shall do so at least 30 calendar
+days in advance of charging the tenant a utility fee.
+
+(b) If a landlord began charging tenants for utility fees prior to the effective date
+of this Division, written notice required under section 98.1204(c) shall be
+provided no later than 90 calendar days after this Division is in effect.
+
+(c) All written notices provided under section 98.1204 shall inform tenants of the
+landlord’s obligations under sections 98.1204 and 98.1205. The notice shall
+include the following language:
+
+Equitable Fees and Right to Notice: The City of San Diego allows landlords
+to charge you a utility fee for water, sewer, stormwater, and trash and
+recycling services if (i) the utility fee is not greater than the amount the
+landlord pays for your utility services, (ii) you are provided written notice

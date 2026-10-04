@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-10-04T01:34:47.255Z",
+  "as_of": "2026-10-01",
+  "documents": {
+    "manifest": 87,
+    "with_text": 81,
+    "official": 54,
+    "fetched": 27
+  },
+  "extraction": {
+    "candidates": 114,
+    "rejected": 1,
+    "rules": 80,
+    "quotes_verified": 80,
+    "quote_rate": 1
+  },
+  "addresses": {
+    "total": 500,
+    "geocoded": 477,
+    "fallback": 23
+  },
+  "results": {
+    "applies": 5194,
+    "unknown": 1549,
+    "pending": 350,
+    "not_yet_effective": 140
+  },
+  "unknown_by_city": {
+    "Los Angeles, CA": {
+      "unknown": 168,
+      "total": 1142
+    },
+    "Hoboken, NJ": {
+      "unknown": 90,
+      "total": 675
+    },
+    "Newark, NJ": {
+      "unknown": 687,
+      "total": 786
+    },
+    "Berkeley, CA": {
+      "unknown": 160,
+      "total": 800
+    },
+    "Boston, MA": {
+      "unknown": 34,
+      "total": 780
+    },
+    "Jersey City, NJ": {
+      "unknown": 22,
+      "total": 622
+    },
+    "Cambridge, MA": {
+      "unknown": 0,
+      "total": 600
+    },
+    "San Francisco, CA": {
+      "unknown": 238,
+      "total": 1278
+    },
+    "San Diego, CA": {
+      "unknown": 150,
+      "total": 550
+    }
+  },
+  "negative_control": {
+    "checks": 2140,
+    "invented_applies": 0,
+    "no_rule_cells": 34
+  },
+  "audit": {
+    "ok": true,
+    "entries": 112,
+    "brokenAt": null
+  },
+  "change_tests": {
+    "T1": {
+      "affected": 250,
+      "conflicts": 0
+    },
+    "T2": {
+      "affected": 90,
+      "conflicts": 90
+    },
+    "T3": {
+      "affected": 140,
+      "conflicts": 90
+    },
+    "T4": {
+      "affected": 110,
+      "conflicts": 0
+    },
+    "T5": {
+      "affected": 0,
+      "conflicts": 0
+    }
+  }
+}
