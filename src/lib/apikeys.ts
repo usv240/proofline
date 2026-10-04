@@ -57,7 +57,7 @@ export function isSameOrigin(req: Request): boolean {
 const windows = new Map<string, { n: number; reset: number }>();
 export const LIMITS = {
   anonymous: { lookup_per_minute: 30 },
-  free: { lookup_per_minute: 120, byo_reads_per_day: 10 },
+  free: { lookup_per_minute: 120, byo_reads_per_day: 50 },
 };
 export function takeToken(subject: string, limit: number, windowMs: number): { ok: boolean; remaining: number; reset: number } {
   const now = Date.now();

@@ -69,7 +69,7 @@ corpus ──► READ (Claude) ──► CHECK QUOTES (code) ──► SECOND CH
 - **API:** `GET /api/lookup`, `POST /api/preflight`, `GET /api/audit/verify`. **MCP server:** `npm run mcp` (tools `lookup_address`, `preflight_check`, `list_changes`).
 
 ## API keys and developers
-`/developers` issues keys with no account: a key is a signed token (HMAC, `PROOFLINE_KEY_SECRET`), so nothing is stored and nothing can leak. Read endpoints work without a key at 30 calls per minute; a key gives 120 per minute and 10 law reads per day. Reading new laws (`POST /api/byo/ordinance`) needs a key because it spends model credits; the site itself is allowed same-origin. Limits are counted in memory per instance (stated on the page). OpenAPI 3.1 description at `/api/openapi.json`.
+`/developers` issues keys with no account: a key is a signed token (HMAC, `PROOFLINE_KEY_SECRET`), so nothing is stored and nothing can leak. Read endpoints work without a key at 30 calls per minute; a key gives 120 per minute and 50 law reads per day; the website itself allows 50 law reads per hour per visitor. Reading new laws (`POST /api/byo/ordinance`) needs a key because it spends model credits; the site itself is allowed same-origin. Limits are counted in memory per instance (stated on the page). OpenAPI 3.1 description at `/api/openapi.json`.
 
 ## Run it
 
