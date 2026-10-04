@@ -43,7 +43,10 @@ export default function Home() {
       <section className="hero-bg border-b border-border">
         <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-14 pt-14 lg:grid-cols-[1.15fr_1fr] lg:pb-20 lg:pt-20">
           <div>
-            <p className="eyebrow">Housing law, at the level of one address</p>
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="eyebrow">Housing law, at the level of one address</p>
+              <Link href="/judges" className="rounded-full border border-border-2 bg-surface px-3 py-1 text-[13px] font-semibold text-brand hover:bg-surface-2">Judging? Start here: 3 minutes &rarr;</Link>
+            </div>
             <h1 className="mt-3 text-[40px] font-bold leading-[1.05] sm:text-[56px]">
               Which housing laws <span className="gradient-text">protect this home?</span>
             </h1>
