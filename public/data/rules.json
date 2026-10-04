@@ -4879,9 +4879,9 @@
       "effective_date": "1979-02-22",
       "citation": "N.J.S.A. 46:8-26",
       "x_citation_full": "N.J.S.A. 46:8-26",
-      "source_doc_id": "D064",
-      "source_url": "https://law.justia.com/codes/new-jersey/title-46/section-46-8-26/",
-      "quoted_span": "The provisions of this act shall apply to all rental premises or units used for dwelling purposes except owner-occupied premises with not more than two rental units where the tenant has failed to provide 30 days written notice to the landlord invoking the provisions of this act.",
+      "source_doc_id": "D067",
+      "source_url": "https://www.nj.gov/dca/codes/publications/pdf_lti/t_i_r.pdf",
+      "quoted_span": "The Security Deposit Law applies to most  residential rental properties, including mobile \nhomes. The exception is an owner-occupied two-, or three-family dwelling. A tenant in an owner-\noccupied two-, or three-family dwelling may, however, make this provision applicable to their \ntenancy 30 days  after sending a  written  request  to the landlord  that  the landlord  fulfill  the \nrequirements of the Security Deposit Law.",
       "confidence": 0.7,
       "conflict_flag": false,
       "conflict_note": null,
@@ -4914,14 +4914,18 @@
         {
           "text": "The history note gives the original law as L.1967, c. 265, effective January 1, 1968, last amended by L.1979, c. 28, effective February 22, 1979. In a small owner-occupied building, the tenant can bring the unit under the act by giving 30 days' written notice to the landlord.",
           "quoted_span": "L.1967, c. 265, s. 8, eff. Jan. 1, 1968. Amended by L.1968, c. 46, s. 1, eff. May 22, 1968; L.1971, c. 223, s. 7, eff. June 21, 1971; L.1979, c. 28, s. 3, eff. Feb. 22, 1979."
+        },
+        {
+          "text": "Also stated in D064 (fetched by Proofline, link-only in the official pack).",
+          "quoted_span": "The provisions of this act shall apply to all rental premises or units used for dwelling purposes except owner-occupied premises with not more than two rental units where the tenant has failed to provide 30 days written notice to the landlord invoking the provisions of this act."
         }
       ],
       "x_plain": "New Jersey's security deposit rules protect you in almost every rental home. If you rent in a building where the owner lives and there are only one or two rental units, you get these protections only after you give the landlord 30 days' written notice that you are invoking the law.",
-      "x_retrieved_at": "2026-10-03",
-      "x_source_kind": "fetched_link_only",
+      "x_retrieved_at": "2026-10-01",
+      "x_source_kind": "official_corpus",
       "x_span": {
-        "start": 1514,
-        "end": 1793,
+        "start": 41565,
+        "end": 41991,
         "match": "exact"
       },
       "x_challenge": {

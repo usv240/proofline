@@ -119,6 +119,11 @@ export function assemble() {
     bySection.set(sk, [...(bySection.get(sk) ?? []), ...cands]);
   }
 
+  // Official-pack sentences found for rules first read from fetched pages (scripts/reanchor.ts).
+  const anchorsFile = path.join(ROOT, "out", "pipeline", "anchors.json");
+  const official = existsSync(anchorsFile) ? JSON.parse(readFileSync(anchorsFile, "utf8")) : {};
+  const docMeta = new Map(docs.map((d) => [d.doc_id, d]));
+
   const merged: Omit<RuleRecord, "team_rule_id">[] = [];
   for (const cands of bySection.values()) {
     // Prefer a source that states who is covered; a rate announcement often has no coverage test.
@@ -157,6 +162,13 @@ export function assemble() {
     const dateConflict = lifecycle.kind === "enacted" && dates.length > 1
       ? `Sources publish different effective dates: ${cands.filter((c) => c.r.effective_date).map((c) => `${normDate(c.r.effective_date)} (${c.d.doc_id})`).join(", ")}. Using ${lifecycle.effective_date}. Human review needed.`
       : null;
+    let proof = { doc_id: anchor.d.doc_id, url: anchor.d.url, quote: anchor.r.quoted_span as string, retrieved_at: anchor.d.retrieved_at, kind: anchor.d.kind, span: (anchor.r.span ?? null) as RuleRecord["x_span"] };
+    const off = anchor.d.kind !== "official_corpus" ? official[`${r.jurisdiction}|${r.category}|${shortCitation(r.citation)}`]?.anchor : null;
+    const offDoc = off ? docMeta.get(off.doc_id) : undefined;
+    if (off && offDoc) {
+      details.set(anchor.r.quoted_span, { text: `Also stated in ${anchor.d.doc_id} (fetched by Proofline, link-only in the official pack).`, quoted_span: anchor.r.quoted_span });
+      proof = { doc_id: off.doc_id, url: offDoc.url, quote: off.quote, retrieved_at: offDoc.retrieved_at, kind: "official_corpus", span: { start: off.start, end: off.end, match: "exact" } };
+    }
     const rec: Omit<RuleRecord, "team_rule_id"> = {
       jurisdiction: r.jurisdiction,
       level: r.jurisdiction.includes(",") ? "city" : "state",
@@ -176,9 +188,9 @@ export function assemble() {
       effective_date: lifecycle.effective_date,
       citation: shortCitation(r.citation),
       x_citation_full: r.citation,
-      source_doc_id: anchor.d.doc_id,
-      source_url: anchor.d.url,
-      quoted_span: anchor.r.quoted_span,
+      source_doc_id: proof.doc_id,
+      source_url: proof.url,
+      quoted_span: proof.quote,
       confidence: r.confidence ?? null,
       conflict_flag: !!dateConflict,
       conflict_note: dateConflict,
@@ -189,9 +201,9 @@ export function assemble() {
       x_may_conflict_with_local: !!r.may_conflict_with_local && !r.yields_to_local,
       x_details: [...details.values()],
       x_plain: r.plain_language,
-      x_retrieved_at: anchor.d.retrieved_at,
-      x_source_kind: anchor.d.kind,
-      x_span: anchor.r.span ?? null,
+      x_retrieved_at: proof.retrieved_at,
+      x_source_kind: proof.kind,
+      x_span: proof.span,
       x_challenge: r.challenge ?? null,
     };
     rec.status = statusAt(rec as RuleRecord, AS_OF);

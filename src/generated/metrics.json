@@ -1,4 +1,9 @@
 {
+  "citations": {
+    "applies": 4967,
+    "official_pack": 4618,
+    "share": 0.9297362593114556
+  },
   "baseline": {
     "model": "claude-opus-5-5",
     "generated_at": "2026-10-04T03:09:52.391Z",
@@ -20,7 +25,7 @@
     },
     "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
   },
-  "generated_at": "2026-10-04T03:12:44.952Z",
+  "generated_at": "2026-10-04T03:24:34.868Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
@@ -92,7 +97,7 @@
   },
   "audit": {
     "ok": true,
-    "entries": 39,
+    "entries": 44,
     "brokenAt": null
   },
   "change_tests": {

@@ -56,6 +56,7 @@ export default function HowItWorks() {
           {[
             { k: "metric.neg" as const, l: "Invented rules", v: `${m.negative_control.invented_applies} in ${m.negative_control.checks.toLocaleString()}`, s: "checks where the right answer is \"no rule\", \"not law yet\" or \"failed\"" },
             { k: "metric.cite" as const, l: "Quotes found in the source", v: pct(m.extraction.quotes_verified, m.extraction.rules), s: `${m.extraction.quotes_verified} of ${m.extraction.rules} rules` },
+            { k: "source" as const, l: "Answers backed by the official pack", v: pct(m.citations.official_pack, m.citations.applies), s: `${m.citations.official_pack.toLocaleString()} of ${m.citations.applies.toLocaleString()} "Protects you" answers quote the organizers' corpus text; the rest quote city codes the pack lists only as links, labeled "Fetched by Proofline"` },
             { k: "source" as const, l: "Candidates rejected", v: String(m.extraction.rejected), s: `of ${m.extraction.candidates} candidate rules read from ${m.documents.with_text} documents` },
             { k: "metric.addresses" as const, l: "Addresses in their legal city", v: `${m.addresses.total}`, s: `${m.addresses.geocoded} by Census Geocoder, ${m.addresses.fallback} by mailing city` },
             { k: "watch.radius" as const, l: "Change cases run", v: String(Object.keys(m.change_tests).length), s: Object.entries(m.change_tests).map(([k, v]) => `${k}: ${v.affected}`).join(", ") },

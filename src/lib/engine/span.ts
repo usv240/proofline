@@ -25,7 +25,8 @@ function normalizeWithMap(s: string): { norm: string; map: number[] } {
     if (ch in CHAR_MAP) ch = CHAR_MAP[ch];
     if (ch === "") continue;
     if (/\s/.test(ch)) {
-      if (lastSpace) continue;
+      // PDF line breaks inside hyphenated words ("owner-\noccupied") match "owner-occupied".
+      if (lastSpace || norm.endsWith("-")) continue;
       ch = " ";
       lastSpace = true;
     } else lastSpace = false;

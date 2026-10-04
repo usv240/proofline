@@ -92,7 +92,14 @@ const audit = existsSync(path.join(OUT, "audit.log.jsonl")) ? verifyChain(readFi
 const baselineFile = path.join(OUT, "eval_baseline.json");
 const baseline = existsSync(baselineFile) ? JSON.parse(readFileSync(baselineFile, "utf8")).summary : null;
 
+// Citation metric as the organizers defined it: "applies" answers whose quote is in the supplied pack.
+const submitted: RuleRecord[] = JSON.parse(readFileSync(path.join(OUT, "rules.json"), "utf8")).rules;
+const subLookups = JSON.parse(readFileSync(path.join(OUT, "lookups.json"), "utf8")).lookups;
+const appliesAll = Object.values<any[]>(subLookups).flat().filter((r) => r.result === "applies");
+const appliesOfficial = appliesAll.filter((r) => submitted.find((x) => x.team_rule_id === r.team_rule_id)?.x_source_kind === "official_corpus").length;
+
 const metrics = {
+  citations: { applies: appliesAll.length, official_pack: appliesOfficial, share: appliesOfficial / appliesAll.length },
   baseline,
   generated_at: new Date().toISOString(),
   as_of: "2026-10-01",

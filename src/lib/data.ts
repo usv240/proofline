@@ -42,6 +42,7 @@ export interface SourceEntry {
 }
 
 export interface Metrics {
+  citations: { applies: number; official_pack: number; share: number };
   baseline: {
     model: string;
     questions: { no_rule: number; unknown_coverage: number };
