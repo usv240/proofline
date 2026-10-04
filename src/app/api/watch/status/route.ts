@@ -46,7 +46,27 @@ function snapshotActions(docId: string): { count: number; retrieved: string | nu
   }
 }
 
-async function legiscan(b: Tracked) {
+// Third-party answers are cached for six hours per server, so a busy page stays far inside the free
+// query limits (LegiScan public tier: 10,000 a month; we track two bills).
+const SIX_HOURS = 6 * 60 * 60 * 1000;
+const cache = new Map<string, { at: number; value: unknown }>();
+async function cached<T>(k: string, fn: () => Promise<T>): Promise<T> {
+  const hit = cache.get(k);
+  if (hit && Date.now() - hit.at < SIX_HOURS) return hit.value as T;
+  const value = await fn();
+  if (value) cache.set(k, { at: Date.now(), value });
+  return value;
+}
+
+function legiscan(b: Tracked) {
+  return cached(`legiscan:${b.id}`, () => legiscanLive(b));
+}
+
+function openstates(b: Tracked) {
+  return cached(`openstates:${b.id}`, () => openstatesLive(b));
+}
+
+async function legiscanLive(b: Tracked) {
   const key = process.env.LEGISCAN_API_KEY;
   if (!key) return null;
   try {
@@ -59,7 +79,7 @@ async function legiscan(b: Tracked) {
   }
 }
 
-async function openstates(b: Tracked) {
+async function openstatesLive(b: Tracked) {
   const key = process.env.OPENSTATES_API_KEY;
   if (!key) return null;
   try {

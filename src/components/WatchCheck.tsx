@@ -25,6 +25,7 @@ export function WatchCheck() {
           <p className="text-[14px] text-muted">
             Checked {new Date(data.checked_at).toLocaleString()} · sources: official legislature site
             {data.sources.legiscan ? ", LegiScan" : ""}{data.sources.openstates ? ", Open States" : ""}
+            {data.sources.legiscan && <> · LegiScan data by LegiScan LLC, <a className="underline underline-offset-4" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a></>}
           </p>
           {data.results.map((r) => (
             <div key={r.id} className="rounded-xl border border-border bg-surface-2 p-4">
