@@ -6,7 +6,7 @@ export const metadata = { title: "For judges: three minutes | Proofline" };
 const TRY = [
   {
     t: "Watch \"not sure\" turn into an answer",
-    d: "A Los Angeles building finished in 1978, right at the rent control cutoff. Five rules say \"Not sure yet\". Tap \"Around 1977\" in the yellow panel: every answer on the page recomputes at once.",
+    d: "A Los Angeles building finished in 1978, right at the rent control cutoff. Four rules say \"Not sure yet\". Tap \"Around 1977\" in the yellow panel: every answer on the page recomputes at once.",
     href: "/check?address=A0107",
     cta: "Open the 1978 building",
     why: "Missing facts are named and answerable, never guessed.",
