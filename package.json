@@ -11,7 +11,7 @@
     "outputs": "tsx scripts/assemble.ts && tsx scripts/outputs.ts && tsx scripts/publish.ts",
     "verify": "tsx scripts/verify.ts",
     "mcp": "tsx mcp/server.mts",
-    "test": "vitest run tests/engine.test.ts",
+    "test": "vitest run tests/engine.test.ts tests/golden.test.ts",
     "new-law": "tsx scripts/new_law.ts"
   },
   "dependencies": {

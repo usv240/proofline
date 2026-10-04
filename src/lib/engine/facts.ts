@@ -48,7 +48,10 @@ export function buildFacts(r: AddressRow): AddressFacts {
   if (/ELDERLY/.test(d)) building_type = "elderly";
   else if (/CONDO/.test(d)) building_type = "condo";
 
-  const government_subsidized = /SUBSD|SECTION 8|S-\s*8|AFFORDABL/.test(d) ? true : null;
+  // Assessor use classes flag subsidized housing (for example Boston "SUBSD HOUSING S-8"). A sample row
+  // whose official class is an ordinary apartment class is treated as not subsidized; live addresses with
+  // no use class stay unknown.
+  const government_subsidized = /SUBSD|SECTION 8|S-\s*8|AFFORDABL/.test(d) ? true : r.use_description ? false : null;
 
   return {
     address_id: r.address_id,

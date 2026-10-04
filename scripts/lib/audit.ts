@@ -1,7 +1,7 @@
 // Append-only, hash-chained audit log. Each entry's hash covers the previous hash, so any edit to an
 // earlier line breaks verification from that point on.
 import { createHash } from "node:crypto";
-import { appendFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync } from "node:fs";
 import path from "node:path";
 
 export const AUDIT_FILE = path.join(process.cwd(), "out", "audit.log.jsonl");
@@ -24,8 +24,25 @@ function lastEntry(): { seq: number; hash: string } {
   return { seq: e.seq, hash: e.hash };
 }
 
+// Exclusive lock so two processes can never append at the same time and fork the chain.
+function withLock<T>(fn: () => T): T {
+  const lock = `${AUDIT_FILE}.lock`;
+  const start = Date.now();
+  for (;;) {
+    try { mkdirSync(lock); break; } catch {
+      if (Date.now() - start > 30_000) throw new Error(`audit log locked: ${lock}`);
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50);
+    }
+  }
+  try { return fn(); } finally { rmSync(lock, { recursive: true, force: true }); }
+}
+
 export function audit(action: string, input: unknown, output: unknown, actor = "proofline-pipeline") {
   mkdirSync(path.dirname(AUDIT_FILE), { recursive: true });
+  withLock(() => append(action, input, output, actor));
+}
+
+function append(action: string, input: unknown, output: unknown, actor: string) {
   const prev = lastEntry();
   const body = {
     seq: prev.seq + 1,
@@ -51,4 +68,18 @@ export function verifyChain(text: string): { ok: boolean; entries: number; broke
     prev = hash;
   }
   return { ok: true, entries: lines.length, brokenAt: null };
+}
+
+/** If the chain is broken (for example by an old concurrent write), keep the old file untouched under a
+ * new name and start a new chain whose first entry records the old file's hash and where it broke. */
+export function sealBrokenChain(): string | null {
+  if (!existsSync(AUDIT_FILE)) return null;
+  const text = readFileSync(AUDIT_FILE, "utf8");
+  const v = verifyChain(text);
+  if (v.ok) return null;
+  const archived = AUDIT_FILE.replace(/\.jsonl$/, `.segment-${Date.now()}.jsonl`);
+  renameSync(AUDIT_FILE, archived);
+  audit("chain_sealed", { archived_file: path.basename(archived), archived_sha256: sha(text), entries: v.entries, broken_at: v.brokenAt },
+    { reason: "Two pipeline processes appended at the same moment before write locking was added. The earlier segment is kept unchanged." });
+  return archived;
 }

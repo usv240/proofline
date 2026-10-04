@@ -30,6 +30,32 @@ const normCite = (c: string) => {
   return nums?.[0]?.toLowerCase() ?? c.toLowerCase().replace(/[^a-z0-9]/g, "");
 };
 
+/** Short official citation, the form the brief uses ("Cal. Civ. Code § 1947.12", "S.F. Admin. Code ch. 37").
+ * Drops descriptive tails and parentheticals, but keeps session-law cites such as "(P.L. 2026, c.43)". */
+// Official code chapters for ordinances that sources cite only by name.
+const CITATION_ALIASES: [RegExp, string][] = [
+  [/^Berkeley\s+Rent\s+Stabilization\s+and\s+Eviction\s+for\s+(Good|Just)\s+Cause\s+Ordinance.*$/i, "Berkeley Mun. Code ch. 13.76"],
+  [/^Berkeley Municipal Code /i, "Berkeley Mun. Code "],
+  [/^California\s+Fair\s+Employment\s+and\s+Housing\s+Act.*$/i, "Cal. Gov. Code § 12955"],
+  [/^San\s+Francisco\s+Fair\s+Chance\s+Ordinance.*$/i, "S.F. Police Code art. 49"],
+  [/^Santa\s+Ana\s+(Rent\s+Stabilization|Just\s+Cause\s+Eviction)\s+Ordinance.*$/i, "Santa Ana Mun. Code ch. 8, art. XIX"],
+];
+
+export function shortCitation(c: string): string {
+  let s = c.trim();
+  s = s.replace(/\s*\((?![^)]*(P\.?\s?L\.|c\.\s?\d|Ord\.|O-\d))[^)]*\)/g, "");
+  s = s.replace(/,\s+[a-z][^,]*$/i, (m) => (/\d/.test(m) ? m : ""));
+  s = s.replace(/\s+(et seq\.?)\s*$/i, " et seq.");
+  s = s.replace(/\s{2,}/g, " ").replace(/\s+([,;])/g, "$1").trim();
+  // A citation like "Berkeley ... Ordinance (B.M.C. Ch. 13.76)" keeps its number only in the parenthetical.
+  if (!/\d/.test(s)) {
+    const inner = [...c.matchAll(/\(([^)]*\d[^)]*)\)/g)].map((m) => m[1]).find((x) => /code|ch\.|§|sec|b\.m\.c|c\.\s?\d/i.test(x));
+    if (inner) s = inner.replace(/^B\.M\.C\.\s*Ch\./i, "Berkeley Mun. Code ch.").trim();
+  }
+  for (const [re, to] of CITATION_ALIASES) s = s.replace(re, to);
+  return s;
+}
+
 // California Constitution art. IV, sec. 8(c): a non-urgency statute takes effect on January 1 of the
 // year after it is enacted. Applied only to chaptered California bills that print no effective date.
 function defaultEffectiveDate(r: any, d: DocOut): { date: string; note: string } | null {
@@ -77,11 +103,27 @@ export function assemble() {
     (c.d.kind === "official_corpus" ? 2 : 0) + (c.r.challenge?.verdict === "support" ? 1 : 0) + (c.r.confidence ?? 0) +
     (c.r.span?.match === "exact" ? 0.1 : 0);
 
+  // Records of the same enacted law in the same place and topic are one rule even if the cluster step
+  // kept them apart (for example a yearly rate notice and the page that states who is covered, both
+  // citing S.F. Admin. Code ch. 37). Proposals and failed measures are never merged this way.
+  const bySection = new Map<string, Cand[]>();
+  for (const [k, cands] of groups) {
+    const c0 = cands[0].r;
+    const sk = cands.every((c) => c.r.lifecycle_kind === "enacted") ? `${c0.jurisdiction}|${c0.category}|sec:${normCite(c0.citation)}` : k;
+    bySection.set(sk, [...(bySection.get(sk) ?? []), ...cands]);
+  }
+
   const merged: Omit<RuleRecord, "team_rule_id">[] = [];
-  for (const cands of groups.values()) {
-    cands.sort((a, b) => rank(b) - rank(a));
+  for (const cands of bySection.values()) {
+    // Prefer a source that states who is covered; a rate announcement often has no coverage test.
+    const hasCov = (c: Cand) => (c.r.coverage.all.length + c.r.coverage.exempt_if_any.length > 0 ? 1 : 0);
+    cands.sort((a, b) => hasCov(b) - hasCov(a) || rank(b) - rank(a));
     const { r, d } = cands[0];
+    // Proof anchor: the quote shown as the rule's proof comes from the official pack whenever any source
+    // in the group is from it. Coverage and dates still come from the best source above.
+    const anchor = d.kind === "official_corpus" ? cands[0] : cands.find((c) => c.d.kind === "official_corpus") ?? cands[0];
     const details = new Map<string, { text: string; quoted_span: string }>();
+    if (anchor !== cands[0]) details.set(r.quoted_span, { text: `Also stated in ${d.doc_id} (fetched by Proofline): ${r.requirement}`, quoted_span: r.quoted_span });
     for (const c of cands) for (const x of c.r.details ?? []) details.set(x.quoted_span, x);
     // Status evidence: a source showing enactment (or failure) outranks an earlier draft marked pending.
     const lifeSrc =
@@ -98,8 +140,12 @@ export function assemble() {
       kind: lifeSrc.r.lifecycle_kind,
       enacted_date: normDate(lifeSrc.r.enacted_date ?? r.enacted_date),
       effective_date: normDate(lifeSrc.r.effective_date ?? r.effective_date),
-      ended_date: normDate(lifeSrc.r.ended_date ?? r.ended_date),
+      // Only a repealed, struck or failed law ends. The end of a published rate period does not end the law.
+      ended_date: lifeSrc.r.lifecycle_kind === "failed" ? normDate(lifeSrc.r.ended_date ?? r.ended_date) : null,
     } as RuleRecord["x_lifecycle"];
+    for (const c of cands) if (c.r.lifecycle_kind === "enacted" && c.r.ended_date) {
+      details.set(`period:${c.d.doc_id}`, { text: `Period stated in ${c.d.doc_id}: ${c.r.effective_date ?? "?"} to ${c.r.ended_date}.`, quoted_span: c.r.quoted_span });
+    }
     // Conflicting published effective dates are surfaced, not silently resolved.
     const dates = [...new Set(cands.map((c) => normDate(c.r.effective_date)).filter(Boolean))];
     const dateConflict = lifecycle.kind === "enacted" && dates.length > 1
@@ -122,10 +168,11 @@ export function assemble() {
           ? "May preempt or conflict with local rules on the same topic; flagged for human review."
           : null,
       effective_date: lifecycle.effective_date,
-      citation: r.citation,
-      source_doc_id: d.doc_id,
-      source_url: d.url,
-      quoted_span: r.quoted_span,
+      citation: shortCitation(r.citation),
+      x_citation_full: r.citation,
+      source_doc_id: anchor.d.doc_id,
+      source_url: anchor.d.url,
+      quoted_span: anchor.r.quoted_span,
       confidence: r.confidence ?? null,
       conflict_flag: !!dateConflict,
       conflict_note: dateConflict,
@@ -136,9 +183,9 @@ export function assemble() {
       x_may_conflict_with_local: !!r.may_conflict_with_local && !r.yields_to_local,
       x_details: [...details.values()],
       x_plain: r.plain_language,
-      x_retrieved_at: d.retrieved_at,
-      x_source_kind: d.kind,
-      x_span: r.span ?? null,
+      x_retrieved_at: anchor.d.retrieved_at,
+      x_source_kind: anchor.d.kind,
+      x_span: anchor.r.span ?? null,
       x_challenge: r.challenge ?? null,
     };
     rec.status = statusAt(rec as RuleRecord, AS_OF);

@@ -1,7 +1,7 @@
 // Address lookup: jurisdiction stack + every rule's result as of a date.
 // Pure function of (rules, facts, date). No model calls happen here.
 
-import { evalCoverage, unknownFacts } from "./predicate";
+import { evalCoverage, tenantConditions, unknownFacts } from "./predicate";
 import type {
   AddressFacts,
   Category,
@@ -100,8 +100,10 @@ function decidingFor(rules: RuleRecord[], f: AddressFacts, asOf: string): Decidi
 function explain(rule: RuleRecord, result: Result, f: AddressFacts, asOf: string, note?: string): string {
   const where = `${f.city}, ${f.state}`;
   switch (result) {
-    case "applies":
-      return `${rule.requirement} Covers this ${where} building as of ${asOf}. Source: ${rule.citation}.`;
+    case "applies": {
+      const tc = tenantConditions(rule.x_coverage, f);
+      return `${rule.requirement} Covers this ${where} building as of ${asOf}${tc.length ? `, ${tc.join(", ")}` : ""}. Source: ${rule.citation}.`;
+    }
     case "unknown": {
       const facts = unknownFacts(rule.x_coverage, f, asOf);
       const what = facts.length ? facts.map((x) => x.replace(/_/g, " ")).join(", ") : "a fact";

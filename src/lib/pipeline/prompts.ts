@@ -61,6 +61,10 @@ Ignore everything else (habitability, utilities, condo conversion, employment, e
 
 GRANULARITY: produce ONE record per distinct legal rule per category: typically one statute section or one ordinance (or ordinance section) per category. Put secondary obligations of the same rule (notice periods, deposit return days, interest, relocation dollar amounts, receipts) in "details", not as separate records. Pending bills and failed or struck measures ARE records (lifecycle_kind pending or failed), because users must see that they are not law. A document that summarizes another level's law (e.g. a city page restating state law) may yield a state record if the document actually states that state rule.
 
+CROSS-TOPIC COVERAGE: a document about one topic sometimes states who is covered by, or exempt from, a rule on another topic (for example a just-cause eviction page saying that units first certified for occupancy after a date are exempt from the rent increase limits). When it does, also produce a record for that other category, with that coverage test and the quote that states it.
+
+RATE ANNOUNCEMENTS: a notice of this year's allowed increase or fee amount is part of the underlying rule. Put the period in details; do not set ended_date for the end of a rate period. ended_date is only for a law that was repealed, struck down, expired or failed.
+
 JURISDICTION: use only jurisdictions from the allowed list given with the document. Use the state code for state law and "City, ST" for city law.
 
 DATES: effective_date is the date the rule starts to apply. For a law long in force with no stated date, use null. For enacted laws whose effective date is in the future relative to the document, still set lifecycle_kind "enacted" with that date. If two dates are published, use the one in the operative text and mention the other in requirement or details.

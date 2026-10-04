@@ -20,7 +20,7 @@
     },
     "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
   },
-  "generated_at": "2026-10-04T02:07:22.960Z",
+  "generated_at": "2026-10-04T02:56:42.680Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
@@ -30,9 +30,9 @@
   },
   "extraction": {
     "candidates": 111,
-    "rejected": 0,
-    "rules": 78,
-    "quotes_verified": 78,
+    "rejected": 2,
+    "rules": 72,
+    "quotes_verified": 72,
     "quote_rate": 1
   },
   "addresses": {
@@ -41,31 +41,32 @@
     "fallback": 23
   },
   "results": {
-    "applies": 5080,
-    "unknown": 1403,
-    "pending": 460,
-    "not_yet_effective": 140
+    "applies": 4917,
+    "superseded": 265,
+    "pending": 350,
+    "not_yet_effective": 140,
+    "unknown": 913
   },
   "unknown_by_city": {
     "Los Angeles, CA": {
-      "unknown": 168,
-      "total": 1142
+      "unknown": 38,
+      "total": 1197
     },
     "Hoboken, NJ": {
-      "unknown": 84,
-      "total": 515
+      "unknown": 86,
+      "total": 475
     },
     "Newark, NJ": {
-      "unknown": 547,
-      "total": 686
+      "unknown": 451,
+      "total": 594
     },
     "Berkeley, CA": {
       "unknown": 160,
-      "total": 880
+      "total": 800
     },
     "Boston, MA": {
-      "unknown": 34,
-      "total": 780
+      "unknown": 0,
+      "total": 626
     },
     "Jersey City, NJ": {
       "unknown": 22,
@@ -73,11 +74,11 @@
     },
     "Cambridge, MA": {
       "unknown": 0,
-      "total": 600
+      "total": 500
     },
     "San Francisco, CA": {
-      "unknown": 238,
-      "total": 1358
+      "unknown": 6,
+      "total": 1271
     },
     "San Diego, CA": {
       "unknown": 150,
@@ -85,13 +86,13 @@
     }
   },
   "negative_control": {
-    "checks": 2250,
+    "checks": 2140,
     "invented_applies": 0,
     "no_rule_cells": 34
   },
   "audit": {
     "ok": true,
-    "entries": 212,
+    "entries": 23,
     "brokenAt": null
   },
   "change_tests": {

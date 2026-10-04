@@ -82,6 +82,7 @@ export interface RuleRecord {
   interaction: string | null;
   effective_date: string | null;
   citation: string;
+  x_citation_full?: string;
   source_doc_id: string | null;
   source_url: string;
   quoted_span: string;

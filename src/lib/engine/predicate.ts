@@ -126,8 +126,18 @@ export function evalCond(c: Cond, f: AddressFacts, asOf: string): Tri {
   return "U";
 }
 
+/** Facts about a tenancy, not a building. A building-level lookup reports them as conditions on the
+ * answer ("for tenants of 12 months or more") instead of letting them make the building "unknown". */
+export const TENANT_FACTS: FactName[] = ["tenancy_months"];
+export const isTenantCond = (c: Cond, f: AddressFacts) => TENANT_FACTS.includes(c.fact) && f.user?.[c.fact] === undefined;
+
+export function tenantConditions(cov: Coverage, f: AddressFacts): string[] {
+  return cov.all.filter((c) => isTenantCond(c, f)).map((c) =>
+    c.fact === "tenancy_months" ? `for tenancies of at least ${c.value} months` : `${c.fact} ${c.op} ${c.value}`);
+}
+
 export function evalCoverage(cov: Coverage, f: AddressFacts, asOf: string): Tri {
-  const base = and(cov.all.map((c) => evalCond(c, f, asOf)));
+  const base = and(cov.all.filter((c) => !isTenantCond(c, f)).map((c) => evalCond(c, f, asOf)));
   const exempt = or(cov.exempt_if_any.map((g) => and(g.map((c) => evalCond(c, f, asOf)))));
   return and([base, not(exempt)]);
 }
@@ -135,7 +145,7 @@ export function evalCoverage(cov: Coverage, f: AddressFacts, asOf: string): Tri 
 /** Facts referenced by a coverage test that are currently unknown for this address. */
 export function unknownFacts(cov: Coverage, f: AddressFacts, asOf: string): FactName[] {
   const out = new Set<FactName>();
-  for (const c of [...cov.all, ...cov.exempt_if_any.flat()]) {
+  for (const c of [...cov.all.filter((x) => !isTenantCond(x, f)), ...cov.exempt_if_any.flat()]) {
     if (evalCond(c, f, asOf) === "U") out.add(c.fact);
   }
   return [...out];
