@@ -68,11 +68,15 @@ corpus ──► READ (Claude) ──► CHECK QUOTES (code) ──► SECOND CH
 - **How it works** (`/how-it-works`): metrics, measured limits by city, live audit and quote verification.
 - **API:** `GET /api/lookup`, `POST /api/preflight`, `GET /api/audit/verify`. **MCP server:** `npm run mcp` (tools `lookup_address`, `preflight_check`, `list_changes`).
 
+## API keys and developers
+`/developers` issues keys with no account: a key is a signed token (HMAC, `PROOFLINE_KEY_SECRET`), so nothing is stored and nothing can leak. Read endpoints work without a key at 30 calls per minute; a key gives 120 per minute and 10 law reads per day. Reading new laws (`POST /api/byo/ordinance`) needs a key because it spends model credits; the site itself is allowed same-origin. Limits are counted in memory per instance (stated on the page). OpenAPI 3.1 description at `/api/openapi.json`.
+
 ## Run it
 
 ```bash
 npm install
 npm run dev                 # web app on http://localhost:3000 (uses the committed outputs)
+# .env: ANTHROPIC_API_KEY (pipeline, Bring your own) and PROOFLINE_KEY_SECRET (API keys)
 npm run verify              # audit chain, quotes, engine reproduces lookups.json, negative control
 npm test                    # engine unit tests
 ```

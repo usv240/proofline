@@ -164,6 +164,10 @@ export const INFO = {
     title: "A note you can send",
     body: "Plain text that quotes the rule and asks how a charge was calculated, or asks for a missing fact. It is a question, not a demand, and not legal advice. You decide whether and how to use it.",
   },
+  apikeys: {
+    title: "API keys",
+    body: "A key lets another tool call Proofline with one header. Keys are signed tokens the server can check without storing anything. Read endpoints work without a key at a lower rate; reading new laws needs one because it spends model credits.",
+  },
   receipt: {
     title: "Proof receipt",
     body: "A small file with a fingerprint (hash) of this answer: which rule set, which facts, which date, which results. Post it back later and Proofline recomputes the answer and tells you if anything changed or if the file was altered.",

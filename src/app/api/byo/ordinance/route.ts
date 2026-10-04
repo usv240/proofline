@@ -7,6 +7,7 @@ import { lookupAddress } from "@/lib/engine/lookup";
 import type { Result } from "@/lib/engine/types";
 import { extractDocument } from "@/lib/pipeline/extractDoc";
 import { toRuleRecords } from "@/lib/pipeline/toRecord";
+import { isSameOrigin, keyFromRequest, LIMITS, takeToken, verifyKey } from "@/lib/apikeys";
 
 export const maxDuration = 300;
 
@@ -24,7 +25,21 @@ export async function POST(req: Request) {
     return Response.json({ message: "Reading new laws is paused right now. Every address answer still works." }, { status: 503 });
   }
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "local";
-  if (limited(ip)) return Response.json({ message: "Too many requests. Please try again in an hour." }, { status: 429 });
+  // This endpoint spends model credits, so it needs either a key or a same-origin call from the Proofline site.
+  let keyId: string | null = null;
+  const presented = keyFromRequest(req);
+  if (presented) {
+    let v: ReturnType<typeof verifyKey>;
+    try { v = verifyKey(presented); } catch { v = { ok: false, reason: "keys not configured" }; }
+    if (!v.ok) return Response.json({ message: `API key ${v.reason}. Create one at /developers.` }, { status: 401 });
+    keyId = v.claims.id;
+    const q = takeToken(`byo:${keyId}`, LIMITS.free.byo_reads_per_day, 24 * 60 * 60 * 1000);
+    if (!q.ok) return Response.json({ message: `This key has used its ${LIMITS.free.byo_reads_per_day} law reads for today.` }, { status: 429 });
+  } else if (!isSameOrigin(req)) {
+    return Response.json({ message: "Reading a new law needs an API key (Authorization: Bearer pl_live_...). Create one at /developers." }, { status: 401 });
+  } else if (limited(ip)) {
+    return Response.json({ message: "Too many requests. Please try again in an hour." }, { status: 429 });
+  }
 
   const body = await req.json().catch(() => null);
   const text = typeof body?.text === "string" ? body.text : "";

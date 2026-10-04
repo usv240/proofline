@@ -142,6 +142,9 @@ export default function HowItWorks() {
           <li className="rounded-lg bg-surface-2 p-3">GET /api/audit/verify</li>
           <li className="rounded-lg bg-surface-2 p-3">MCP server: npm run mcp (tools: lookup_address, preflight_check, list_changes)</li>
         </ul>
+        <p className="mt-3 text-[15px]"><Link className="text-brand underline-offset-4 hover:underline" href="/developers">Create an API key and see examples on the Developers page</Link>.</p>
+        <ul className="hidden">
+        </ul>
       </section>
 
       <section className="mt-8" aria-labelledby="src-h">

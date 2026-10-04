@@ -11,6 +11,7 @@ export const NAV = [
   { href: "/byo", label: "Bring your own" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/learn", label: "Learn" },
+  { href: "/developers", label: "Developers" },
 ];
 
 export function Logo({ size = 26 }: { size?: number }) {
