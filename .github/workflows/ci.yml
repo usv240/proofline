@@ -15,7 +15,7 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Typecheck
-        run: npx tsc --noEmit -p .
+        run: npx next typegen && npx tsc --noEmit -p .
       - name: Tests (engine + golden checks from the organizers' statements)
         run: npm test
       - name: Verify (audit chain, quotes, engine reproduces lookups.json, negative control)
