@@ -19,6 +19,8 @@ const FROM_CATEGORY: Record<string, Kind> = {
 };
 
 const VERDICT_KIND: Record<string, VerdictKind> = { allowed: "allowed", not_allowed: "blocked", needs_person: "person", info: "none", no_rules: "none" };
+// Informational lines show their coverage status (replaced by a local rule, proposed, starts later) instead of a verdict.
+const infoKind = (coverage: string): VerdictKind => (["superseded", "pending", "not_yet_effective"].includes(coverage) ? (coverage as VerdictKind) : "none");
 
 /** A neutral note that quotes the law and asks a question. It never gives advice or instructions. */
 function draftNote(r: PreflightResult, a: AddressFacts, kind: Kind): string {
@@ -82,7 +84,7 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
     setResult(preflight(rules, facts, asOf, a));
   }
 
-  const input = "h-12 w-full rounded-xl border border-border bg-bg px-3 text-[17px] tabular";
+  const input = "input tabular";
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
       <form onSubmit={run} className="space-y-6" aria-describedby="pf-help">
@@ -90,7 +92,7 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
           <legend className="flex items-center text-[18px] font-semibold">1. What change? <InfoButton k="pf.form" /></legend>
           <div className="mt-2 grid grid-cols-2 gap-2">
             {KINDS.map((x) => (
-              <label key={x.k} className={`cursor-pointer rounded-xl border p-3 ${kind === x.k ? "border-brand bg-[var(--sup-bg)]" : "border-border hover:bg-surface"}`}>
+              <label key={x.k} className={`card card-hover cursor-pointer p-3.5 ${kind === x.k ? "ring-2 ring-[var(--brand)] bg-brand-soft" : ""}`}>
                 <input type="radio" name="kind" value={x.k} checked={kind === x.k} onChange={() => { setKind(x.k); setResult(null); }} className="sr-only" />
                 <span className="block font-medium">{x.t}</span>
                 <span className="block text-[14px] text-muted">{x.d}</span>
@@ -135,7 +137,7 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
           </label>
         </fieldset>
 
-        <details className="rounded-xl border border-border p-4">
+        <details className="card p-4">
           <summary className="cursor-pointer font-medium">3. Building facts (optional)</summary>
           <p className="mt-2 flex items-center text-[15px] text-muted">Used for this check only, never saved. <InfoButton k="pf.facts" /></p>
           <div className="mt-3 grid gap-3 sm:grid-cols-3">
@@ -150,7 +152,7 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
         </details>
 
         {err && <p role="alert" style={{ color: "var(--bad-fg)" }}>{err}</p>}
-        <button type="submit" className="h-12 w-full rounded-xl bg-brand text-[17px] font-semibold text-brand-ink">Check this change</button>
+        <button type="submit" className="btn btn-primary h-12 w-full text-[17px]">Check this change</button>
         <p id="pf-help" className="text-[14px] text-muted">
           Pre-Flight only says whether a change fits the rules it found. It never suggests ways around a rule. Your inputs are not saved.
         </p>
@@ -158,19 +160,19 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
 
       <section aria-live="polite" aria-label="Result">
         {!result ? (
-          <div className="rounded-2xl border border-dashed border-border p-6 text-muted">The result appears here, with the law&apos;s own words for every rule checked.</div>
+          <div className="card border-dashed p-8 text-center text-muted">The result appears here, with the law&apos;s own words for every rule checked.</div>
         ) : (
           <div className="space-y-4">
-            <div className="rounded-2xl border border-border p-5" style={{ background: `var(--${result.verdict === "not_allowed" ? "bad" : result.verdict === "needs_person" ? "unk" : result.verdict === "allowed" ? "ok" : "none"}-bg)` }}>
+            <div className="card p-6" style={{ background: `var(--${result.verdict === "not_allowed" ? "bad" : result.verdict === "needs_person" ? "unk" : result.verdict === "allowed" ? "ok" : "none"}-bg)` }}>
               <VerdictChip kind={VERDICT_KIND[result.verdict]} size="lg" />
               <p className="mt-3 text-[18px]">{result.summary}</p>
               <p className="mt-2 text-[14px] text-muted">{result.disclaimer}</p>
             </div>
             {result.lines.map((l) => (
-              <article key={l.team_rule_id} className="rounded-xl border border-border p-4">
+              <article key={l.team_rule_id} className={`card accent-${l.verdict === "not_allowed" ? "blocked" : l.verdict === "allowed" ? "applies" : l.verdict === "needs_person" ? "unknown" : infoKind(l.coverage)} p-4 sm:p-5`}>
                 <div className="flex flex-wrap items-center gap-2">
-                  <VerdictChip kind={VERDICT_KIND[l.verdict]} />
-                  <span className="text-[14px] text-muted">{l.jurisdiction} · coverage: {l.coverage.replace(/_/g, " ")}</span>
+                  <VerdictChip kind={l.verdict === "info" ? infoKind(l.coverage) : VERDICT_KIND[l.verdict]} />
+                  <span className="text-[14px] text-muted">{l.jurisdiction}{l.verdict !== "info" ? ` · coverage: ${l.coverage.replace(/_/g, " ")}` : ""}</span>
                 </div>
                 <h3 className="mt-2 font-semibold">{l.title}</h3>
                 <p className="mt-1">{l.reason}</p>
@@ -189,21 +191,21 @@ export function PreflightForm({ address, rules, initialKind }: { address: Addres
               </article>
             ))}
             <button type="button" onClick={() => navigator.clipboard?.writeText(`${result.summary}\n${result.lines.map((l) => `- ${l.title} (${l.citation}): ${l.reason}`).join("\n")}\n${result.disclaimer}`)}
-              className="h-11 rounded-lg border border-border px-4 hover:bg-surface">
+              className="btn btn-secondary">
               Copy summary with sources
             </button>
             {(result.verdict === "not_allowed" || result.verdict === "needs_person") && (
-              <button type="button" onClick={() => setNote(draftNote(result, address, kind))} className="ml-2 h-11 rounded-lg border border-border px-4 hover:bg-surface">
+              <button type="button" onClick={() => setNote(draftNote(result, address, kind))} className="btn btn-secondary ml-2">
                 Draft a note to send
               </button>
             )}
             {note && (
-              <div className="rounded-xl border border-border p-4">
+              <div className="card p-4 sm:p-5">
                 <p className="flex items-center font-semibold">A note you can send <InfoButton k="note" /></p>
                 <textarea readOnly value={note} rows={10} className="mt-2 w-full rounded-lg border border-border bg-bg p-3 text-[15px]" />
                 <div className="mt-2 flex gap-2">
-                  <button type="button" onClick={() => navigator.clipboard?.writeText(note)} className="h-11 rounded-lg bg-brand px-4 font-medium text-brand-ink">Copy note</button>
-                  <button type="button" onClick={() => setNote(null)} className="h-11 rounded-lg border border-border px-4">Close</button>
+                  <button type="button" onClick={() => navigator.clipboard?.writeText(note)} className="btn btn-primary">Copy note</button>
+                  <button type="button" onClick={() => setNote(null)} className="btn btn-secondary">Close</button>
                 </div>
                 <p className="mt-2 text-[13px] text-muted">The note asks a question and quotes the law. It does not give legal advice or tell anyone what to do.</p>
               </div>

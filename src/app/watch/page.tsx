@@ -19,7 +19,8 @@ export default function WatchPage() {
   const proposals = RULES.filter((r) => r.x_lifecycle.kind !== "enacted" || r.status === "not_yet_effective");
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="flex items-center text-[32px] font-semibold">Law Watch <InfoButton k="watch" /></h1>
+      <p className="eyebrow">What is about to change</p>
+      <h1 className="mt-1 flex items-center text-[34px] font-bold">Law Watch <InfoButton k="watch" /></h1>
       <p className="mt-1 max-w-3xl text-muted">
         Laws start, stop, and get proposed or struck down. For each change, Proofline shows which homes it affects, from which date,
         and any conflict between state and city rules. A person approves each change before it is used in answers.
@@ -31,9 +32,9 @@ export default function WatchPage() {
       <ul className="mt-3 space-y-3">
         {entries.map((c) => (
           <li key={c.test_id}>
-            <Link href={`/watch/${c.test_id}`} className="block rounded-xl border border-border p-4 hover:border-brand hover:bg-surface">
+            <Link href={`/watch/${c.test_id}`} className="card card-hover block p-5">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-md bg-surface-2 px-2 py-0.5 text-[14px] font-semibold">{c.test_id}</span>
+                <span className="rounded-md bg-brand-soft px-2 py-0.5 text-[13px] font-bold text-brand">{c.test_id}</span>
                 <VerdictChip kind={statusKind(c.rules)} />
                 {c.conflict_flag_address_ids.length > 0 && (
                   <span className="rounded-md px-2 py-0.5 text-[13px]" style={{ background: "var(--bad-bg)", color: "var(--bad-fg)" }}>
@@ -50,9 +51,9 @@ export default function WatchPage() {
 
       <h2 className="mt-10 text-[22px] font-semibold">Upcoming, proposed and failed measures</h2>
       <p className="text-muted">Everything in the sources that is not in force today.</p>
-      <div className="mt-3 overflow-x-auto rounded-xl border border-border">
-        <table className="w-full text-left text-[15px]">
-          <thead className="bg-surface text-muted">
+      <div className="card mt-3 overflow-x-auto">
+        <table className="table">
+          <thead>
             <tr><th className="p-3">Measure</th><th className="p-3">Place</th><th className="p-3">Status</th><th className="p-3">Date</th></tr>
           </thead>
           <tbody>
@@ -68,10 +69,10 @@ export default function WatchPage() {
         </table>
       </div>
 
-      <div className="mt-10 rounded-xl border border-border bg-surface p-5">
+      <div className="panel mt-10 p-6">
         <p className="text-[18px] font-semibold">Got a new law?</p>
         <p className="text-muted">Paste it in Bring your own. Proofline reads it, checks its own work, and shows every affected home.</p>
-        <Link href="/byo" className="mt-3 inline-flex h-11 items-center rounded-lg bg-brand px-4 font-medium text-brand-ink">Bring your own law</Link>
+        <Link href="/byo" className="btn btn-primary mt-3">Bring your own law</Link>
       </div>
     </div>
   );

@@ -86,18 +86,18 @@ export function RuleCard({ rule, result, addressId, lang = "en" }: { rule: RuleR
   const kind = result.result as VerdictKind;
   const pfCats = ["rent_increase_limits", "security_deposits", "application_screening_fees", "algorithmic_rent_setting"];
   return (
-    <article className="rounded-xl border border-border bg-bg p-4 sm:p-5">
+    <article className={`card accent-${kind} p-4 sm:p-5`}>
       <div className="flex flex-wrap items-center gap-2">
         <VerdictChip kind={kind} lang={lang} />
         <span className="text-muted"><InfoButton k={`v.${kind}` as never} /></span>
-        <span className="rounded-md bg-surface px-2 py-0.5 text-[13px] text-muted">{rule.level === "state" ? `State: ${rule.jurisdiction}` : `City: ${rule.jurisdiction}`}</span>
+        <span className="rounded-md bg-surface-2 px-2 py-0.5 text-[12.5px] font-medium text-muted">{rule.level === "state" ? `State: ${rule.jurisdiction}` : `City: ${rule.jurisdiction}`}</span>
         {result.conflict_flag && (
           <span className="inline-flex items-center rounded-md px-2 py-0.5 text-[13px]" style={{ background: "var(--bad-bg)", color: "var(--bad-fg)" }}>
             Possible conflict <InfoButton k="conflict" />
           </span>
         )}
       </div>
-      <h3 className="mt-2 text-[18px] font-semibold leading-snug">{rule.title}</h3>
+      <h3 className="mt-2.5 text-[18px] font-semibold leading-snug">{rule.title}</h3>
       <p className="mt-1" lang={lang}>{lang === "es" && rule.x_plain_es ? rule.x_plain_es : rule.x_plain || rule.requirement}</p>
       {lang === "es" && <p className="mt-1 text-[13px] text-muted">La cita legal y los detalles estan en ingles, como en la fuente original.</p>}
       {rule.key_value && (
@@ -117,12 +117,12 @@ export function RuleCard({ rule, result, addressId, lang = "en" }: { rule: RuleR
           type="button"
           aria-expanded={open}
           onClick={() => setOpen(!open)}
-          className="h-11 rounded-lg border border-border px-4 text-[15px] font-medium hover:bg-surface"
+          className="btn btn-secondary"
         >
           {open ? "Hide proof" : "Show proof"}
         </button>
         {addressId && pfCats.includes(rule.category) && (result.result === "applies" || result.result === "unknown") && (
-          <Link href={`/preflight?address=${addressId}&kind=${rule.category}`} className="inline-flex h-11 items-center rounded-lg border border-border px-4 text-[15px] hover:bg-surface">
+          <Link href={`/preflight?address=${addressId}&kind=${rule.category}`} className="btn btn-ghost">
             Check a change
           </Link>
         )}

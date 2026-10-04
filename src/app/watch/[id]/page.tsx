@@ -32,25 +32,25 @@ export default async function ChangePage(props: PageProps<"/watch/[id]">) {
     <div className="mx-auto max-w-5xl px-4 py-8">
       <Link href="/watch" className="text-brand underline underline-offset-2">Back to Law Watch</Link>
       <p className="mt-4 text-[14px] font-semibold text-muted">{c.test_id}</p>
-      <h1 className="text-[30px] font-semibold leading-tight">{c.title}</h1>
+      <h1 className="text-[32px] font-bold leading-tight">{c.title}</h1>
       {c.expected_behavior && <p className="mt-2 text-muted">What a correct system does: {c.expected_behavior}</p>}
 
       <section className="mt-6 grid gap-4 sm:grid-cols-3">
-        <div className="rounded-xl border border-border p-4">
+        <div className="card kpi p-5">
           <p className="flex items-center text-[15px] text-muted">Homes affected <InfoButton k="watch.radius" /></p>
-          <p className="text-[36px] font-semibold tabular">{c.affected_address_ids.length}</p>
+          <p className="kpi-value">{c.affected_address_ids.length}</p>
         </div>
-        <div className="rounded-xl border border-border p-4">
+        <div className="card kpi p-5">
           <p className="flex items-center text-[15px] text-muted">Conflict flags <InfoButton k="conflict" /></p>
-          <p className="text-[36px] font-semibold tabular">{c.conflict_flag_address_ids.length}</p>
+          <p className="kpi-value">{c.conflict_flag_address_ids.length}</p>
         </div>
-        <div className="rounded-xl border border-border p-4">
+        <div className="card kpi p-5">
           <p className="text-[15px] text-muted">Dates checked</p>
           <p className="mt-2 tabular">{dates.join(" and ") || "2026-10-01"}</p>
         </div>
       </section>
 
-      <section className="mt-6 rounded-xl border border-border bg-surface p-4">
+      <section className="panel mt-6 p-5">
         <p className="font-semibold">What changes</p>
         <p className="mt-1">{c.notes}</p>
         {byCity.size > 0 && (
@@ -65,7 +65,7 @@ export default async function ChangePage(props: PageProps<"/watch/[id]">) {
         <div className="mt-3 space-y-3">
           {rules.length === 0 && <p className="text-muted">No matching rule was found in the sources.</p>}
           {rules.map((r) => (
-            <article key={r.team_rule_id} className="rounded-xl border border-border p-4">
+            <article key={r.team_rule_id} className="card p-5">
               <div className="flex flex-wrap items-center gap-2">
                 <VerdictChip kind={r.status === "not_yet_effective" ? "not_yet_effective" : r.x_lifecycle.kind === "pending" ? "pending" : r.x_lifecycle.kind === "failed" ? "failed" : "applies"} />
                 <span className="text-[14px] text-muted">{r.team_rule_id} · {r.jurisdiction}</span>
@@ -91,9 +91,9 @@ export default async function ChangePage(props: PageProps<"/watch/[id]">) {
         {rows.length === 0 ? (
           <p className="mt-2 text-muted">No home is affected. {c.type === "negative" ? "This measure is not law, so no home gains or loses a rule." : ""}</p>
         ) : (
-          <div className="mt-3 overflow-x-auto rounded-xl border border-border">
-            <table className="w-full text-left text-[15px]">
-              <thead className="bg-surface text-muted"><tr><th className="p-3">Address</th><th className="p-3">City</th><th className="p-3">Before</th><th className="p-3">After</th><th className="p-3">Conflict</th></tr></thead>
+          <div className="card mt-3 overflow-x-auto">
+            <table className="table">
+              <thead><tr><th className="p-3">Address</th><th className="p-3">City</th><th className="p-3">Before</th><th className="p-3">After</th><th className="p-3">Conflict</th></tr></thead>
               <tbody>
                 {rows.map((b, i) => {
                   const a = ADDRESSES.find((x) => x.address_id === b.address_id)!;

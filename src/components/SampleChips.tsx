@@ -13,9 +13,9 @@ export function SampleChips({ target = "/check" }: { target?: string }) {
     <ul className="grid gap-2 sm:grid-cols-2">
       {SAMPLES.map((s) => (
         <li key={s.id}>
-          <Link href={`${target}?address=${s.id}`} className="block h-full rounded-xl border border-border bg-bg p-3 hover:border-brand hover:bg-surface">
-            <span className="block font-medium">{s.label}</span>
-            <span className="block text-[15px] text-muted">{s.why}</span>
+          <Link href={`${target}?address=${s.id}`} className="card card-hover block h-full p-3.5">
+            <span className="block text-[15.5px] font-semibold">{s.label}</span>
+            <span className="mt-0.5 block text-[14px] text-muted">{s.why}</span>
           </Link>
         </li>
       ))}

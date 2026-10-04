@@ -34,14 +34,14 @@ export function ReceiptButton({ facts, asOf, results, rulesSha }: { facts: Addre
   }
 
   return (
-    <div className="no-print rounded-xl border border-border p-4">
+    <div className="card no-print p-4 sm:p-5">
       <p className="flex items-center font-semibold">Proof receipt <InfoButton k="receipt" /></p>
       <p className="text-[15px] text-muted">A sealed record of this answer: the rule set version, the facts used, the date and every result. Anyone can check it later, even after the rules change.</p>
       <div className="mt-3 flex flex-wrap gap-2">
-        <button type="button" onClick={make} className="h-11 rounded-lg bg-brand px-4 font-medium text-brand-ink">Get a receipt</button>
-        {r && <button type="button" onClick={download} className="h-11 rounded-lg border border-border px-4">Download</button>}
-        {r && <button type="button" disabled={busy} onClick={() => verify(false)} className="h-11 rounded-lg border border-border px-4">Verify it now</button>}
-        {r && <button type="button" disabled={busy} onClick={() => verify(true)} className="h-11 rounded-lg border border-border px-4 text-muted">Try a tampered copy</button>}
+        <button type="button" onClick={make} className="btn btn-primary">Get a receipt</button>
+        {r && <button type="button" onClick={download} className="btn btn-secondary">Download</button>}
+        {r && <button type="button" disabled={busy} onClick={() => verify(false)} className="btn btn-secondary">Verify it now</button>}
+        {r && <button type="button" disabled={busy} onClick={() => verify(true)} className="btn btn-ghost">Try a tampered copy</button>}
       </div>
       {r && (
         <p className="mt-3 break-all font-mono text-[13px] text-muted">

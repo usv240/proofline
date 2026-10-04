@@ -42,10 +42,11 @@ const HELP: [string, string, string][] = [
 export default function LearnPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="text-[32px] font-semibold">Learn</h1>
+      <p className="eyebrow">Plain explanations</p>
+      <h1 className="mt-1 text-[34px] font-bold">Learn</h1>
       <p className="mt-2 max-w-3xl text-muted">Plain explanations of the six topics, how layers of law work, and where to get help. Not legal advice.</p>
 
-      <section id="layers" className="mt-8 rounded-2xl border border-border bg-surface p-5">
+      <section id="layers" className="panel mt-8 p-6">
         <h2 className="text-[24px] font-semibold">Layers of law</h2>
         <p className="mt-2">Every home is covered by its <strong>state</strong> law and, inside some cities, by <strong>city</strong> law too. When both cover the same topic, one of three things happens:</p>
         <ul className="mt-2 list-disc space-y-1 pl-6">
@@ -65,9 +66,9 @@ export default function LearnPage() {
         <section key={cat} id={cat} className="mt-10 scroll-mt-24">
           <h2 className="text-[24px] font-semibold">{CATEGORY_LABEL[cat]}</h2>
           <p className="mt-1 text-[18px]">{ONE_LINE[cat]}</p>
-          <div className="mt-3 overflow-x-auto rounded-xl border border-border">
-            <table className="w-full text-left text-[15px]">
-              <thead className="bg-surface text-muted"><tr><th className="p-3">Place</th><th className="p-3">What applies</th><th className="p-3">Status</th></tr></thead>
+          <div className="card mt-3 overflow-x-auto">
+            <table className="table">
+              <thead><tr><th className="p-3">Place</th><th className="p-3">What applies</th><th className="p-3">Status</th></tr></thead>
               <tbody>
                 {PLACES.map((p) => {
                   const rs = RULES.filter((r) => r.jurisdiction === p && r.category === cat);
@@ -95,12 +96,12 @@ export default function LearnPage() {
         <h2 className="text-[24px] font-semibold">Words you will see</h2>
         <dl className="mt-3 grid gap-3 sm:grid-cols-2">
           {GLOSSARY.map(([t, d]) => (
-            <div key={t} className="rounded-xl border border-border p-4"><dt className="font-semibold">{t}</dt><dd className="text-muted">{d}</dd></div>
+            <div key={t} className="card p-4"><dt className="font-semibold">{t}</dt><dd className="text-muted">{d}</dd></div>
           ))}
         </dl>
       </section>
 
-      <section id="help" className="mt-10 scroll-mt-24 rounded-2xl border border-border bg-surface p-5">
+      <section id="help" className="panel mt-10 scroll-mt-24 p-6">
         <h2 className="text-[24px] font-semibold">Where to get help</h2>
         <p className="mt-1">For advice about your own situation, contact one of these. Proofline is not a lawyer.</p>
         <ul className="mt-3 space-y-2">

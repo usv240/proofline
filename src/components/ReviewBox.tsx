@@ -23,7 +23,7 @@ export function ReviewBox({ id, removesProtection }: { id: string; removesProtec
   }
 
   return (
-    <div className="rounded-xl border border-border p-4">
+    <div className="card p-5">
       <p className="flex items-center font-semibold">Human review <InfoButton k="watch.approve" /></p>
       {d ? (
         <div className="mt-2">
@@ -37,11 +37,11 @@ export function ReviewBox({ id, removesProtection }: { id: string; removesProtec
         <div className="mt-2 space-y-2">
           {!!removesProtection && <p className="font-medium" style={{ color: "var(--bad-fg)" }}>This change removes protection for {removesProtection} homes. A note is required to approve.</p>}
           <label className="block text-[15px]">Note (optional)
-            <input value={note} onChange={(e) => setNote(e.target.value)} className="mt-1 h-11 w-full rounded-lg border border-border bg-bg px-3" />
+            <input value={note} onChange={(e) => setNote(e.target.value)} className="input mt-1 h-11" />
           </label>
           <div className="flex gap-2">
-            <button type="button" onClick={() => decide("approved")} className="h-11 rounded-lg bg-brand px-4 font-medium text-brand-ink">Approve</button>
-            <button type="button" onClick={() => decide("rejected")} className="h-11 rounded-lg border border-border px-4">Reject</button>
+            <button type="button" onClick={() => decide("approved")} className="btn btn-primary">Approve</button>
+            <button type="button" onClick={() => decide("rejected")} className="btn btn-secondary">Reject</button>
           </div>
           <p className="text-[14px] text-muted">Nothing changes in answers until a person approves.</p>
         </div>

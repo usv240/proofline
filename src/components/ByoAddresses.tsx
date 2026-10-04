@@ -67,12 +67,12 @@ export function ByoAddresses({ rules }: { rules: RuleRecord[] }) {
         <label className="block"><span className="text-[15px]">As of</span>
           <input type="date" value={asOf} onChange={(e) => e.target.value && setAsOf(e.target.value)} className="mt-1 block h-11 rounded-lg border border-border bg-bg px-3" />
         </label>
-        <label className="inline-flex h-11 cursor-pointer items-center rounded-lg border border-border px-4 hover:bg-surface">
+        <label className="btn btn-secondary cursor-pointer">
           Load a CSV file
           <input type="file" accept=".csv,text/csv" className="sr-only" onChange={async (e) => { const f = e.target.files?.[0]; if (f) setText(await f.text()); }} />
         </label>
-        <button type="button" onClick={run} className="h-11 rounded-lg bg-brand px-5 font-medium text-brand-ink">Check all</button>
-        {rows && <button type="button" onClick={download} className="h-11 rounded-lg border border-border px-4">Download results (CSV)</button>}
+        <button type="button" onClick={run} className="btn btn-primary">Check all</button>
+        {rows && <button type="button" onClick={download} className="btn btn-secondary">Download results (CSV)</button>}
       </div>
       {rows && (
         <div className="overflow-x-auto rounded-xl border border-border">

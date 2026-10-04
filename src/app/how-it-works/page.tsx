@@ -19,7 +19,8 @@ export default function HowItWorks() {
   const pct = (a: number, b: number) => `${Math.round((a / b) * 100)}%`;
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <h1 className="text-[32px] font-semibold">How it works</h1>
+      <p className="eyebrow">Under the hood</p>
+      <h1 className="mt-1 text-[34px] font-bold">How it works</h1>
       <p className="mt-2 max-w-3xl text-[18px] text-muted">
         The AI reads the law once. After that, every answer comes from tested code, not from a chatbot. Every number on this page is
         produced by a script from the published data.
@@ -29,9 +30,9 @@ export default function HowItWorks() {
         <h2 id="pipe-h" className="text-[24px] font-semibold">From law text to an answer</h2>
         <ol className="mt-4 grid gap-3 md:grid-cols-3">
           {PIPELINE.map((p, i) => (
-            <li key={p.t} className="rounded-xl border border-border p-4">
+            <li key={p.t} className="card p-5">
               <p className="flex items-center gap-2 font-semibold">
-                <span aria-hidden className="flex h-7 w-7 items-center justify-center rounded-full bg-brand text-[14px] text-brand-ink">{i + 1}</span>
+                <span aria-hidden className="flex h-7 w-7 items-center justify-center rounded-full bg-brand-soft text-[13px] font-bold text-brand">{i + 1}</span>
                 {p.t}
                 <span className="ml-auto rounded-md px-2 py-0.5 text-[12px]" style={{ background: p.ai ? "var(--sup-bg)" : "var(--ok-bg)", color: p.ai ? "var(--sup-fg)" : "var(--ok-fg)" }}>{p.ai ? "AI step" : "Code step"}</span>
               </p>
@@ -41,7 +42,7 @@ export default function HowItWorks() {
         </ol>
       </section>
 
-      <section className="mt-8 rounded-2xl border border-border bg-surface p-5" aria-labelledby="ai-h">
+      <section className="panel mt-8 p-6" aria-labelledby="ai-h">
         <h2 id="ai-h" className="flex items-center text-[22px] font-semibold">Proof it is not a chatbot <InfoButton k="ai" /></h2>
         <p className="mt-2">
           Address lookups and Pre-Flight checks make no AI calls at all: they run from the published rules, in your browser. Turn off your
@@ -62,9 +63,9 @@ export default function HowItWorks() {
             { k: "watch.radius" as const, l: "Change cases run", v: String(Object.keys(m.change_tests).length), s: Object.entries(m.change_tests).map(([k, v]) => `${k}: ${v.affected}`).join(", ") },
             { k: "audit" as const, l: "Audit log", v: m.audit?.ok ? "Intact" : "Check", s: `${m.audit?.entries ?? 0} recorded steps` },
           ].map((x) => (
-            <div key={x.l} className="rounded-xl border border-border p-4">
+            <div key={x.l} className="card kpi p-5">
               <dt className="flex items-center text-[15px] text-muted">{x.l} <InfoButton k={x.k} /></dt>
-              <dd className="mt-1 text-[28px] font-semibold tabular">{x.v}</dd>
+              <dd className="kpi-value text-[30px]">{x.v}</dd>
               <dd className="text-[14px] text-muted">{x.s}</dd>
             </div>
           ))}
@@ -78,9 +79,9 @@ export default function HowItWorks() {
             The same model, given the same law documents through search, asked the same questions in plain language with a request to cite.
             Questions come from places and topics where no rule is in force, and from buildings whose coverage depends on a missing fact.
           </p>
-          <div className="mt-3 overflow-x-auto rounded-xl border border-border">
-            <table className="w-full text-left text-[15px]">
-              <thead className="bg-surface text-muted"><tr><th className="p-3">Measure</th><th className="p-3">AI plus search</th><th className="p-3">Proofline</th></tr></thead>
+          <div className="card mt-3 overflow-x-auto">
+            <table className="table">
+              <thead><tr><th className="p-3">Measure</th><th className="p-3">AI plus search</th><th className="p-3">Proofline</th></tr></thead>
               <tbody>
                 <tr className="border-t border-border"><td className="p-3">Said a rule is in force where none is ({m.baseline.questions.no_rule} questions)</td><td className="p-3 tabular">{m.baseline.baseline.invented_in_force} ({Math.round((m.baseline.baseline.invented_in_force / m.baseline.questions.no_rule) * 100)}%)</td><td className="p-3 tabular font-semibold">{m.baseline.proofline.invented_in_force}</td></tr>
                 <tr className="border-t border-border"><td className="p-3">Quotes not found in the sources</td><td className="p-3 tabular">{m.baseline.baseline.quotes_not_found} of {m.baseline.baseline.quotes}</td><td className="p-3 tabular font-semibold">{m.baseline.proofline.quotes_not_found} of {m.baseline.proofline.quotes}</td></tr>
@@ -95,9 +96,9 @@ export default function HowItWorks() {
       <section className="mt-8" aria-labelledby="lim-h">
         <h2 id="lim-h" className="flex items-center text-[24px] font-semibold">Measured limits <InfoButton k="missing" /></h2>
         <p className="mt-1 text-muted">Where public records leave out facts, answers say &ldquo;Not sure yet&rdquo;. This is how often, by city, as of {m.as_of}.</p>
-        <div className="mt-3 overflow-x-auto rounded-xl border border-border">
-          <table className="w-full text-left text-[15px]">
-            <thead className="bg-surface text-muted"><tr><th className="p-3">Place</th><th className="p-3">Not sure yet</th><th className="p-3">Share of answers</th></tr></thead>
+        <div className="card mt-3 overflow-x-auto">
+          <table className="table">
+            <thead><tr><th className="p-3">Place</th><th className="p-3">Not sure yet</th><th className="p-3">Share of answers</th></tr></thead>
             <tbody>
               {Object.entries(m.unknown_by_city).sort((a, b) => b[1].unknown / b[1].total - a[1].unknown / a[1].total).map(([k, v]) => (
                 <tr key={k} className="border-t border-border"><td className="p-3">{k}</td><td className="p-3 tabular">{v.unknown} of {v.total}</td><td className="p-3 tabular">{pct(v.unknown, v.total)}</td></tr>
@@ -107,7 +108,7 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section id="scale" className="mt-8 rounded-2xl border border-border p-5" aria-labelledby="scale-h">
+      <section id="scale" className="card mt-8 p-6" aria-labelledby="scale-h">
         <h2 id="scale-h" className="text-[22px] font-semibold">Adding a new place takes one command</h2>
         <p className="mt-1">
           Bayonne, New Jersey was not in the challenge. We added it during the event from the city&apos;s own published rent control ordinance
@@ -125,7 +126,7 @@ export default function HowItWorks() {
         </p>
       </section>
 
-      <section id="audit" className="mt-8 rounded-2xl border border-border p-5" aria-labelledby="aud-h">
+      <section id="audit" className="card mt-8 p-6" aria-labelledby="aud-h">
         <h2 id="aud-h" className="flex items-center text-[22px] font-semibold">Check it yourself <InfoButton k="audit" /></h2>
         <p className="mt-1 text-muted">Re-checks the audit log chain and finds every rule&apos;s quote in its source again, on the server, now.</p>
         <div className="mt-3"><VerifyButton /></div>
@@ -136,18 +137,18 @@ export default function HowItWorks() {
         <h2 id="api-h" className="text-[24px] font-semibold">API and MCP</h2>
         <p className="mt-1 text-muted">Other tools, like a legal aid chatbot, can use the same answers. Every response says &ldquo;Not legal advice.&rdquo;</p>
         <ul className="mt-3 space-y-2 font-mono text-[14px]">
-          <li className="rounded-lg bg-surface p-3">GET /api/lookup?address=A0016&amp;as_of=2026-10-01</li>
-          <li className="rounded-lg bg-surface p-3">POST /api/preflight {"{"} &quot;address&quot;: &quot;A0016&quot;, &quot;action&quot;: {"{"} &quot;kind&quot;: &quot;rent_increase&quot;, &quot;current_rent&quot;: 2000, &quot;new_rent&quot;: 2100 {"}"} {"}"}</li>
-          <li className="rounded-lg bg-surface p-3">GET /api/audit/verify</li>
-          <li className="rounded-lg bg-surface p-3">MCP server: npm run mcp (tools: lookup_address, preflight_check, list_changes)</li>
+          <li className="rounded-lg bg-surface-2 p-3">GET /api/lookup?address=A0016&amp;as_of=2026-10-01</li>
+          <li className="rounded-lg bg-surface-2 p-3">POST /api/preflight {"{"} &quot;address&quot;: &quot;A0016&quot;, &quot;action&quot;: {"{"} &quot;kind&quot;: &quot;rent_increase&quot;, &quot;current_rent&quot;: 2000, &quot;new_rent&quot;: 2100 {"}"} {"}"}</li>
+          <li className="rounded-lg bg-surface-2 p-3">GET /api/audit/verify</li>
+          <li className="rounded-lg bg-surface-2 p-3">MCP server: npm run mcp (tools: lookup_address, preflight_check, list_changes)</li>
         </ul>
       </section>
 
       <section className="mt-8" aria-labelledby="src-h">
         <h2 id="src-h" className="flex items-center text-[24px] font-semibold">Sources ({SOURCES.length}) <InfoButton k="source" /></h2>
-        <div className="mt-3 max-h-[28rem] overflow-auto rounded-xl border border-border">
-          <table className="w-full text-left text-[14px]">
-            <thead className="sticky top-0 bg-surface text-muted"><tr><th className="p-2">ID</th><th className="p-2">Place</th><th className="p-2">Kind</th><th className="p-2">Rules</th><th className="p-2">Link</th></tr></thead>
+        <div className="card mt-3 max-h-[28rem] overflow-auto">
+          <table className="table text-[14px]">
+            <thead className="sticky top-0"><tr><th className="p-2">ID</th><th className="p-2">Place</th><th className="p-2">Kind</th><th className="p-2">Rules</th><th className="p-2">Link</th></tr></thead>
             <tbody>
               {SOURCES.map((s) => (
                 <tr key={s.doc_id} className="border-t border-border">

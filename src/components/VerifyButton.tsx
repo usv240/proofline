@@ -10,7 +10,7 @@ export function VerifyButton() {
   return (
     <div>
       <button type="button" disabled={busy} onClick={async () => { setBusy(true); try { setV(await (await fetch("/api/audit/verify")).json()); } finally { setBusy(false); } }}
-        className="h-11 rounded-lg bg-brand px-5 font-medium text-brand-ink disabled:opacity-60">
+        className="btn btn-primary">
         {busy ? "Checking..." : "Verify now"}
       </button>
       {v && (

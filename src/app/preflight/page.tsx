@@ -15,8 +15,9 @@ export default async function PreflightPage(props: PageProps<"/preflight">) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
-      <h1 className="flex items-center text-[32px] font-semibold">Rent Pre-Flight <InfoButton k="pf.form" /></h1>
-      <p className="mt-1 max-w-3xl text-muted">
+      <p className="eyebrow">Before it happens</p>
+      <h1 className="mt-1 flex items-center text-[34px] font-bold">Rent Pre-Flight <InfoButton k="pf.form" /></h1>
+      <p className="mt-2 max-w-3xl text-[17px] text-text-2">
         Check a rent increase, deposit, application fee or pricing software against every rule for one address, before it happens.
         You get <strong>Allowed</strong>, <strong>Not allowed</strong> with the law&apos;s words, or <strong>Needs a person</strong> with the missing fact.
       </p>

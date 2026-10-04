@@ -35,7 +35,7 @@ export default async function CheckPage(props: PageProps<"/check">) {
       </div>
       {bundle ? (
         <>
-          <div className="no-print mb-6 rounded-xl border border-border bg-surface p-4 text-[15px]">
+          <div className="panel no-print mb-6 p-4 text-[15px]">
             This page shows which rules cover this building on the date you pick. Tap any <strong>i</strong> to learn more.
             Tap <strong>Show proof</strong> to read the law&apos;s own words.
           </div>

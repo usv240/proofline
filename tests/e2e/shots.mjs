@@ -1,6 +1,6 @@
 import { chromium } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
-const base = process.env.BASE ?? "http://localhost:3124";
+const base = process.env.BASE ?? "http://localhost:3127";
 const pages = ["/", "/check?address=A0016", "/check?address=A0107", "/check?address=A0008", "/preflight?address=A0008", "/watch", "/watch/T3", "/byo", "/how-it-works", "/learn", "/card/A0016"];
 const browser = await chromium.launch({ channel: "chrome" });
 const issues = [];

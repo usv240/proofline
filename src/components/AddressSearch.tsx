@@ -71,19 +71,19 @@ export function AddressSearch({ index, target = "/check", autoFocus = false, com
             else if (e.key === "Enter") { e.preventDefault(); if (matches[active]) go(matches[active].id); else lookupFree(); }
             else if (e.key === "Escape") setOpen(false);
           }}
-          className="h-12 w-full rounded-xl border border-border bg-bg px-4 text-[17px] placeholder:text-muted"
+          className="input"
         />
         <button
           type="button"
           onClick={() => (matches[active] ? go(matches[active].id) : lookupFree())}
           disabled={busy}
-          className="h-12 shrink-0 rounded-xl bg-brand px-5 font-medium text-brand-ink disabled:opacity-60"
+          className="btn btn-primary h-12 shrink-0"
         >
           {busy ? "Finding..." : "Check"}
         </button>
       </div>
       {open && matches.length > 0 && (
-        <ul id={listId} role="listbox" className="absolute z-30 mt-1 w-full overflow-hidden rounded-xl border border-border bg-bg shadow-lg">
+        <ul id={listId} role="listbox" className="card absolute z-30 mt-2 w-full overflow-hidden">
           {matches.map((m, i) => (
             <li
               key={m.id}

@@ -63,14 +63,14 @@ export function ByoLaw({ places }: { places: string[] }) {
         <div className="space-y-3 sm:w-64">
           <label className="block">
             <span className="font-medium">Which place is it for?</span>
-            <select value={place} onChange={(e) => setPlace(e.target.value)} className="mt-1 h-12 w-full rounded-xl border border-border bg-bg px-3">
+            <select value={place} onChange={(e) => setPlace(e.target.value)} className="input mt-1">
               {places.map((p) => <option key={p} value={p}>{p}</option>)}
             </select>
           </label>
-          <button type="button" onClick={() => { setText(EXAMPLE_ORDINANCE); setPlace("Cambridge, MA"); }} className="h-11 w-full rounded-lg border border-border px-3 text-[15px] hover:bg-surface">
+          <button type="button" onClick={() => { setText(EXAMPLE_ORDINANCE); setPlace("Cambridge, MA"); }} className="btn btn-secondary w-full">
             Use a practice law (fictional)
           </button>
-          <button type="button" onClick={run} disabled={busy || text.trim().length < 200} className="h-12 w-full rounded-xl bg-brand font-semibold text-brand-ink disabled:opacity-50">
+          <button type="button" onClick={run} disabled={busy || text.trim().length < 200} className="btn btn-primary h-12 w-full">
             {busy ? "Reading..." : "Read this law"}
           </button>
           <p className="text-[14px] text-muted">Takes about a minute. The result is a proposal: nothing changes until a person approves it.</p>

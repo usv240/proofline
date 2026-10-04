@@ -13,18 +13,19 @@ const FILES = [
 export default function DataPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
-      <h1 className="text-[32px] font-semibold">Data</h1>
+      <p className="eyebrow">Open outputs</p>
+      <h1 className="mt-1 text-[34px] font-bold">Data</h1>
       <p className="mt-2 text-muted">
         All outputs are open. Generated {METRICS.generated_at.slice(0, 10)} from {METRICS.documents.with_text} documents. Not legal advice.
       </p>
       <ul className="mt-6 space-y-3">
         {FILES.map((x) => (
-          <li key={x.f} className="flex flex-col gap-2 rounded-xl border border-border p-4 sm:flex-row sm:items-center">
+          <li key={x.f} className="card flex flex-col gap-3 p-5 sm:flex-row sm:items-center">
             <div className="flex-1">
               <p className="font-mono font-semibold">{x.f}</p>
               <p className="text-[15px] text-muted">{x.d}</p>
             </div>
-            <a href={`/data/${x.f}`} download className="inline-flex h-11 items-center justify-center rounded-lg border border-border px-4 hover:bg-surface">Download</a>
+            <a href={`/data/${x.f}`} download className="btn btn-secondary">Download</a>
           </li>
         ))}
       </ul>

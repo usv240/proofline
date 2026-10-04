@@ -39,9 +39,9 @@ export function AddressResult({ address: base, rules, noRule, initialAsOf, rules
 
   return (
     <div className="space-y-8">
-      <section aria-labelledby="addr-h" className="rounded-2xl border border-border bg-surface p-5 sm:p-6">
-        <p className="text-[14px] text-muted">Address {address.address_id}</p>
-        <h1 id="addr-h" className="text-[28px] font-semibold leading-tight sm:text-[36px]">{address.street_address}</h1>
+      <section aria-labelledby="addr-h" className="panel hero-bg p-5 sm:p-7">
+        <p className="eyebrow">Address {address.address_id}</p>
+        <h1 id="addr-h" className="mt-1 text-[30px] font-bold leading-tight sm:text-[40px]">{address.street_address}</h1>
         <p className="mt-1 text-[17px]">
           Legal city: <strong>{address.city}, {address.state}</strong>
           {address.postal_city !== address.city && <span className="text-muted"> (mailing city: {address.postal_city})</span>}
@@ -68,21 +68,21 @@ export function AddressResult({ address: base, rules, noRule, initialAsOf, rules
       <section aria-label="Date" className="flex flex-col gap-3 sm:flex-row sm:items-end">
         <div>
           <label htmlFor="asof" className="flex items-center text-[15px] font-medium">As of <InfoButton k="asof" /></label>
-          <input id="asof" type="date" value={asOf} onChange={(e) => e.target.value && setAsOf(e.target.value)} className="h-11 rounded-lg border border-border bg-bg px-3" />
+          <input id="asof" type="date" value={asOf} onChange={(e) => e.target.value && setAsOf(e.target.value)} className="input h-11 w-auto" />
         </div>
         <div className="flex flex-wrap gap-2">
           {QUICK_DATES.map((q) => (
             <button key={q.d} type="button" aria-pressed={asOf === q.d} onClick={() => setAsOf(q.d)}
-              className={`h-11 rounded-lg border px-3 text-[15px] ${asOf === q.d ? "border-brand bg-[var(--sup-bg)]" : "border-border hover:bg-surface"}`}>
+              className={`btn ${asOf === q.d ? "btn-primary" : "btn-secondary"}`}>
               {q.label}
             </button>
           ))}
         </div>
       </section>
 
-      <section aria-labelledby="sum-h" className="rounded-2xl border border-border p-5">
+      <section aria-labelledby="sum-h" className="card p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <h2 id="sum-h" className="text-[22px] font-semibold">{lang === "es" ? `Resumen al ${asOf}` : `Summary as of ${asOf}`}</h2>
+          <h2 id="sum-h" className="text-[24px] font-bold">{lang === "es" ? `Resumen al ${asOf}` : `Summary as of ${asOf}`}</h2>
           <div role="group" aria-label="Language" className="no-print flex rounded-lg border border-border p-0.5">
             {(["en", "es"] as const).map((l) => (
               <button key={l} type="button" aria-pressed={lang === l} onClick={() => setLang(l)} className={`h-9 rounded-md px-3 text-[15px] ${lang === l ? "bg-brand text-brand-ink" : ""}`}>{l === "en" ? "English" : "Espanol"}</button>
@@ -120,7 +120,7 @@ export function AddressResult({ address: base, rules, noRule, initialAsOf, rules
                     const drops = o.changes.filter((c) => c.before === "applies" || (c.before === "unknown" && c.after === "none")).length;
                     return (
                       <button key={o.label} type="button" onClick={() => setAnswers([...answers.filter((x) => x.fact !== w.fact), { fact: w.fact, label: o.label, patch: o.patch }])}
-                        className="rounded-lg border border-border bg-bg px-3 py-2 text-left text-[15px] hover:border-brand">
+                        className="card card-hover px-3.5 py-2.5 text-left text-[15px]">
                         <span className="block font-medium">{o.label}</span>
                         <span className="block text-[13px] text-muted">
                           {gains ? `${gains} rule${gains === 1 ? "" : "s"} would protect you` : ""}{gains && drops ? ", " : ""}{drops ? `${drops} would not apply` : ""}
@@ -136,8 +136,8 @@ export function AddressResult({ address: base, rules, noRule, initialAsOf, rules
         )}
         <div className="mt-4"><ReceiptButton facts={address} asOf={asOf} results={results} rulesSha={rulesSha} /></div>
         <div className="mt-4 flex flex-wrap gap-2 no-print">
-          <Link href={`/preflight?address=${address.address_id}`} className="inline-flex h-11 items-center rounded-lg bg-brand px-4 font-medium text-brand-ink">Check a rent change</Link>
-          <Link href={`/card/${address.address_id}`} className="inline-flex h-11 items-center rounded-lg border border-border px-4 hover:bg-surface">Get a Rights Card</Link>
+          <Link href={`/preflight?address=${address.address_id}`} className="btn btn-primary">Check a rent change</Link>
+          <Link href={`/card/${address.address_id}`} className="btn btn-secondary">Get a Rights Card</Link>
         </div>
       </section>
 
@@ -146,7 +146,7 @@ export function AddressResult({ address: base, rules, noRule, initialAsOf, rules
         const none = noRule.filter((n) => n.category === cat);
         return (
           <section key={cat} aria-labelledby={`h-${cat}`}>
-            <h2 id={`h-${cat}`} className="flex items-center text-[22px] font-semibold">
+            <h2 id={`h-${cat}`} className="flex items-center text-[22px] font-bold">
               {lang === "es" ? CATEGORY_LABEL_ES[cat] : CATEGORY_LABEL[cat]} <InfoButton k={`cat.${cat}` as never} />
             </h2>
             <div className="mt-3 space-y-3">
@@ -154,7 +154,7 @@ export function AddressResult({ address: base, rules, noRule, initialAsOf, rules
                 .sort((a, b) => order(a.result) - order(b.result))
                 .map((r) => <RuleCard key={r.team_rule_id} rule={byId.get(r.team_rule_id)!} result={r} addressId={address.address_id} lang={lang} />)}
               {none.map((n) => (
-                <div key={`${n.jurisdiction}-${n.category}`} className="rounded-xl border border-dashed border-border p-4">
+                <div key={`${n.jurisdiction}-${n.category}`} className="card accent-none border-dashed p-4">
                   <div className="flex items-center gap-2"><VerdictChip kind="none" /><InfoButton k="v.none" /><span className="text-[14px] text-muted">{n.level === "state" ? `State: ${n.jurisdiction}` : `City: ${n.jurisdiction}`}</span></div>
                   <p className="mt-2 text-[15px]">{n.reason}</p>
                   {n.quoted_span && <blockquote className="law-quote mt-2">&ldquo;{n.quoted_span}&rdquo;{n.citation ? <span className="mt-1 block font-sans text-[13px] text-muted">{n.citation} ({n.source_doc_id})</span> : null}</blockquote>}
