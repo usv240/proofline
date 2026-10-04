@@ -5,6 +5,7 @@ import asyncio
 import json
 import os
 import subprocess
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SPEC = json.load(open(os.path.join(ROOT, "scripts", "video", "scenes.json"), encoding="utf-8"))
@@ -41,9 +42,14 @@ async def one(video, scene, rate):
 
 
 async def main():
+    # Optional scene ids on the command line regenerate only those scenes and keep the rest unchanged.
+    only = set(sys.argv[1:])
+    path = os.path.join(BUILD, "timings.json")
+    old = json.load(open(path, encoding="utf-8")) if only and os.path.exists(path) else {}
     timings = {}
     for video, v in SPEC["videos"].items():
-        timings[video] = [await one(video, s, v.get("rate", SPEC["rate"])) for s in v["scenes"]]
+        prev = {x["id"]: x for x in old.get(video, [])}
+        timings[video] = [prev[s["id"]] if only and s["id"] not in only and s["id"] in prev else await one(video, s, v.get("rate", SPEC["rate"])) for s in v["scenes"]]
         total = sum(x["dur"] + v.get("pad", 0.35) for x in timings[video])
         print(f"{video}: video {total:.1f}s  " + "  ".join(f"{x['id']}={x['dur']:.1f}" for x in timings[video]))
     json.dump(timings, open(os.path.join(BUILD, "timings.json"), "w", encoding="utf-8"), indent=1)

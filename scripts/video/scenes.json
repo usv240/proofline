@@ -38,7 +38,7 @@
         },
         {
           "id": "d6",
-          "say": "Plain AI with search invented rules that don't exist. Proofline: zero, across 2,010 checks. It doesn't ask you to trust AI; it lets you verify every answer. Proofline, by Team USV. Not legal advice.",
+          "say": "Plain AI with search invented rules that don't exist. Proofline: zero, across 2,010 checks. It doesn't ask you to trust AI; it lets you verify every answer. Proofline, by Team USV.",
           "callout": "0 invented rules in 2,010 checks",
           "end": "Try it: proofline-opal.vercel.app/judges",
           "callout_at": "zero"
@@ -100,7 +100,7 @@
         },
         {
           "id": "m4",
-          "say": "I built the whole system around evidence: verified quotes, deterministic decisions and explicit uncertainty. My goal wasn't to build another legal chatbot. It was to build something whose answers can be checked. Thanks for watching, and I would love your feedback.",
+          "say": "I built the whole system around evidence: verified quotes, deterministic decisions and explicit uncertainty. Every answer comes with its proof, so renters and housing providers can check it for themselves. Thanks for watching, and I would love your feedback.",
           "end": "proofline-opal.vercel.app"
         }
       ],

@@ -22,7 +22,7 @@ export default function MethodNote() {
 
       <h2 className="mt-3 font-bold">Pipeline (Module A)</h2>
       <ol className="list-decimal pl-5">
-        <li><strong>Read</strong> (Claude Opus 5.5, structured outputs): one call per document returns rule records in the official schema plus a coverage test over a closed set of facts (units, year built, building type, owner occupancy, subsidy, tenancy length).</li>
+        <li><strong>Read</strong> (Claude Opus 5.5 for the corpus, Sonnet 5.5 for laws pasted live; structured outputs): one call per document returns rule records in the official schema plus a coverage test over a closed set of facts (units, year built, building type, owner occupancy, subsidy, tenancy length).</li>
         <li><strong>Check quotes</strong> (code): every quote must be found word for word in the source; the stored span is copied from the source, never from the model. No quote, no rule.</li>
         <li><strong>Second check</strong> (independent model pass): tries to refute each record from the document alone; refuted records are dropped, partial ones corrected with lower confidence.</li>
         <li><strong>Reconcile and assemble</strong> (model grouping, deterministic merge): the same law found in several documents becomes one record; status is computed from lifecycle dates (enacted, effective, struck), never typed; conflicting published dates are kept and flagged.</li>

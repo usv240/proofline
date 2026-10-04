@@ -5,6 +5,8 @@ import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import type * as z from "zod/v4";
 
 export const MODEL = process.env.ANTHROPIC_MODEL_PIPELINE ?? "claude-opus-5-5";
+/** Laws pasted live on Bring your own: a faster, lower-cost model, since anyone can trigger it. */
+export const BYO_MODEL = process.env.ANTHROPIC_MODEL_BYO ?? "claude-sonnet-5-5";
 
 let client: Anthropic | null = null;
 function getClient() {
@@ -26,9 +28,10 @@ export async function parseStructured<T extends z.ZodType>(args: {
   user: string;
   effort?: "low" | "medium" | "high" | "xhigh" | "max";
   maxTokens?: number;
+  model?: string;
 }): Promise<{ data: z.infer<T> | null; meta: CallMeta }> {
   const res = await getClient().beta.messages.parse({
-    model: MODEL,
+    model: args.model ?? MODEL,
     max_tokens: args.maxTokens ?? 32000,
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default",

@@ -31,37 +31,47 @@ def chunks(text, max_words=9):
         if words:
             out.append(" ".join(words))
     # Merge fragments shorter than four words into a neighbour, so no line flashes by on its own.
-    merged = []
+    # A fragment joins the line before it, unless that line ends a sentence; then it starts the next line.
+    merged, carry = [], ""
     for line in out:
-        if merged and (len(line.split()) < 4 or len(merged[-1].split()) < 4) and len(merged[-1].split()) + len(line.split()) <= max_words + 3:
+        line = (carry + " " + line).strip() if carry else line
+        carry = ""
+        short = len(line.split()) < 4
+        prev_ends = bool(merged) and merged[-1].rstrip()[-1:] in ".?!"
+        if merged and short and not prev_ends and len(merged[-1].split()) + len(line.split()) <= max_words + 3:
             merged[-1] = merged[-1] + " " + line
+        elif short and (prev_ends or not merged) and line.rstrip()[-1:] not in ".?!":
+            carry = line
         else:
             merged.append(line)
+    if carry:
+        merged.append(carry)
     return merged
 
 
-def spoken_first(token):
-    t = f" {token} "
+def spoken_tokens(text):
+    t = f" {text} "
     for k, v in SPEC["speak"].items():
         t = t.replace(k, v)
-    return norm(t.split()[0]) if t.split() else ""
+    return [n for n in (norm(w) for w in t.split()) if n]
 
 
 def subtitle_events(scene, timing, offset):
-    """Align each subtitle line to the narration's word timings."""
+    """Align every spoken word, in order, to the narration's word timings; each line starts at its first word."""
     lines = chunks(scene["say"])
-    words = timing["words"]
-    events, idx = [], 0
-    starts = []
+    bounds = [(norm(w["w"]), w["t"]) for w in timing["words"]]
+    pos, starts = 0, []
     for line in lines:
-        first = spoken_first(line.split()[0])
-        j = idx
-        while j < len(words) and norm(words[j]["w"]) != first:
-            j += 1
-        if j >= len(words):
-            j = idx
-        starts.append(words[j]["t"] if j < len(words) else (starts[-1] + 1 if starts else 0))
-        idx = j + 1
+        first = None
+        for tok in spoken_tokens(line):
+            for j in range(pos, min(pos + 4, len(bounds))):
+                if bounds[j][0] == tok or bounds[j][0].startswith(tok) or tok.startswith(bounds[j][0]):
+                    if first is None:
+                        first = bounds[j][1]
+                    pos = j + 1
+                    break
+        starts.append(first if first is not None else (starts[-1] + 0.8 if starts else 0.0))
+    events = []
     for i, line in enumerate(lines):
         s = starts[i]
         e = starts[i + 1] if i + 1 < len(lines) else timing["dur"] + 0.25
@@ -136,7 +146,6 @@ def build(name):
         if end_card is not None:
             overlays.append(("Callout", end_card, end, sc["end"]))
     overlays.append(("Badge", 0, total, SPEC["badge"]))
-    overlays.append(("Badge2", 0, total, "Not legal advice"))
     ass = os.path.join(BUILD, name, "subs.ass")
     with open(ass, "w", encoding="utf-8") as f:
         f.write(

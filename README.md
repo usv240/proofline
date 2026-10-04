@@ -48,7 +48,7 @@ corpus ──► READ (Claude) ──► CHECK QUOTES (code) ──► SECOND CH
                                          lookups · Pre-Flight · change tracking · Rights Card
 ```
 
-1. **Read.** Claude (`claude-opus-5-5`, structured outputs) reads each document once and writes rule records in the official schema, plus a machine-testable coverage test over a closed set of facts (units, year built, building type, owner occupancy...).
+1. **Read.** Claude (`claude-opus-5-5` for the corpus; `claude-sonnet-5-5` for laws pasted live on Bring your own; structured outputs) reads each document once and writes rule records in the official schema, plus a machine-testable coverage test over a closed set of facts (units, year built, building type, owner occupancy...).
 2. **Check quotes.** Code confirms every quote exists word for word in the source and stores the exact source substring. No quote, no rule.
 3. **Second check.** A separate pass tries to refute each rule from the document alone (wrong date, status, number, place). Refuted rules are dropped; partial ones are corrected and get lower confidence.
 4. **Reconcile and assemble.** The same law found in several sources becomes one record. A later source showing enactment outranks an earlier draft. Conflicting published dates are kept and flagged. Status at any date is computed from the law's lifecycle (enacted, effective, struck), never typed by the model.

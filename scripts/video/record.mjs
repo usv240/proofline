@@ -275,10 +275,10 @@ const PLANS = {
       p.scroll(p.w("deterministic"), 1.5, p.page.locator("#pipe-h"), 150);
     }],
     ["t2", async (p) => { await p.go("/how-it-works"); await p.jump(p.page.locator("#pipe-h"), 150); }, (p) => {
-      p.glide(0.5, 1.0, [700, 420]);
-      p.glide(p.w("code"), 0.9, [1000, 640]);
-      p.scroll(p.w("second"), 1.8, p.page.locator("#ai-h"), 150);
-      p.glide(p.w("second") + 1.9, 0.9, [900, 420]);
+      // Point at each pipeline card as it is named: Read, Check quotes, Second check.
+      p.glide(0.4, 1.0, p.page.getByText("Read", { exact: true }).first());
+      p.glide(p.w("code"), 0.9, p.page.getByText("Check quotes", { exact: true }).first());
+      p.glide(p.w("second"), 0.9, p.page.getByText("Second check", { exact: true }).first());
     }],
     ["t3", async (p) => { await p.go(terminalPage()); p.hide(); }, (p) => {
       const b = p.w("verify");
@@ -307,9 +307,9 @@ const PLANS = {
       p.glide(0.4, 1.2, [700, 520]);
       p.glide(p.w("rent"), 1.2, [1250, 600]);
     }],
-    ["m4", async (p) => { await p.go("/how-it-works"); await p.jump(p.page.locator("#ai-h"), 150); }, (p) => {
+    ["m4", async (p) => { await p.go("/how-it-works"); await p.jump(p.page.locator("#num-h"), 150); }, (p) => {
       p.glide(0.5, 1.2, [820, 450]);
-      const a = p.w("goal") - 0.4;
+      const a = p.w("every") - 0.4;
       p.cut(a, () => p.go("/"));
       p.glide(a + 0.05, 1.5, [980, 520]);
     }],

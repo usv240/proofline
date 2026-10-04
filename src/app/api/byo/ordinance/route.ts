@@ -6,6 +6,7 @@ import { ADDRESSES, PLACES, RULES } from "@/lib/data";
 import { lookupAddress } from "@/lib/engine/lookup";
 import type { Result } from "@/lib/engine/types";
 import { extractDocument } from "@/lib/pipeline/extractDoc";
+import { BYO_MODEL } from "@/lib/pipeline/llm";
 import { toRuleRecords } from "@/lib/pipeline/toRecord";
 import { isSameOrigin, keyFromRequest, LIMITS, takeToken, verifyKey } from "@/lib/apikeys";
 
@@ -56,7 +57,7 @@ export async function POST(req: Request) {
   const full = `SOURCE: pasted by user\nRETRIEVED: ${retrieved_at}\n\n${text}`;
 
   const t0 = Date.now();
-  const r = await extractDocument({ doc_id, jurisdiction: place, state, level: place.includes(",") ? "city" : "state", url: "pasted by user", retrieved_at, text: full }, { effort: "medium" });
+  const r = await extractDocument({ doc_id, jurisdiction: place, state, level: place.includes(",") ? "city" : "state", url: "pasted by user", retrieved_at, text: full }, { effort: "medium", model: BYO_MODEL });
   const newRules = toRuleRecords(r.rules, { doc_id, url: "pasted by user", retrieved_at, kind: "fetched_link_only" }, `NEW-${sha.slice(0, 4).toUpperCase()}`, asOf);
 
   // Blast radius: compare every sample home with and without the new rules, today and on each new date.

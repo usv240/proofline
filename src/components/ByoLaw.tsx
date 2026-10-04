@@ -73,7 +73,7 @@ export function ByoLaw({ places }: { places: string[] }) {
           <button type="button" onClick={run} disabled={busy || text.trim().length < 200} className="btn btn-primary h-12 w-full">
             {busy ? "Reading..." : "Read this law"}
           </button>
-          <p className="text-[14px] text-muted">Takes about a minute. The result is a proposal: nothing changes until a person approves it.</p>
+          <p className="text-[14px] text-muted">Usually takes 10 to 30 seconds. The result is a proposal: nothing changes until a person approves it.</p>
         </div>
       </div>
 

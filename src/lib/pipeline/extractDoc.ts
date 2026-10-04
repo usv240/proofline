@@ -33,13 +33,13 @@ export function allowedJurisdictions(d: Pick<DocInput, "level" | "state" | "juri
   return d.level === "state" ? [d.state] : [d.jurisdiction, d.state];
 }
 
-export async function extractDocument(d: DocInput, opts: { effort?: "medium" | "high" } = {}): Promise<DocResult> {
+export async function extractDocument(d: DocInput, opts: { effort?: "medium" | "high"; model?: string } = {}): Promise<DocResult> {
   const steps: DocResult["steps"] = [];
   let t = Date.now();
   const allowed = allowedJurisdictions(d);
   const note = d.operator_note ? `\nOperator note: ${d.operator_note}` : "";
   const header = `DOCUMENT ${d.doc_id}\nSource URL: ${d.url}\nPrimary jurisdiction: ${d.jurisdiction}\nAllowed jurisdictions: ${allowed.join(" | ")}\nRetrieved: ${d.retrieved_at ?? "unknown"}${note}\n\n<document>\n${d.text}\n</document>`;
-  const ex = await parseStructured({ schema: ExtractionOutput, system: EXTRACT_SYSTEM, user: header, effort: opts.effort ?? "high" });
+  const ex = await parseStructured({ schema: ExtractionOutput, system: EXTRACT_SYSTEM, user: header, effort: opts.effort ?? "high", model: opts.model });
   const raw = ex.data ?? { rules: [], no_rule_findings: [] };
   steps.push({ step: "Read the law", ms: Date.now() - t, detail: `${raw.rules.length} candidate rules` });
 
@@ -78,6 +78,7 @@ export async function extractDocument(d: DocInput, opts: { effort?: "medium" | "
       system: VERIFY_SYSTEM,
       user: `${note ? `${note.trim()}\n\n` : ""}<document id="${d.doc_id}" jurisdiction="${d.jurisdiction}">\n${d.text}\n</document>\n\nCANDIDATE RECORDS:\n\n${listing}`,
       effort: opts.effort ?? "high",
+      model: opts.model,
     });
     verdicts = ver.data?.verdicts ?? [];
   }
