@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InfoButton } from "@/components/InfoButton";
 import { VerdictChip } from "@/components/Verdict";
+import { WatchCheck } from "@/components/WatchCheck";
 import { CHANGES, RULES } from "@/lib/data";
 
 export const metadata = { title: "Law Watch | Proofline" };
@@ -23,6 +24,8 @@ export default function WatchPage() {
         Laws start, stop, and get proposed or struck down. For each change, Proofline shows which homes it affects, from which date,
         and any conflict between state and city rules. A person approves each change before it is used in answers.
       </p>
+
+      <div className="mt-6"><WatchCheck /></div>
 
       <h2 className="mt-8 text-[22px] font-semibold">Change cases</h2>
       <ul className="mt-3 space-y-3">

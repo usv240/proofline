@@ -88,15 +88,6 @@
       "quoted_span": null
     },
     {
-      "jurisdiction": "San Diego, CA",
-      "level": "city",
-      "category": "screening_restrictions",
-      "reason": "No rule at this level was found in the 5 source documents for San Diego, CA. State law applies.",
-      "citation": null,
-      "source_doc_id": null,
-      "quoted_span": null
-    },
-    {
       "jurisdiction": "Santa Ana, CA",
       "level": "city",
       "category": "security_deposits",

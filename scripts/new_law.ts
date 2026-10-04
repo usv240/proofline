@@ -24,7 +24,7 @@ mkdirSync(NEW, { recursive: true });
 
 let text: string;
 if (file.toLowerCase().endsWith(".pdf")) {
-  text = execFileSync("python", ["-c", "import sys;from pypdf import PdfReader;print('\\n\\n'.join((p.extract_text() or '') for p in PdfReader(sys.argv[1]).pages))", file], { encoding: "utf8", maxBuffer: 50e6 });
+  text = execFileSync("python", ["-c", "import sys;from pypdf import PdfReader;print('\\n\\n'.join((p.extract_text() or '') for p in PdfReader(sys.argv[1]).pages))", file], { encoding: "utf8", maxBuffer: 50e6, env: { ...process.env, PYTHONIOENCODING: "utf-8", PYTHONUTF8: "1" } });
 } else text = readFileSync(file, "utf8");
 
 const existing = readdirSync(NEW).filter((f) => f.endsWith(".json")).map((f) => JSON.parse(readFileSync(path.join(NEW, f), "utf8")));
@@ -57,7 +57,7 @@ run("npx tsx scripts/publish.ts");
 run("npx tsx scripts/verify.ts");
 
 const rules = JSON.parse(readFileSync(path.join(ROOT, "out", "rules.json"), "utf8")).rules.filter((r: { source_doc_id: string }) => r.source_doc_id === docId);
-const changes = JSON.parse(readFileSync(path.join(ROOT, "out", "changes.json"), "utf8"));
+const changes = JSON.parse(readFileSync(path.join(ROOT, "out", "pipeline", "changes_full.json"), "utf8"));
 console.log(`\n${testId}: ${docId} (${place}) read in ${Math.round((Date.now() - t0) / 1000)}s`);
 for (const r of rules) console.log(`  ${r.team_rule_id} ${r.category} status=${r.status} effective=${r.effective_date} | ${r.title}`);
 console.log(`  affected addresses: ${changes[testId]?.affected_address_ids.length ?? 0}`);

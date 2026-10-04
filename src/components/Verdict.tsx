@@ -33,7 +33,12 @@ function Icon({ name }: { name: string }) {
   }
 }
 
-export function VerdictChip({ kind, size = "md" }: { kind: VerdictKind; size?: "md" | "lg" }) {
+const LABEL_ES: Record<VerdictKind, string> = {
+  applies: "Le protege", unknown: "Aun no se sabe", superseded: "Reemplazada por una regla local", not_yet_effective: "Empieza despues",
+  pending: "Propuesta, no es ley", failed: "No se aprobo", none: "No hay regla a este nivel", allowed: "Permitido", blocked: "No permitido", person: "Necesita una persona",
+};
+
+export function VerdictChip({ kind, size = "md", lang = "en" }: { kind: VerdictKind; size?: "md" | "lg"; lang?: "en" | "es" }) {
   const v = V[kind];
   return (
     <span
@@ -41,7 +46,7 @@ export function VerdictChip({ kind, size = "md" }: { kind: VerdictKind; size?: "
       style={{ background: v.bg, color: v.fg }}
     >
       <Icon name={v.icon} />
-      <span>{v.label}</span>
+      <span>{lang === "es" ? LABEL_ES[kind] : v.label}</span>
     </span>
   );
 }
@@ -53,6 +58,15 @@ export const CATEGORY_LABEL: Record<Category, string> = {
   application_screening_fees: "Application and screening fees",
   screening_restrictions: "Screening restrictions",
   algorithmic_rent_setting: "Algorithmic rent-setting",
+};
+
+export const CATEGORY_LABEL_ES: Record<Category, string> = {
+  rent_increase_limits: "Limites de aumento de renta",
+  just_cause_eviction: "Desalojo solo con causa justa",
+  security_deposits: "Depositos de garantia",
+  application_screening_fees: "Cuotas de solicitud y evaluacion",
+  screening_restrictions: "Limites en la evaluacion de inquilinos",
+  algorithmic_rent_setting: "Rentas fijadas por algoritmos",
 };
 
 export const CATEGORY_ORDER: Category[] = [

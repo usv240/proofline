@@ -65,6 +65,8 @@ export const PLACES = [
   "CA", "Los Angeles, CA", "San Francisco, CA", "San Diego, CA", "Berkeley, CA", "Santa Ana, CA",
   "NJ", "Jersey City, NJ", "Hoboken, NJ", "Newark, NJ", "MA", "Boston, MA", "Cambridge, MA",
 ];
+/** Places added after the brief to show the pipeline extends; not in the submission files. */
+export const EXTENSION_PLACES = ["Bayonne, NJ"];
 
 export function addressById(id: string) {
   return ADDRESSES.find((a) => a.address_id === id) ?? null;

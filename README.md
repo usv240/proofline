@@ -15,11 +15,11 @@ RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Ha
 
 | | |
 |---|---|
-| Documents read | 81 of 87 in the manifest (54 official text, 27 link-only pages fetched once; 6 sites blocked automated access and are recorded as such) |
-| Rules extracted | 78, every one with a quote found word for word in its source (100%) |
+| Documents read | 82 of 87 in the manifest (55 with official text, 27 link-only pages fetched once read-only; 5 sites blocked automated access and are recorded as such) |
+| Rules extracted | 74 in the 13 places in scope, every one with a quote found word for word in its source (100%); short official citations ("Cal. Civ. Code § 1947.12") |
 | Candidates rejected | quotes not found, wrong jurisdiction, or refuted by the second check are dropped and logged in `out/pipeline/rejected.json` |
 | Addresses | 500 placed in their legal city: 477 by the US Census Geocoder, 23 by mailing city |
-| Negative control | **0** "applies" answers in 2,250 checks where the right answer is "no rule", "failed" or "not law yet" |
+| Negative control | **0** "applies" answers in 2,090 checks where the right answer is "no rule", "failed" or "not law yet" |
 | Change cases | T1 250 CA addresses · T2 90 (Jersey City 50, Hoboken 40, Newark 0) · T3 140 NJ, 90 conflict flags · T4 110 MA pending · T5 0 |
 | Audit log | hash chained, every pipeline step recorded |
 
@@ -87,13 +87,23 @@ npm run new-law -- --file ordinance.pdf --place "Cambridge, MA" --test T6 --url 
 | `out/` | Submission files, audit log, pipeline intermediates |
 | `mcp/` | MCP server |
 
+## Tests and checks
+- `npm test`: engine unit tests plus 20 golden checks taken only from the organizers' own statements (the brief's San Francisco example, the README certificate-of-occupancy cutoffs, the T1 to T5 expectations, the official schema). They caught two real bugs during the event (Los Angeles rent control applying to no building; San Francisco rent control applying to post-1979 buildings), both fixed.
+- `npm run verify`: audit chain, every quote found in its source, engine reproduces `lookups.json`, failed or pending measures never "applies".
+- The audit log is written under an exclusive lock. An earlier segment broken by two concurrent runs is kept unchanged in `out/` and recorded in the first entry of the current chain.
+
+## Added during the event
+- **New place, live (stretch goal):** Bayonne, NJ, read from the city's own 28-page rent control ordinance PDF with one command (`npm run new-law -- --real`). Shown on the site and in live lookups; kept out of the submission files, which cover the 13 places in the brief.
+- **Law Watch live check:** reads the official Massachusetts Legislature bill history for S.2983 and H.5222 and compares it with the copy Proofline read. LegiScan and Open States are added automatically when `LEGISCAN_API_KEY` or `OPENSTATES_API_KEY` is set.
+- **English and Spanish** on every address result, not only the Rights Card.
+
 ## Known gaps (measured, not hidden)
-- **San Diego source-of-income ordinance (SDMC ch. 9 art. 8 div. 8):** the link-only page (D075) returned almost no text, so the pipeline reports no city screening rule for San Diego. Found by the baseline comparison. State law (Gov. Code 12955) still applies and is reported.
+- **San Diego source-of-income ordinance:** the link-only page (D075) returned almost no text. Found by the baseline comparison; fixed by reading the same Division 8 from the City of San Diego's official code PDF, labeled as such.
 - **Six link-only sources blocked automated access** (four Justia mirrors of statutes already in the corpus, the Los Angeles code publisher, and a mass.gov regulation). They were not worked around.
 - **Owner facts** (owner-occupied, corporate owner, number of properties) are never in public records, so rules that depend on them are "unknown" unless a user supplies the fact in Pre-Flight.
 
 ## Baseline comparison
-`npx tsx scripts/eval_baseline.ts`: the same model given the same corpus through BM25 search, asked in plain language. On 34 questions where no rule is in force at that level it claimed one 3 times (9%), and 3 of its 16 quotes were not in the sources. Proofline: 0 and 0 of 78. Full answers in `out/eval_baseline.json`.
+`npx tsx scripts/eval_baseline.ts`: the same model given the same corpus through BM25 search, asked in plain language. On 33 questions where no rule is in force at that level it claimed one 2 times, and 1 of its 20 quotes was not in the sources. Proofline: 0 and 0. Full answers in `out/eval_baseline.json`.
 
 ## Responsible design
 - Every interface, API response and export says **Not legal advice**.

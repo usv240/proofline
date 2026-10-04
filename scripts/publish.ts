@@ -16,7 +16,9 @@ const PUB = path.join(ROOT, "public", "data");
 mkdirSync(GEN, { recursive: true });
 mkdirSync(PUB, { recursive: true });
 
-const rules: (RuleRecord & { x_params?: unknown })[] = JSON.parse(readFileSync(path.join(OUT, "rules.json"), "utf8")).rules;
+// The site shows every place, including ones added after the brief (rules_all.json).
+const rulesFile = existsSync(path.join(OUT, "rules_all.json")) ? "rules_all.json" : "rules.json";
+const rules: (RuleRecord & { x_params?: unknown })[] = JSON.parse(readFileSync(path.join(OUT, rulesFile), "utf8")).rules;
 // Pre-Flight parameters (from scripts/params.ts) are attached by rule identity.
 const paramsFile = path.join(OUT, "pipeline", "params.json");
 if (existsSync(paramsFile)) {
@@ -28,7 +30,7 @@ if (existsSync(esFile)) {
   const es = JSON.parse(readFileSync(esFile, "utf8"));
   for (const r of rules as (RuleRecord & { x_plain_es?: string })[]) r.x_plain_es = es[r.team_rule_id]?.en === r.x_plain ? es[r.team_rule_id].es : undefined;
 }
-const noRule = JSON.parse(readFileSync(path.join(OUT, "no_rule_findings.json"), "utf8"));
+const noRule = JSON.parse(readFileSync(path.join(OUT, existsSync(path.join(OUT, "no_rule_findings_all.json")) ? "no_rule_findings_all.json" : "no_rule_findings.json"), "utf8"));
 const changesFull = JSON.parse(readFileSync(path.join(OUT, "pipeline", "changes_full.json"), "utf8"));
 const addrs = parseAddressesCsv(readFileSync(path.join(ROOT, "data", "addresses_resolved.csv"), "utf8"));
 const corpus = loadCorpus();

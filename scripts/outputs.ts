@@ -32,7 +32,8 @@ const changes: Record<string, unknown> = {};
 const changesFull: Record<string, unknown> = {};
 for (const t of tests) {
   const c = runChangeTest(t, rules, addrs);
-  changes[t.test_id] = { affected_address_ids: c.affected_address_ids, conflict_flag_address_ids: c.conflict_flag_address_ids, notes: c.notes };
+  // The submission covers the organizers' change tests (T1 to T6); other runs stay in changes_full.
+  if (/^T\d+$/.test(t.test_id)) changes[t.test_id] = { affected_address_ids: c.affected_address_ids, conflict_flag_address_ids: c.conflict_flag_address_ids, notes: c.notes };
   changesFull[t.test_id] = { ...t, ...c };
 }
 

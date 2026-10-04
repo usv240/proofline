@@ -4495,6 +4495,7 @@
       "coverage_conditions": "Newly constructed multiple dwellings (buildings with three or more units) within 30 years of completion of construction.",
       "exemptions": null,
       "overrides": [
+        "BAY-RENT-01",
         "HOB-RENT-01",
         "HOB-RENT-02",
         "JC-RENT-01",
@@ -4511,7 +4512,7 @@
       "quoted_span": "Under the Newly Constructed Multiple Dwellings Law ( N.J.S.A. 2A:42 -84.5), newly \nconstructed multiple dwellings shall be exempt from any local rent control ordinances for a period \nof 30 years following completion of construction of the building.",
       "confidence": 0.72,
       "conflict_flag": true,
-      "conflict_note": "May conflict with or preempt: HOB-RENT-01 (Hoboken, NJ), HOB-RENT-02 (Hoboken, NJ), JC-RENT-01 (Jersey City, NJ), NWK-RENT-01 (Newark, NJ), NWK-RENT-02 (Newark, NJ), NWK-RENT-03 (Newark, NJ). Human review needed.",
+      "conflict_note": "May conflict with or preempt: BAY-RENT-01 (Bayonne, NJ), HOB-RENT-01 (Hoboken, NJ), HOB-RENT-02 (Hoboken, NJ), JC-RENT-01 (Jersey City, NJ), NWK-RENT-01 (Newark, NJ), NWK-RENT-02 (Newark, NJ), NWK-RENT-03 (Newark, NJ). Human review needed.",
       "x_lifecycle": {
         "kind": "enacted",
         "enacted_date": null,
@@ -4942,7 +4943,7 @@
       "overrides": [],
       "interaction": null,
       "effective_date": "2025-06-21",
-      "citation": "S.D. Mun. Code §§ 98.1101-98.1104 (proposed, O-2025-107)",
+      "citation": "S.D. Mun. Code §§ 98.1101-98.1104",
       "x_citation_full": "S.D. Mun. Code §§ 98.1101-98.1104 (proposed, O-2025-107)",
       "source_doc_id": "D076",
       "source_url": "https://sandiego.gov/sites/default/files/2025-04/automated-rent-price-fixing-prohibition-ordinance-materials.pdf",
@@ -5227,6 +5228,75 @@
       "x_challenge": {
         "verdict": "partial",
         "note": "The quote, the 2023-06-24 effective date, the enacted status and the 2- or 3-month relocation amount (§98.0706(c)) are correct. The requirement overstates two duties. First, the five-year offer-back (§98.0706(d)) covers only evictions under (b)(1), (3) or (4), not withdrawal from the market. It also applies only if the tenant asked in writing within 30 days and gave an address. Second, the duty to notify the Housing Commission applies only 30 days after the Commission sets up its submission portal."
+      }
+    },
+    {
+      "team_rule_id": "SD-SCREEN-01",
+      "jurisdiction": "San Diego, CA",
+      "level": "city",
+      "category": "screening_restrictions",
+      "status": "in_force",
+      "title": "Prohibition of Discrimination Based on a Tenant's Source of Income",
+      "requirement": "Landlords may not refuse, renew, end or restrict a tenancy, misrepresent availability, or advertise in a discriminatory way based on a person's source of income, including rental assistance and housing vouchers. Income standards must count all of a tenant's sources of income and the combined income of co-tenants and cosigners.",
+      "key_value": null,
+      "coverage_conditions": "All rental units and tenancies in the City of San Diego. Source of income includes lawful verifiable income and rental assistance from any federal, state, local or nonprofit program, including security deposit and homeless assistance, whether paid to the tenant, landlord or a representative.",
+      "exemptions": "Tenancies where the owner or a member of the owner's family lives in the same residential building and shares a bathroom or kitchen with the tenant or prospective tenant. Acts necessary to comply with program requirements related to source of income are permitted.",
+      "overrides": [],
+      "interaction": null,
+      "effective_date": "2018-10-18",
+      "citation": "San Diego Mun. Code §§ 98.0801–98.0806",
+      "x_citation_full": "San Diego Mun. Code §§ 98.0801–98.0806",
+      "source_doc_id": "D075",
+      "source_url": "https://gocodebook.com/library/us/ca/san-diego-zoning/division-8-prohibition-of-discrimination-based-on-a-tenant-s-source-of-income",
+      "quoted_span": "It is unlawful for any person to do any of the following acts, wholly or in \r\npart, based on a person’s source of income",
+      "confidence": 0.9,
+      "conflict_flag": false,
+      "conflict_note": null,
+      "x_lifecycle": {
+        "kind": "enacted",
+        "enacted_date": "2018-09-18",
+        "effective_date": "2018-10-18",
+        "ended_date": null
+      },
+      "x_coverage": {
+        "all": [],
+        "exempt_if_any": []
+      },
+      "x_yields_to_local": false,
+      "x_may_conflict_with_local": false,
+      "x_details": [
+        {
+          "text": "Source of income is defined more broadly than state law to include rental assistance programs.",
+          "quoted_span": "This \r\nDivision defines source of income more broadly to include rental assistance from any \r\nfederal, state, local, or nonprofit-administered benefit or subsidy program, among \r\nother sources."
+        },
+        {
+          "text": "Income standards that fail to count all sources of income or combined income are prohibited.",
+          "quoted_span": "It is unlawful for any person to use a financial or income standard for \r\nentering into or renewing a tenancy that does either of the following:"
+        },
+        {
+          "text": "Owner-occupied shared-facility exemption.",
+          "quoted_span": "Nothing in this Division shall apply to any tenancy in which the owner or any \r\nmember of his or her family resides within the same residential building as the \r\ntenant and the owner or family member share a bathroom or a kitchen facility with \r\nthe tenant or prospective tenant."
+        },
+        {
+          "text": "Private right of action applies to violations on or after August 1, 2019, filed within one year of discovery.",
+          "quoted_span": "An aggrieved person claiming a violation of this Division may file an action \r\nagainst a person in a court of competent jurisdiction for a violation(s) that is \r\nalleged to have occurred on or after August 1, 2019, within one year after \r\ndiscovery of the alleged violation."
+        },
+        {
+          "text": "Damages of three times one month's rent for violations during a tenancy.",
+          "quoted_span": "If the court determines that a violation occurred \r\nduring a tenancy, then the court shall award to the individual whose rights \r\nare violated three (3) times the amount of one month’s rent that was being \r\ncharged for the rental-unit at the time of violation."
+        }
+      ],
+      "x_plain": "Your landlord in San Diego cannot turn you down, end your lease, or treat you differently because you pay rent with a housing voucher or other rental help.",
+      "x_retrieved_at": "2026-10-03",
+      "x_source_kind": "fetched_link_only",
+      "x_span": {
+        "start": 2846,
+        "end": 2966,
+        "match": "normalized"
+      },
+      "x_challenge": {
+        "verdict": "support",
+        "note": "§98.0803(a)-(c) supports this, with the broad source-of-income definition in §98.0802. Division effective 10-18-2018. Omitted limits: a program-requirements carve-out and the owner-occupied shared bathroom/kitchen exception (§98.0804). Private actions cover only violations on or after Aug 1, 2019."
       }
     },
     {

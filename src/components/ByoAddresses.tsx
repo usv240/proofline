@@ -12,7 +12,7 @@ const SAMPLE = `street,city,state,year_built,units
 300 Broadway,Jersey City,NJ,,8
 400 Mass Ave,Cambridge,MA,1920,6`;
 
-const CITIES = ["Los Angeles", "San Francisco", "San Diego", "Berkeley", "Santa Ana", "Jersey City", "Hoboken", "Newark", "Boston", "Cambridge"];
+const CITIES = ["Los Angeles", "San Francisco", "San Diego", "Berkeley", "Santa Ana", "Jersey City", "Hoboken", "Newark", "Boston", "Cambridge", "Bayonne"];
 
 function parse(text: string) {
   const lines = text.trim().replace(/\r/g, "").split("\n").filter(Boolean);

@@ -2,7 +2,7 @@
 // Building facts are unknown for live addresses, so rules that depend on them come back "Not sure yet".
 import type { AddressFacts } from "@/lib/engine/types";
 
-const CITIES = new Set(["Los Angeles", "San Francisco", "San Diego", "Berkeley", "Santa Ana", "Jersey City", "Hoboken", "Newark", "Boston", "Cambridge"]);
+const CITIES = new Set(["Los Angeles", "San Francisco", "San Diego", "Berkeley", "Santa Ana", "Jersey City", "Hoboken", "Newark", "Boston", "Cambridge", "Bayonne"]);
 const STATES: Record<string, AddressFacts["state"]> = { "06": "CA", "34": "NJ", "25": "MA" };
 
 export async function GET(req: Request) {

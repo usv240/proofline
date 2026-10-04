@@ -1,0 +1,13 @@
+[
+  {
+    "test_id": "J1",
+    "title": "New jurisdiction added live: Bayonne, NJ rent control (Ch. 16)",
+    "type": "new_document",
+    "rule_ids": [],
+    "source_doc_ids": [
+      "D088"
+    ],
+    "as_of": "2026-10-01",
+    "expected_behavior": "Extracted unaided; affected addresses listed; future effective date reported as not yet effective."
+  }
+]

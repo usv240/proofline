@@ -12,9 +12,13 @@ const ROOT = process.cwd();
 const IN = path.join(ROOT, "out", "pipeline", "extract");
 const OUT = path.join(ROOT, "out");
 
+export const EXTENSION_PLACES = ["Bayonne, NJ"];
 const CITY_CODE: Record<string, string> = {
   "Los Angeles, CA": "LA", "San Francisco, CA": "SF", "San Diego, CA": "SD", "Berkeley, CA": "BK", "Santa Ana, CA": "SA",
   "Jersey City, NJ": "JC", "Hoboken, NJ": "HOB", "Newark, NJ": "NWK", "Boston, MA": "BOS", "Cambridge, MA": "CAM",
+  // Added after the brief, to show the pipeline extends to new places (stretch goal). Kept out of the
+  // submission files, which cover only the 13 places in scope.
+  "Bayonne, NJ": "BAY",
   CA: "CA", NJ: "NJ", MA: "MA",
 };
 const CAT_CODE: Record<Category, string> = {
@@ -42,6 +46,8 @@ const CITATION_ALIASES: [RegExp, string][] = [
 ];
 
 export function shortCitation(c: string): string {
+  // Status words belong in the status field, not the citation (a draft's "(proposed, O-2025-107)").
+  c = c.replace(/\s*\([^)]*(proposed|draft|pending)[^)]*\)/gi, "");
   let s = c.trim();
   s = s.replace(/\s*\((?![^)]*(P\.?\s?L\.|c\.\s?\d|Ord\.|O-\d))[^)]*\)/g, "");
   s = s.replace(/,\s+[a-z][^,]*$/i, (m) => (/\d/.test(m) ? m : ""));
@@ -261,8 +267,11 @@ export function assemble() {
   }
 
   mkdirSync(OUT, { recursive: true });
-  writeFileSync(path.join(OUT, "rules.json"), JSON.stringify({ rules }, null, 2));
-  writeFileSync(path.join(OUT, "no_rule_findings.json"), JSON.stringify({ as_of: AS_OF, findings: noRules }, null, 2));
+  const inScope = (j: string) => !EXTENSION_PLACES.includes(j);
+  writeFileSync(path.join(OUT, "rules_all.json"), JSON.stringify({ rules }, null, 2));
+  writeFileSync(path.join(OUT, "no_rule_findings_all.json"), JSON.stringify({ as_of: AS_OF, findings: noRules }, null, 2));
+  writeFileSync(path.join(OUT, "rules.json"), JSON.stringify({ rules: rules.filter((r) => inScope(r.jurisdiction)) }, null, 2));
+  writeFileSync(path.join(OUT, "no_rule_findings.json"), JSON.stringify({ as_of: AS_OF, findings: noRules.filter((n) => inScope(n.jurisdiction)) }, null, 2));
 
   const rejected = docs.flatMap((d) => d.rejected.map((x: any) => ({ doc_id: d.doc_id, ...x })));
   writeFileSync(path.join(OUT, "pipeline", "rejected.json"), JSON.stringify(rejected, null, 2));

@@ -1,38 +1,38 @@
 {
   "baseline": {
     "model": "claude-opus-5-5",
-    "generated_at": "2026-10-04T02:06:52.146Z",
+    "generated_at": "2026-10-04T03:09:52.391Z",
     "questions": {
-      "no_rule": 34,
-      "unknown_coverage": 5
+      "no_rule": 33,
+      "unknown_coverage": 7
     },
     "baseline": {
-      "invented_in_force": 3,
+      "invented_in_force": 2,
       "confident_on_unknown": 0,
-      "quotes": 16,
-      "quotes_not_found": 3
+      "quotes": 20,
+      "quotes_not_found": 1
     },
     "proofline": {
       "invented_in_force": 0,
       "confident_on_unknown": 0,
-      "quotes": 78,
+      "quotes": 73,
       "quotes_not_found": 0
     },
     "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
   },
-  "generated_at": "2026-10-04T02:56:42.680Z",
+  "generated_at": "2026-10-04T03:10:12.810Z",
   "as_of": "2026-10-01",
   "documents": {
     "manifest": 87,
-    "with_text": 81,
-    "official": 54,
+    "with_text": 82,
+    "official": 55,
     "fetched": 27
   },
   "extraction": {
-    "candidates": 111,
-    "rejected": 2,
-    "rules": 72,
-    "quotes_verified": 72,
+    "candidates": 113,
+    "rejected": 3,
+    "rules": 74,
+    "quotes_verified": 74,
     "quote_rate": 1
   },
   "addresses": {
@@ -41,7 +41,7 @@
     "fallback": 23
   },
   "results": {
-    "applies": 4917,
+    "applies": 4967,
     "superseded": 265,
     "pending": 350,
     "not_yet_effective": 140,
@@ -82,17 +82,17 @@
     },
     "San Diego, CA": {
       "unknown": 150,
-      "total": 600
+      "total": 650
     }
   },
   "negative_control": {
-    "checks": 2140,
+    "checks": 2090,
     "invented_applies": 0,
-    "no_rule_cells": 34
+    "no_rule_cells": 38
   },
   "audit": {
     "ok": true,
-    "entries": 23,
+    "entries": 39,
     "brokenAt": null
   },
   "change_tests": {
@@ -113,6 +113,10 @@
       "conflicts": 0
     },
     "T5": {
+      "affected": 0,
+      "conflicts": 0
+    },
+    "J1": {
       "affected": 0,
       "conflicts": 0
     }

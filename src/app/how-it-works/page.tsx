@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { InfoButton } from "@/components/InfoButton";
 import { VerifyButton } from "@/components/VerifyButton";
-import { METRICS, SOURCES } from "@/lib/data";
+import { EXTENSION_PLACES, METRICS, RULES, SOURCES } from "@/lib/data";
 
 export const metadata = { title: "How it works | Proofline" };
 
@@ -104,6 +104,24 @@ export default function HowItWorks() {
             </tbody>
           </table>
         </div>
+      </section>
+
+      <section id="scale" className="mt-8 rounded-2xl border border-border p-5" aria-labelledby="scale-h">
+        <h2 id="scale-h" className="text-[22px] font-semibold">Adding a new place takes one command</h2>
+        <p className="mt-1">
+          Bayonne, New Jersey was not in the challenge. We added it during the event from the city&apos;s own published rent control ordinance
+          (a 28-page PDF), with the same pipeline and no hand-written rules:
+        </p>
+        <pre className="mt-3 overflow-x-auto rounded-lg bg-surface p-3 text-[13px]">npm run new-law -- --file Rent-Control-Ordinance-2023.pdf --place &quot;Bayonne, NJ&quot; --real</pre>
+        <ul className="mt-3 list-disc space-y-1 pl-6 text-[15px]">
+          {RULES.filter((r) => EXTENSION_PLACES.includes(r.jurisdiction)).map((r) => (
+            <li key={r.team_rule_id}>{r.team_rule_id}: {r.title} <span className="text-muted">({r.citation}{r.key_value ? `; ${r.key_value}` : ""})</span></li>
+          ))}
+        </ul>
+        <p className="mt-3 text-[15px] text-muted">
+          Read, quote-checked and second-checked in about 75 seconds. Type any Bayonne address in the search box to see it alongside New Jersey state law.
+          Places added this way are kept out of the challenge submission files, which cover the 13 places in the brief.
+        </p>
       </section>
 
       <section id="audit" className="mt-8 rounded-2xl border border-border p-5" aria-labelledby="aud-h">

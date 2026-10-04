@@ -6,7 +6,7 @@ import { decidingFactForAddress, lookupAddress } from "@/lib/engine/lookup";
 import type { AddressFacts, NoRuleFinding, RuleRecord } from "@/lib/engine/types";
 import { InfoButton } from "./InfoButton";
 import { RuleCard } from "./RuleCard";
-import { CATEGORY_LABEL, CATEGORY_ORDER, VerdictChip, type VerdictKind } from "./Verdict";
+import { CATEGORY_LABEL, CATEGORY_LABEL_ES, CATEGORY_ORDER, VerdictChip, type VerdictKind } from "./Verdict";
 
 const QUICK_DATES = [
   { d: "2025-12-31", label: "Dec 31, 2025" },
@@ -24,6 +24,7 @@ export function unitsText(a: AddressFacts) {
 
 export function AddressResult({ address, rules, noRule, initialAsOf }: { address: AddressFacts; rules: RuleRecord[]; noRule: NoRuleFinding[]; initialAsOf: string }) {
   const [asOf, setAsOf] = useState(initialAsOf);
+  const [lang, setLang] = useState<"en" | "es">("en");
   const results = useMemo(() => lookupAddress(rules, address, asOf), [rules, address, asOf]);
   const deciding = useMemo(() => decidingFactForAddress(rules, address, asOf, results), [rules, address, asOf, results]);
   const byId = useMemo(() => new Map(rules.map((r) => [r.team_rule_id, r])), [rules]);
@@ -74,10 +75,17 @@ export function AddressResult({ address, rules, noRule, initialAsOf }: { address
       </section>
 
       <section aria-labelledby="sum-h" className="rounded-2xl border border-border p-5">
-        <h2 id="sum-h" className="text-[22px] font-semibold">Summary as of {asOf}</h2>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 id="sum-h" className="text-[22px] font-semibold">{lang === "es" ? `Resumen al ${asOf}` : `Summary as of ${asOf}`}</h2>
+          <div role="group" aria-label="Language" className="no-print flex rounded-lg border border-border p-0.5">
+            {(["en", "es"] as const).map((l) => (
+              <button key={l} type="button" aria-pressed={lang === l} onClick={() => setLang(l)} className={`h-9 rounded-md px-3 text-[15px] ${lang === l ? "bg-brand text-brand-ink" : ""}`}>{l === "en" ? "English" : "Espanol"}</button>
+            ))}
+          </div>
+        </div>
         <ul className="mt-3 flex flex-wrap gap-2">
           {(["applies", "unknown", "superseded", "not_yet_effective", "pending"] as VerdictKind[]).filter((k) => counts[k]).map((k) => (
-            <li key={k} className="flex items-center gap-1"><VerdictChip kind={k} /><span className="tabular text-[15px]">x {counts[k]}</span></li>
+            <li key={k} className="flex items-center gap-1"><VerdictChip kind={k} lang={lang} /><span className="tabular text-[15px]">x {counts[k]}</span></li>
           ))}
         </ul>
         {deciding && unknownCount > 0 && (
@@ -102,12 +110,12 @@ export function AddressResult({ address, rules, noRule, initialAsOf }: { address
         return (
           <section key={cat} aria-labelledby={`h-${cat}`}>
             <h2 id={`h-${cat}`} className="flex items-center text-[22px] font-semibold">
-              {CATEGORY_LABEL[cat]} <InfoButton k={`cat.${cat}` as never} />
+              {lang === "es" ? CATEGORY_LABEL_ES[cat] : CATEGORY_LABEL[cat]} <InfoButton k={`cat.${cat}` as never} />
             </h2>
             <div className="mt-3 space-y-3">
               {items
                 .sort((a, b) => order(a.result) - order(b.result))
-                .map((r) => <RuleCard key={r.team_rule_id} rule={byId.get(r.team_rule_id)!} result={r} addressId={address.address_id} />)}
+                .map((r) => <RuleCard key={r.team_rule_id} rule={byId.get(r.team_rule_id)!} result={r} addressId={address.address_id} lang={lang} />)}
               {none.map((n) => (
                 <div key={`${n.jurisdiction}-${n.category}`} className="rounded-xl border border-dashed border-border p-4">
                   <div className="flex items-center gap-2"><VerdictChip kind="none" /><InfoButton k="v.none" /><span className="text-[14px] text-muted">{n.level === "state" ? `State: ${n.jurisdiction}` : `City: ${n.jurisdiction}`}</span></div>

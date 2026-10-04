@@ -81,14 +81,14 @@ export function ProofPanel({ rule }: { rule: RuleRecord }) {
   );
 }
 
-export function RuleCard({ rule, result, addressId }: { rule: RuleRecord; result: RuleResult; addressId?: string }) {
+export function RuleCard({ rule, result, addressId, lang = "en" }: { rule: RuleRecord & { x_plain_es?: string }; result: RuleResult; addressId?: string; lang?: "en" | "es" }) {
   const [open, setOpen] = useState(false);
   const kind = result.result as VerdictKind;
   const pfCats = ["rent_increase_limits", "security_deposits", "application_screening_fees", "algorithmic_rent_setting"];
   return (
     <article className="rounded-xl border border-border bg-bg p-4 sm:p-5">
       <div className="flex flex-wrap items-center gap-2">
-        <VerdictChip kind={kind} />
+        <VerdictChip kind={kind} lang={lang} />
         <span className="text-muted"><InfoButton k={`v.${kind}` as never} /></span>
         <span className="rounded-md bg-surface px-2 py-0.5 text-[13px] text-muted">{rule.level === "state" ? `State: ${rule.jurisdiction}` : `City: ${rule.jurisdiction}`}</span>
         {result.conflict_flag && (
@@ -98,7 +98,8 @@ export function RuleCard({ rule, result, addressId }: { rule: RuleRecord; result
         )}
       </div>
       <h3 className="mt-2 text-[18px] font-semibold leading-snug">{rule.title}</h3>
-      <p className="mt-1">{rule.x_plain || rule.requirement}</p>
+      <p className="mt-1" lang={lang}>{lang === "es" && rule.x_plain_es ? rule.x_plain_es : rule.x_plain || rule.requirement}</p>
+      {lang === "es" && <p className="mt-1 text-[13px] text-muted">La cita legal y los detalles estan en ingles, como en la fuente original.</p>}
       {rule.key_value && (
         <p className="mt-2 text-[15px]"><span className="text-muted">Key number: </span><span className="font-medium tabular">{rule.key_value}</span></p>
       )}
