@@ -21,7 +21,7 @@ const FAQ = [
   { q: "Is this legal advice?", a: "No. It shows what the law says and where it comes from. For advice about your situation, contact a legal aid office or a tenant rights group. The Learn page lists them." },
   { q: "Where does the law text come from?", a: "From official state and city sources collected for this project, each with its web address and the date it was retrieved. A few public pages listed only as links were retrieved once by Proofline and are labeled that way." },
   { q: "Why does it sometimes say \"Not sure yet\"?", a: "Some rules depend on facts that public records do not include, like the exact date a building was approved for people to live in. We tell you which fact and how to find it, instead of guessing. You can answer it on the page and watch every result update." },
-  { q: "Does it use AI?", a: "Yes, once: to read the law and turn it into rules that can be tested. A second AI pass and a script then check every rule against the source. Every answer you see is computed from those tested rules, not written by a chatbot." },
+  { q: "Does it use AI?", a: "Yes, once: to read the law and turn it into rules that can be tested. A second AI pass and a script then check every rule against the source. Every answer you see is computed from those tested rules, the same way every time." },
   { q: "Which places are covered?", a: "California (Los Angeles, San Francisco, San Diego, Berkeley, Santa Ana), New Jersey (Jersey City, Hoboken, Newark) and Massachusetts (Boston, Cambridge), plus Bayonne, NJ, added live during the event." },
   { q: "How current is it?", a: "Every answer shows an \"as of\" date, and you can pick a different date to see what applied before or what is about to change." },
 ];

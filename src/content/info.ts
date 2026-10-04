@@ -158,7 +158,7 @@ export const INFO = {
   },
   ai: {
     title: "AI off",
-    body: "Every address answer is computed from tested rules, not written by a chatbot. The AI is only used to read new laws.",
+    body: "Every address answer is computed from tested rules, the same way every time. The AI is only used to read new laws.",
   },
   note: {
     title: "A note you can send",

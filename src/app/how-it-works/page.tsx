@@ -22,7 +22,7 @@ export default function HowItWorks() {
       <p className="eyebrow">Under the hood</p>
       <h1 className="mt-1 text-[34px] font-bold">How it works</h1>
       <p className="mt-2 max-w-3xl text-[18px] text-muted">
-        The AI reads the law once. After that, every answer comes from tested code, not from a chatbot. Every number on this page is
+        The AI reads the law once. After that, every answer comes from tested code, the same way every time. Every number on this page is
         produced by a script from the published data.
       </p>
 
@@ -43,7 +43,7 @@ export default function HowItWorks() {
       </section>
 
       <section className="panel mt-8 p-6" aria-labelledby="ai-h">
-        <h2 id="ai-h" className="flex items-center text-[22px] font-semibold">Proof it is not a chatbot <InfoButton k="ai" /></h2>
+        <h2 id="ai-h" className="flex items-center text-[22px] font-semibold">No AI at answer time <InfoButton k="ai" /></h2>
         <p className="mt-2">
           Address lookups and Pre-Flight checks make no AI calls at all: they run from the published rules, in your browser. Turn off your
           internet after this page loads and change the date on any address: the answers still update. The AI is only used to read new law
