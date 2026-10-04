@@ -1,0 +1,17 @@
+[
+  {
+    "doc_id": "D023",
+    "title": "Statewide rent cap (Tenant Protection Act) – coverage as referenced in § 1946.2",
+    "reason": "second check: The document only quotes required notice text that cross-references § 1947.12. It does not set out the rent cap rule or its amount. The exemption described is the § 1946.2(e)(8) just cause exemption, not an established rent-limit rule."
+  },
+  {
+    "doc_id": "D030",
+    "title": "Pending state bills to ban algorithmic rent-setting",
+    "reason": "second check: State-level bills are another jurisdiction from this Cambridge document. They appear only as an unidentified passing mention in a news article, with no bill numbers or provisions."
+  },
+  {
+    "doc_id": "D075",
+    "title": "FEHA source of income discrimination prohibition",
+    "reason": "second check: This is a state FEHA rule, mentioned only as background in San Diego's purpose statement (§98.0801). The San Diego ordinance does not establish it, so it belongs to another jurisdiction."
+  }
+]

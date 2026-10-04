@@ -3,7 +3,7 @@
 // 2. Every rule's quote is found word for word in its source document.
 // 3. Re-running the engine reproduces lookups.json exactly (no hidden hand edits).
 // 4. The negative control holds: failed and pending measures never produce "applies".
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { parseAddressesCsv } from "../src/lib/engine/addresses";
 import { lookupAddress } from "../src/lib/engine/lookup";
@@ -13,14 +13,16 @@ import { AUDIT_FILE, verifyChain } from "./lib/audit";
 import { loadCorpus } from "./lib/corpus";
 
 const ROOT = process.cwd();
-const rules: RuleRecord[] = JSON.parse(readFileSync(path.join(ROOT, "out", "rules.json"), "utf8")).rules;
-const saved = JSON.parse(readFileSync(path.join(ROOT, "out", "lookups.json"), "utf8"));
+// out/ is written by the pipeline and not committed; a fresh clone (and CI) checks the published copies in public/data.
+const OUT = existsSync(path.join(ROOT, "out", "rules.json")) ? path.join(ROOT, "out") : path.join(ROOT, "public", "data");
+const rules: RuleRecord[] = JSON.parse(readFileSync(path.join(OUT, "rules.json"), "utf8")).rules;
+const saved = JSON.parse(readFileSync(path.join(OUT, "lookups.json"), "utf8"));
 const addrs = parseAddressesCsv(readFileSync(path.join(ROOT, "data", "addresses_resolved.csv"), "utf8"));
 const corpus = loadCorpus();
 let ok = true;
 const line = (pass: boolean, msg: string) => { console.log(`${pass ? "PASS" : "FAIL"}  ${msg}`); ok &&= pass; };
 
-const chain = verifyChain(readFileSync(AUDIT_FILE, "utf8"));
+const chain = verifyChain(readFileSync(existsSync(AUDIT_FILE) ? AUDIT_FILE : path.join(OUT, "audit.log.jsonl"), "utf8"));
 line(chain.ok, `audit log chain intact (${chain.entries} entries${chain.brokenAt ? `, broken at line ${chain.brokenAt}` : ""})`);
 
 const bad = rules.filter((r) => { const d = corpus.find((x) => x.doc_id === r.source_doc_id); return !d || !findSpan(d.text, r.quoted_span); });

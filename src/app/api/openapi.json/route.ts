@@ -14,6 +14,7 @@ export async function GET() {
       "/api/receipt/verify": { post: { summary: "Recompute and verify a proof receipt", responses: { "200": { description: "intact, same rule set, results match" } } } },
       "/api/audit/verify": { get: { summary: "Audit chain and quote verification", responses: { "200": { description: "chain and quotes" } } } },
       "/api/keys": { post: { summary: "Create an API key (from the developers page)", responses: { "200": { description: "key shown once" } } } },
+      "/api/health": { get: { summary: "Health of each component and the data version being served", responses: { "200": { description: "status ok | degraded | down, components, rules_sha256" } } } },
       "/api/keys/verify": { get: { summary: "Check a key", security: [{ bearer: [] }], responses: { "200": { description: "limits and expiry" }, "401": { description: "invalid" } } } },
     },
   };

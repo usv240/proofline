@@ -15,7 +15,12 @@
 
 # next.js
 /.next/
-/out/
+/out/*
+!/out/*.json
+!/out/*.jsonl
+!/out/pipeline/
+/out/pipeline/*
+!/out/pipeline/*.json
 
 # production
 /build

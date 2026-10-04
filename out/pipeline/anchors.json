@@ -1,0 +1,85 @@
+{
+  "Hoboken, NJ|algorithmic_rent_setting|Hoboken City Code § 158-2": {
+    "hash": "f8e08b3adb2ec31c",
+    "rule": "HOB-ALG-01",
+    "anchor": null,
+    "note": "None of the documents is Hoboken City Code § 158-2, and none states this local ordinance or its $2,000 fine / 90 days community service penalty. D069 is the statewide FAIR Act (N.J. antitrust law), which bans algorithmic rent coordination across New Jersey; it mentions Hoboken only in its legislative findings. It is a different law with different enforcement, so it does not state the Hoboken rule."
+  },
+  "Hoboken, NJ|rent_increase_limits|Hoboken City Code § 158-1": {
+    "hash": "49208507d08707b7",
+    "rule": "HOB-RENT-01",
+    "anchor": null,
+    "note": "None of the official documents contains Hoboken City Code § 158-1 or any Hoboken rule requiring disclosures for renewal rent increases over 10%. D069 (FAIR Act) mentions Hoboken only in legislative findings about rent growth and addresses algorithmic pricing, not renewal disclosures. D067 discusses statewide rent increase procedures and unconscionability but does not state this disclosure requirement. The 10% figure in D067 concerns security deposit increases, not rent."
+  },
+  "Jersey City, NJ|algorithmic_rent_setting|Jersey City Code § 218-12": {
+    "hash": "fd773db8aae44469",
+    "rule": "JC-ALG-01",
+    "anchor": null,
+    "note": "None of the documents states a Jersey City ban on algorithmic rent coordination services. The Jersey City landlord/tenant page (D036) does not mention the topic or Code § 218-12. D069 is New Jersey's statewide FAIR Act: it is state law, not a Jersey City ordinance, and lacks the $2,000-per-day fine."
+  },
+  "MA|application_screening_fees|254 CMR 7.00": {
+    "hash": "965887de7462ad34",
+    "rule": "MA-FEE-01",
+    "anchor": null,
+    "note": "The quoted text only covers the first part of the rule: it limits fee-based apartment-finding to licensed brokers or salesmen. It says nothing about the broker giving the applicant written notice at the first personal meeting. It also does not mention the notice's contents (fee amount, time and manner of payment, whether the fee depends on a lease) or the applicant signing or a refusal being recorded."
+  },
+  "Newark, NJ|rent_increase_limits|Newark, N.J., Code § 19:2-3.1; § 19:2-3.2": {
+    "hash": "cd68f99058fb6977",
+    "rule": "NWK-RENT-01",
+    "anchor": null,
+    "note": "None of the official documents set out Newark's rent control ordinance or its CPI-based increase cap of at most 4%. D067, the DCA Truth in Renting guide, says only in general terms that municipalities may adopt rent control ordinances. D065, D066, D068 and D069 deal with other topics: criminal records, application fees, discrimination and algorithmic rent pricing."
+  },
+  "Newark, NJ|rent_increase_limits|Newark, N.J., Code § 2:10-1.2b.5-": {
+    "hash": "9a097ddc40e938f4",
+    "rule": "NWK-RENT-02",
+    "anchor": null,
+    "note": "None of the official documents is Newark's municipal code or addresses HOME-assisted unit rent limits under Newark's Neighborhood Rehabilitation Program. They are state statutes on fair chance housing, application fees and algorithmic rent pricing, plus state DCA and DCR guides. None states the rent cap (the lesser of HUD fair market rent or 30% of income at 65% AMI) or the 30-day notice requirement for Newark."
+  },
+  "Newark, NJ|rent_increase_limits|Newark, N.J., Code § 2:10-11.1": {
+    "hash": "e8be5593b370fa3c",
+    "rule": "NWK-RENT-03",
+    "anchor": null,
+    "note": "None of the documents is the Newark municipal code. D067, the state Truth in Renting guide, discusses unconscionable rent increases under state case law, but it does not state Newark's definition (an increase exceeding the landlord's expense increase and not comparable to similar properties). It also says nothing about rent above an approved pro-forma being per se unconscionable for redevelopment or financial agreement properties. The other documents (D065, D066, D068, D069) cover unrelated topics."
+  },
+  "Newark, NJ|screening_restrictions|Newark Rev. Gen. Ord. ch. 2:31, Art. 1, §§ 2:31-1 to 2:31-9": {
+    "hash": "00a362b61cb72c5e",
+    "rule": "NWK-SCREEN-01",
+    "anchor": null,
+    "note": "None of the official documents is the Newark ordinance (ch. 2:31) or states Newark's rule. D065 is the statewide Fair Chance in Housing Act, which has different lookback periods (6/4/1 years by offense degree) and a conditional-offer trigger rather than Newark's 8-year/5-year lookbacks and formal-application trigger. The other documents do not address criminal history screening in Newark."
+  },
+  "San Diego, CA|screening_restrictions|San Diego Mun. Code §§ 98.0801–98.0806": {
+    "hash": "cc2b79de1132ded6",
+    "rule": "SD-SCREEN-01",
+    "anchor": null,
+    "note": "None of the San Diego documents (D073 on Division 7 tenant protections, D076 on algorithmic rent-setting) contains San Diego Mun. Code §§ 98.0801–98.0806 or a city source-of-income discrimination rule. The state documents (D016, D027) describe California's FEHA source-of-income protections, but they state the rule at state level rather than as San Diego's municipal requirement."
+  },
+  "Santa Ana, CA|algorithmic_rent_setting|Santa Ana ordinance prohibiting Algorithmic Devices": {
+    "hash": "d77d4b4e0fcc4bbe",
+    "rule": "SA-ALG-01",
+    "anchor": null,
+    "note": "None of the official documents mention a Santa Ana ordinance banning algorithmic rent-pricing devices. The Santa Ana pages (D084, D085) cover only rent stabilization and just cause eviction. AB 325 (D022) is a statewide Cartwright Act provision on common pricing algorithms, not the Santa Ana ordinance, and it does not include the $1,000 fine."
+  },
+  "Hoboken, NJ|rent_increase_limits|Hoboken City Code ch. 155, §§ 155-3, 155-4, 155-5": {
+    "hash": "53225245a2c48b6b",
+    "rule": "HOB-RENT-02",
+    "anchor": null,
+    "note": "None of the official documents are Hoboken's rent control ordinance. D067 says only that municipalities may adopt rent control ordinances. D069 mentions Hoboken only for rent-growth data. No document states the 5%-or-CPI cap, the October 1, 1985 base rent, or the one-increase-per-12-months limit for Hoboken."
+  },
+  "Los Angeles, CA|screening_restrictions|L.A. Mun. Code §§ 45.65–45.69": {
+    "hash": "b3c6d44df7c90554",
+    "rule": "LA-SCREEN-01",
+    "anchor": null,
+    "note": "None of the Los Angeles documents (council motion on rent algorithms, JCO page, RSO overview, rent increase calculator, relocation bulletins) mention a source-of-income or Section 8 discrimination ban under LAMC §§ 45.65–45.69. The California documents (CRD housing page D016 and Gov. Code 12955 in D027) describe the separate statewide FEHA source-of-income protection, not the Los Angeles municipal ordinance cited in the rule."
+  },
+  "NJ|security_deposits|N.J.S.A. 46:8-26": {
+    "hash": "82de50eeb0241896",
+    "rule": "NJ-DEP-02",
+    "anchor": {
+      "doc_id": "D067",
+      "quote": "The Security Deposit Law applies to most  residential rental properties, including mobile \nhomes. The exception is an owner-occupied two-, or three-family dwelling. A tenant in an owner-\noccupied two-, or three-family dwelling may, however, make this provision applicable to their \ntenancy 30 days  after sending a  written  request  to the landlord  that  the landlord  fulfill  the \nrequirements of the Security Deposit Law.",
+      "start": 41565,
+      "end": 41991
+    },
+    "note": "The text says the law covers residential rentals, with one exception: owner-occupied two- or three-family dwellings, which means no more than two rental units besides the owner's. It also says a tenant there can bring the law into effect 30 days after a written request to the landlord. This matches the rule in substance."
+  }
+}

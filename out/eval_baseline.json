@@ -1,0 +1,694 @@
+{
+  "summary": {
+    "model": "claude-opus-5-5",
+    "generated_at": "2026-10-04T03:09:52.391Z",
+    "questions": {
+      "no_rule": 33,
+      "unknown_coverage": 7
+    },
+    "baseline": {
+      "invented_in_force": 2,
+      "confident_on_unknown": 0,
+      "quotes": 20,
+      "quotes_not_found": 1
+    },
+    "proofline": {
+      "invented_in_force": 0,
+      "confident_on_unknown": 0,
+      "quotes": 73,
+      "quotes_not_found": 0
+    },
+    "method": "Baseline = same model, BM25 retrieval of 8 chunks from the same corpus, asked in plain language with a citation request. Proofline answers come from the published engine outputs for the same questions."
+  },
+  "results": [
+    {
+      "id": "A:MA:rent_increase_limits",
+      "q": "As of 2026-10-01, is there a MA state law on rent increase limits (rent control or rent caps) that is in force? Do not count city ordinances, bills, or failed measures. Answer yes or no, and list only state laws in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "no",
+        "rules": [
+          {
+            "citation": "Mass. Gen. Laws ch. 40P, § 4",
+            "in_force": true,
+            "quote": "No city or town may enact, maintain or enforce rent control of any kind, except that any city or town that accepts this chapter may adopt rent control regulation that provides: (a) after six months from the date of the initial adoption of rent control regulation by a particular city or town, compliance on the part of property owners as to the rent control regulation or any subsequently adopted rent control regulation shall be entirely voluntary and uncoerced"
+          }
+        ],
+        "explanation": "The provided excerpts show no Massachusetts state law that limits rent increases. The state law that is in force, M.G.L. c. 40P, § 4, works the other way: it generally bars cities and towns from enacting, maintaining or enforcing rent control. The only exception is a narrow local option, and even then landlord compliance becomes entirely voluntary after six months. The 2026 rent control ballot question was blocked by the Supreme Judicial Court, so it is a failed measure and not law. Proponents mentioned a possible 2028 effort, which also does not count. The other Massachusetts excerpts (c. 186, §§ 11 and 31) cover notices to quit for nonpayment of rent, not rent increase limits. I have cited § 4 because it is the in-force state law that governs this question, not because it caps rents."
+      },
+      "quotes": 1,
+      "notFound": 0,
+      "inventedInForce": 1,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Los Angeles, CA:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Los Angeles itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided Los Angeles excerpts (D040 Just Cause Ordinance, D042 RSO rent increase calculator, D043 relocation assistance bulletins, D044 security deposit interest) addresses a city ordinance limiting tenant application or screening fees. The 'Application Fees' in D043 are LAHD relocation service fees that landlords pay. They are not fees charged to prospective tenants. The only screening-fee rule in the excerpts is Berkeley's page (D005), which relies on state law (Civ. Code 1950.6) and is excluded. The excerpts therefore neither confirm nor rule out a Los Angeles city ordinance on this topic, so the answer cannot be determined from them, and no in-force Los Angeles ordinance can be listed."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Los Angeles, CA:screening_restrictions",
+      "q": "As of 2026-10-01, has the city of Los Angeles itself enacted a local ordinance on tenant screening restrictions (criminal history, source of income) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts identify a City of Los Angeles ordinance restricting tenant screening based on criminal history or source of income. The Los Angeles excerpts cover only the Just Cause Ordinance (D040), RSO/JCO relocation assistance (D043), and security deposit interest under the RSO (D044). None of these addresses screening criteria. The criminal-history and source-of-income materials (D015, D016) describe California state law and regulations, which you asked me to exclude. The only local fair chance ordinance in the excerpts is Berkeley's (BMC 13.106, D003), not Los Angeles's. Because these excerpts neither confirm nor rule out a Los Angeles city ordinance in force as of 2026-10-01, I cannot answer yes or no, and no Los Angeles city ordinances can be listed. Checking the Los Angeles Municipal Code or the Los Angeles Housing Department directly would settle the question."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Los Angeles, CA:algorithmic_rent_setting",
+      "q": "As of 2026-10-01, has the city of Los Angeles itself enacted a local ordinance on bans on algorithmic rent-setting software that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts shows that the City of Los Angeles has enacted its own local ordinance banning algorithmic rent-setting software, so I can't confirm one exists or is in force as of 2026-10-01. The Los Angeles excerpts cover different topics. D044 is about security deposit interest under the Rent Stabilization Ordinance. D040 is about the Just Cause for Eviction Ordinance. D042 is about the Rent Stabilization Ordinance rent increase calculator. None of them mentions algorithmic pricing. The excerpts that do discuss algorithmic rent-setting bans are about other places. These are Santa Ana's ordinance (D087, given a first reading Feb. 17, 2026 with a final vote set for March 3), New Jersey's state FAIR Act (D069/D060), and a Morgan Lewis article (D037/D002) that lists actions in San Francisco, San Diego, Seattle, Philadelphia and Providence, but not Los Angeles. The Morgan Lewis excerpt is cut off, so it may mention other places. Because the excerpts neither confirm nor rule out a Los Angeles ordinance, the answer is unknown rather than a definite no. I list no in-force Los Angeles city ordinances because none appear in the provided text."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:San Francisco, CA:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of San Francisco itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts identifies a San Francisco city ordinance that limits application or tenant screening fees. The San Francisco materials cover other topics. D078 is a Human Rights Commission page that mentions the Fair Chance Ordinance and Sanctuary City complaints, but its text contains nothing on screening fee caps. D037 and D002 discuss SF Administrative Code § 37.10C, which bans algorithmic rent-pricing devices, not screening fees. The fee-limit material that is provided applies elsewhere. D005 concerns Berkeley and relies on state law (California Civil Code § 1950.6), which you asked me to exclude. D054 concerns Massachusetts. Because the excerpts neither show that such an SF ordinance exists nor rule it out, I cannot answer yes or no from these sources, so I have listed no ordinances. To confirm, check the San Francisco Rent Board or the SF Administrative Code directly."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:San Diego, CA:rent_increase_limits",
+      "q": "As of 2026-10-01, has the city of San Diego itself enacted a local ordinance on rent increase limits (rent control or rent caps) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "no",
+        "rules": [],
+        "explanation": "None of the excerpts shows that the City of San Diego has its own local ordinance capping rent increases. The San Diego Tenant Protection Ordinance materials (D077) cover just-cause eviction requirements, such as the conditions for a 'substantial remodel' eviction. The tenant notice described there points to state law for rent caps: 'California law limits the amount your rent can be increased. See California Civil Code section 1947.12.' The local portion of that notice concerns only a statement of cause for terminations. D076 discusses a proposed ordinance banning anti-competitive automated rent price-fixing (algorithmic pricing). That is not a cap on rent increases, and the excerpt does not show it was adopted or is in force. Rent increase limits in San Diego therefore appear to come from state law (Civil Code 1947.12), which you asked to exclude. Because no in-force city ordinance limiting rent increases appears in these excerpts, the answer is no and the list of qualifying ordinances is empty. Note this is based only on the provided excerpts; the city's official code would confirm it."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:San Diego, CA:security_deposits",
+      "q": "As of 2026-10-01, has the city of San Diego itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the excerpts shows a City of San Diego ordinance setting security deposit limits. The only San Diego source (D077, a Legal Aid Society of San Diego fact sheet on the City of San Diego Tenant Protection Ordinance, updated September 21, 2023) is cut off before it says anything about security deposits. It also warns that its information may not be current. The security deposit caps in the excerpts come from California state law (Assembly Bill 12, effective July 1, 2024), as described on Berkeley's page (D007). You asked me not to count state law, so I excluded it. The Morgan Lewis article (D037/D002) mentions San Diego only for algorithmic rent-pricing litigation, not deposit limits. Because these excerpts neither confirm nor rule out a San Diego city ordinance on deposit limits in force as of 2026-10-01, I cannot answer yes or no. To check, look at the San Diego Municipal Code or ask the San Diego Housing Commission."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:San Diego, CA:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of San Diego itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the excerpts show a City of San Diego ordinance limiting application or screening fees. The San Diego material (D077, Legal Aid Society of San Diego) covers the Tenant Protection Ordinance: just-cause eviction, substantial-remodel requirements and tenant notice. It says nothing about screening or application fees. The fee-limit material that does appear concerns Berkeley, which applies state law (Cal. Civ. Code 1950.6), and Massachusetts, so neither is relevant here. These are only partial excerpts, so their silence does not prove San Diego has no such ordinance. I therefore cannot answer yes or no from the provided sources, and no in-force city ordinance can be listed. To confirm, check the San Diego Municipal Code or the San Diego Housing Commission."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Santa Ana, CA:security_deposits",
+      "q": "As of 2026-10-01, has the city of Santa Ana itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided Santa Ana excerpts mention a city ordinance that limits security deposits. The Santa Ana materials cover three ordinances. The first is the Rent Stabilization Ordinance, which caps rent increases at 3% or 80% of CPI, whichever is lower; the current maximum is 2.87% for Sept 1, 2026 through Aug 31, 2027. The second is the Just Cause Eviction Ordinance, effective Nov. 19, 2021. The third is an ordinance banning algorithmic rent-setting software, approved for first reading Feb. 17, 2026, with a final vote set for March 3. None of these addresses security deposits. The only security deposit rules in the excerpts are on a Berkeley page, and they describe state law (AB 12), which you asked me to exclude. Because these excerpts are not the full Santa Ana municipal code, I can't confirm whether a local deposit ordinance exists or not, so the answer is unknown. No Santa Ana ordinance on security deposits is listed."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Santa Ana, CA:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Santa Ana itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "no",
+        "rules": [],
+        "explanation": "None of the provided excerpts show that Santa Ana has enacted a local ordinance limiting application or screening fees. The Santa Ana materials cover three other ordinances. First, the Rent Stabilization Ordinance caps increases at the lower of 3% or 80% of CPI, and the current maximum is 2.87% for Sept 1, 2026–Aug 31, 2027. Second, the Just Cause Eviction Ordinance has been effective since Nov 19, 2021. Third, Ordinance No. NS-3090 on algorithmic rent-setting has been effective since April 2, 2026. None of these addresses screening or application fees. The screening-fee limits in the excerpts come from Berkeley's guidance on California Civil Code §1950.6, which is state law and excluded by the question, and from Massachusetts law, which does not apply. On the provided record, Santa Ana has no in-force city ordinance on application or screening fees, so no city ordinances are listed. This conclusion is limited to these excerpts; Santa Ana's full municipal code was not provided."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Santa Ana, CA:screening_restrictions",
+      "q": "As of 2026-10-01, has the city of Santa Ana itself enacted a local ordinance on tenant screening restrictions (criminal history, source of income) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The excerpts don't show any Santa Ana city ordinance on tenant screening, such as limits on criminal-history checks or source-of-income discrimination. The Santa Ana materials cover three other ordinances: the Rent Stabilization Ordinance (effective Nov. 19, 2021), the Just Cause Eviction Ordinance, and a 2026 ordinance banning algorithmic rent-setting software, which got a first reading on Feb. 17 with a final vote set for March 3. None of these address tenant screening, so I have listed no city ordinances. The criminal-history restrictions shown come from other sources: Berkeley's Fair Chance Access to Housing Ordinance (BMC 13.106) applies only in Berkeley, and the California Civil Rights Council regulations described by the California Apartment Association are state law, which you asked me to exclude. Because these excerpts are not a complete record of Santa Ana's municipal code, I can't confirm that no such ordinance exists. The answer is unknown rather than no. To check directly, you can contact Santa Ana's rent stabilization office at rso@santa-ana.org or (714) 667-2209, or see santa-ana.gov/renterprotections."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Jersey City, NJ:just_cause_eviction",
+      "q": "As of 2026-10-01, has the city of Jersey City itself enacted a local ordinance on just-cause eviction protections that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The excerpts provided cover Santa Ana, Los Angeles, Berkeley, San Francisco, and California state law. None of them mention Jersey City. Jersey City is in New Jersey, where just-cause eviction protections generally come from the state Anti-Eviction Act, which you asked me not to count. Because these excerpts contain no Jersey City ordinance, I can't confirm whether the city has enacted its own just-cause eviction ordinance in force as of 2026-10-01, so I'm not listing any. To find out, check the Jersey City Municipal Code (for example, the Rent Leveling chapter) or contact the Jersey City Office of Landlord-Tenant Relations."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Jersey City, NJ:security_deposits",
+      "q": "As of 2026-10-01, has the city of Jersey City itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts covers a Jersey City ordinance on security deposit limits. The two Jersey City excerpts deal only with algorithmic rent-pricing. D037 is a Morgan Lewis article on rent-pricing litigation. D035 is a news report of public comment on a proposed anti-RealPage ordinance. Neither mentions a city security deposit limit. The security deposit material in the excerpts is about Berkeley (D007, which describes state law AB 12) and Los Angeles (D044, deposit interest under LARSO), not Jersey City. Without a source on Jersey City's own ordinances, I can't confirm or rule out a local security deposit ordinance in force as of 2026-10-01, so no city ordinances are listed. Separately, New Jersey state law caps security deposits, but you asked me to exclude state law, and it is not in these excerpts either."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Jersey City, NJ:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Jersey City itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The excerpts don't settle whether Jersey City has its own ordinance limiting application or screening fees, so I can't answer yes or no. The two Jersey City excerpts are a Morgan Lewis article (D037) and a Hudson County View report (D035). Both are about a proposed ordinance on algorithmic rent-pricing software like RealPage. That proposal deals with rent-setting collusion, not screening fees, and the excerpts don't show it was ever enacted or took effect. None of the excerpts mention a Jersey City ordinance on application or screening fees. The fee-limit rules that do appear are from other places: Berkeley (BMC 13.78.010 and 13.78.016), California Civil Code 1950.6, and Massachusetts (MGL ch. 186 §15B). Because the excerpts are silent, the most I can say is that they don't show such an ordinance. That is not proof that none exists, so I've listed no Jersey City ordinances. To check, you could look at Jersey City's municipal code directly or contact the city's rent leveling or tenant services office."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Jersey City, NJ:screening_restrictions",
+      "q": "As of 2026-10-01, has the city of Jersey City itself enacted a local ordinance on tenant screening restrictions (criminal history, source of income) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts identifies a Jersey City ordinance on tenant screening, criminal history, or source of income. The only excerpt tagged Jersey City (D037, a Morgan Lewis article) covers algorithmic rent-pricing litigation, not screening restrictions, and it does not cite any Jersey City ordinance. The Berkeley Fair Chance Ordinance (BMC 13.106) and the California materials apply to other jurisdictions. Any New Jersey state law, such as the Fair Chance in Housing Act, is excluded by your question. These excerpts therefore cannot confirm or rule out an in-force Jersey City ordinance as of 2026-10-01. To get a definite answer, check the Jersey City Municipal Code or ask the city's Office of Landlord-Tenant Relations."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Hoboken, NJ:just_cause_eviction",
+      "q": "As of 2026-10-01, has the city of Hoboken itself enacted a local ordinance on just-cause eviction protections that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The excerpts don't cover Hoboken (New Jersey), so I can't say whether the city has its own just-cause eviction ordinance in force as of 2026-10-01. They only cover California jurisdictions: Santa Ana, Los Angeles, Berkeley, San Francisco, and California state law. None of those apply to Hoboken, so I have not listed any of them. For reference, New Jersey has a statewide Anti-Eviction Act, but the question excludes state law and it isn't in these excerpts either. To answer this, you would need Hoboken's municipal code or official city sources."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Hoboken, NJ:security_deposits",
+      "q": "As of 2026-10-01, has the city of Hoboken itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts contains a Hoboken city ordinance on security deposit limits. The only mention of Hoboken is in the New Jersey FAIR Act (P.L. 2026, c.43, D069). That is a state law about algorithmic rent pricing. It cites Hoboken rent increases only as legislative findings, and the question excludes state law in any case. The other excerpts cover Berkeley, Santa Ana, Los Angeles and general commentary, not Hoboken municipal law. Because the excerpts are silent, I cannot confirm or rule out that Hoboken has an in-force local security deposit ordinance as of 2026-10-01. To check, consult Hoboken's municipal code, for example its rent control chapter, or the city's rent leveling office."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Hoboken, NJ:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Hoboken itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts address Hoboken, New Jersey. They cover Berkeley, CA (BMC 13.78.010 and 13.78.016), Massachusetts state law (MGL Ch. 186 §15B, via a MassLandlords blog), Santa Ana, CA rent stabilization, and California Civil Code §1950.6. None of these are Hoboken ordinances. So the excerpts cannot confirm or rule out a Hoboken city ordinance limiting application or screening fees that is in force as of 2026-10-01. To answer this, check the Hoboken Municipal Code (for example, Chapter 155 on Rent Control) or contact Hoboken's Division of Rent Leveling and Stabilization."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Hoboken, NJ:screening_restrictions",
+      "q": "As of 2026-10-01, has the city of Hoboken itself enacted a local ordinance on tenant screening restrictions (criminal history, source of income) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts contains a Hoboken municipal ordinance on tenant screening, criminal history, or source of income. The only New Jersey material is a state statute, P.L. 2026, c.43 (the FAIR Act), which deals with algorithmic rent pricing. It mentions Hoboken only as an example of rent increases, and as state law it is excluded by the question anyway. The screening-ordinance excerpts are from Berkeley, CA (BMC 13.106, the Fair Chance Access to Housing Ordinance) and from California state sources. These are not Hoboken law, so I have not listed them. The excerpts neither confirm nor rule out a Hoboken ordinance in force as of 2026-10-01, so the answer cannot be determined from these sources. Hoboken's municipal code or city clerk would be the place to check."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Newark, NJ:just_cause_eviction",
+      "q": "As of 2026-10-01, has the city of Newark itself enacted a local ordinance on just-cause eviction protections that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts address Newark (whether Newark, CA or Newark, NJ). They cover Santa Ana, Los Angeles, Berkeley, San Francisco, and California state law (Civil Code §1947.12/1946.2-type provisions), and state law is excluded by the question. Because nothing in the excerpts shows whether Newark has or has not enacted a just-cause eviction ordinance, I can't confirm either way from these sources. To find out, check Newark's municipal code or contact the city's housing or rent office."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Newark, NJ:security_deposits",
+      "q": "As of 2026-10-01, has the city of Newark itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts shows a Newark, NJ city ordinance that limits security deposits. The only Newark excerpt (D071) is about the Abandoned Property List (§ 2:10-1.4B, Ord. 6 S+FC, 3-21-2007). It concerns vacant and abandoned buildings, not security deposits. The other excerpts cover Berkeley, Santa Ana, Los Angeles and Jersey City, plus a law-firm article on algorithmic rent pricing. None addresses Newark security deposit limits. Because these excerpts are only partial, I can't confirm either way whether Newark has enacted such an ordinance that is in force as of 2026-10-01. So no qualifying city ordinances are listed. New Jersey state law on security deposits exists, but you asked me to exclude state law. To check, you could search Newark's municipal code or contact the city's rent control office."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Newark, NJ:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Newark itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts address Newark (whether Newark, CA or Newark, NJ). The excerpts cover Berkeley, CA (BMC 13.78.010 and 13.78.016), Santa Ana, CA, Massachusetts, and California state law (Civil Code 1950.6). Because nothing here describes any Newark city ordinance on application or screening fees, I can't confirm whether one exists or is in force. State law is excluded as you asked. To check, look at Newark's municipal code or contact the city's rent or housing office."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Newark, NJ:algorithmic_rent_setting",
+      "q": "As of 2026-10-01, has the city of Newark itself enacted a local ordinance on bans on algorithmic rent-setting software that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts mentions a Newark, NJ ordinance on algorithmic rent-setting software. Within New Jersey, the excerpts identify only Jersey City (Jersey City Code § 218-12, effective June 2025) and Hoboken (Hoboken City Code ch. 158-2, effective July 2025) as cities with such ordinances. They also cover the statewide FAIR Act (P.L. 2026, c. 43, approved July 20, 2026), which you asked me to exclude. Because the excerpts are silent on Newark, I can't confirm whether Newark has or hasn't enacted an in-force ordinance as of 2026-10-01. I am not listing any city ordinances, since none from Newark appear in the material. To settle this, check the Newark Municipal Code or the City Clerk's legislative records."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Boston, MA:rent_increase_limits",
+      "q": "As of 2026-10-01, has the city of Boston itself enacted a local ordinance on rent increase limits (rent control or rent caps) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts establish whether Boston has an in-force city ordinance limiting rent increases as of 2026-10-01. The Boston excerpts cover only the Boston Fair Housing Regulations (D012) and the Housing Stability Notification Act (D013), which requires landlords to give renters a notice of tenant rights. Both excerpts are truncated, and neither mentions rent control or rent caps. The rent-increase material in the other excerpts concerns Santa Ana, Berkeley and New Jersey, not Boston. So these sources can neither confirm nor rule out a Boston rent stabilization ordinance. For reference, Massachusetts state law (the 1994 ban on rent control) has generally prevented cities from adopting rent control without state authorization. However, that law is not in these excerpts, and the question asks me not to count state law. To confirm, check the City of Boston's official website or the Boston Municipal Code directly."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Boston, MA:security_deposits",
+      "q": "As of 2026-10-01, has the city of Boston itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts address a Boston city ordinance limiting security deposits. The Boston excerpts (D012 Fair Housing Regulations, D013 Housing Stability Notification Act) are truncated and do not mention security deposit limits. D053 is Massachusetts state law (M.G.L. c.186 §18, on reprisals), which is excluded by the question and in any case does not address deposit limits. The remaining excerpts concern Berkeley, Los Angeles, and Santa Ana. The excerpts therefore cannot confirm whether Boston has enacted an in-force local security deposit ordinance. Massachusetts security deposit rules are generally set by state law (M.G.L. c.186 §15B), but that statute is not in these excerpts. To be sure, check Boston's municipal code or contact the Boston Office of Housing Stability."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Boston, MA:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Boston itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the excerpts shows a Boston city ordinance on application or screening fees. The two Boston excerpts are cut off before reaching any relevant text. D012 (Boston Fair Housing Regulations) breaks off in its introduction. D013 (Housing Stability Notification Act) covers a notice landlords must give renters, not fee limits. The Massachusetts material in D054 describes state law, which the question says to leave out: MGL c.186 §15B bars lessors from charging anything before a tenancy except first and last month's rent, security deposit, and lock cost, and 254 CMR 7 lets brokers charge application fees. D054 is also a landlord trade-group blog, not an official source. Because the Boston excerpts are incomplete, these sources don't let me confirm or rule out a Boston fee ordinance, so I can't answer yes or no. Since I found no in-force city ordinance, the rule list is empty. To settle this, check the Boston Municipal Code or ask the City of Boston's Office of Housing Stability or Fair Housing Commission."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Boston, MA:algorithmic_rent_setting",
+      "q": "As of 2026-10-01, has the city of Boston itself enacted a local ordinance on bans on algorithmic rent-setting software that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The provided excerpts do not establish whether Boston has enacted a local ordinance banning algorithmic rent-setting software. The only Boston excerpt (D012) is a truncated Boston.gov page on Fair Housing Regulations and contains no reference to algorithmic rent-setting. The other excerpts discuss such bans elsewhere, including Santa Ana, San Diego, San Francisco, Philadelphia, Seattle, Providence, and New Jersey's state FAIR Act. Because these excerpts neither confirm nor rule out a Boston ordinance, I cannot answer yes or no. No in-force Boston city ordinance can be listed from these sources. Check the Boston City Code or City Council records directly."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Cambridge, MA:rent_increase_limits",
+      "q": "As of 2026-10-01, has the city of Cambridge itself enacted a local ordinance on rent increase limits (rent control or rent caps) that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the excerpts says whether Cambridge has a local ordinance limiting rent increases, so I can't answer yes or no from them. The Cambridge excerpts cover only two things. The first is the Tenants Rights and Resources Notification Ordinance, Chapter 8.71 (D031). It requires landlords to give tenants an information guide 'at the inception and termination of tenancies.' The second is the Human Rights Commission's anti-discrimination work (D029). Neither caps or controls rent increases, so neither is listed as a rule here. The excerpts never say that Cambridge has, or lacks, a rent control or rent cap ordinance in force. Rent limits do appear for other cities: Santa Ana, CA (3% cap) in D085, and New Jersey local rent control in D067. Those are not Cambridge. As general background outside these excerpts, Massachusetts banned local rent control by statewide ballot measure in 1994. Whether anything has changed since then should be checked against current Cambridge and Massachusetts sources."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Cambridge, MA:just_cause_eviction",
+      "q": "As of 2026-10-01, has the city of Cambridge itself enacted a local ordinance on just-cause eviction protections that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "no",
+        "rules": [
+          {
+            "citation": "Cambridge, MA Municipal Code Ch. 8.71 (Ordinance requiring a rights-and-resources Guide with eviction notices), as described in the City FAQ",
+            "in_force": true,
+            "quote": "If you do begin an eviction process through a notice to quit or other action, it is required that you offer the Guide about rights and resources at the same time."
+          }
+        ],
+        "explanation": "The only Cambridge ordinance in the excerpts (Chapter 8.71) is a notice requirement. A landlord who starts an eviction must give the tenant a Guide about rights and resources along with the notice to quit. It does not limit the reasons a landlord may use to evict, so it is not a just-cause eviction ordinance. The excerpts show no Cambridge ordinance requiring just cause for eviction. The just-cause ordinances excerpted belong to other cities: Santa Ana, Los Angeles, Berkeley and San Francisco. California state law is excluded as requested and does not apply in Massachusetts. Based on these excerpts, the answer is no. Cambridge's eviction-related ordinance is a notice and information requirement, not a just-cause protection."
+      },
+      "quotes": 1,
+      "notFound": 0,
+      "inventedInForce": 1,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Cambridge, MA:security_deposits",
+      "q": "As of 2026-10-01, has the city of Cambridge itself enacted a local ordinance on security deposit limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The provided Cambridge excerpts (D029, D031) describe only the Cambridge Human Rights Ordinance (Ch. 2.76) and the Tenants Rights and Resources Notification Ordinance (Ch. 8.71). The Notification Ordinance requires landlords to give tenants an informational guide at the start and end of a tenancy. Neither excerpt mentions a city ordinance limiting security deposits. The security deposit material in the excerpts is all about Berkeley (state law, AB 12) or Los Angeles (deposit interest). It does not concern Cambridge. Because the excerpts do not address the question, I cannot confirm from them whether Cambridge has an in-force local security deposit limit ordinance. So no city ordinances are listed. Outside these excerpts, Massachusetts security deposits are generally governed by state law (M.G.L. c. 186, § 15B), which the question excludes. You could check the Cambridge Municipal Code or ask the city to confirm."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Cambridge, MA:application_screening_fees",
+      "q": "As of 2026-10-01, has the city of Cambridge itself enacted a local ordinance on application or screening fee limits that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "The provided Cambridge excerpts (D029, D031) mention only the Cambridge Human Rights Ordinance (ch. 2.76) and the Tenants' Rights and Resources Notification Ordinance (Sec. 8.71). Neither excerpt says anything about limits on application or screening fees. The fee material in the excerpts comes from other places. For Massachusetts, it is state law (MGL c.186 §15B and 254 CMR 7, as described on a landlord blog). For California, it is Civil Code 1950.6 and Berkeley's BMC 13.78. You asked me to exclude state law, and the excerpts show no Cambridge city ordinance on these fees. Still, the excerpts are only partial and do not include a full list of Cambridge ordinances. So I can't confirm whether such an ordinance exists, and I can't rule it out. To be sure, check the Cambridge Municipal Code or ask the City of Cambridge directly."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:Cambridge, MA:algorithmic_rent_setting",
+      "q": "As of 2026-10-01, has the city of Cambridge itself enacted a local ordinance on bans on algorithmic rent-setting software that is in force? Do not count state law. Answer yes or no, and list only city ordinances that are in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [],
+        "explanation": "None of the provided excerpts mention Cambridge (MA or otherwise). The excerpts cover algorithmic rent-setting bans in Jersey City (Code § 218-12), Hoboken, Berkeley (NS-3090), Santa Ana, San Diego, Philadelphia, Minneapolis, Providence, Seattle, and New Jersey's state FAIR Act, but say nothing about a Cambridge ordinance. The list of cities in the Morgan Lewis article is cut off, so I cannot confirm from these sources whether Cambridge has or has not enacted such an ordinance. No Cambridge city ordinances can be listed. Check the Cambridge City Council records or municipal code directly."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "A:MA:algorithmic_rent_setting",
+      "q": "As of 2026-10-01, is there a MA state law on bans on algorithmic rent-setting software that is in force? Do not count city ordinances, bills, or failed measures. Answer yes or no, and list only state laws in force.",
+      "truth": "no",
+      "baseline": {
+        "answer": "no",
+        "rules": [],
+        "explanation": "The only Massachusetts material on algorithmic rent-setting in the excerpts is Bill S.2983, 'An Act prohibiting algorithmic rent setting.' It is a bill, not an enacted law. As of its last recorded action on 3/12/2026, the Joint Committee on Housing reported it favorably, and it was referred to the Senate Committee on Ways and Means. Its status still reads 'Referred to Senate Committee on Ways and Means' in the page retrieved 2026-10-01. Pending bills are excluded under the question, so it is not listed. The other Massachusetts excerpt, G.L. c. 186, § 31, covers notices to quit for nonpayment of rent and has nothing to do with algorithmic rent-setting. New Jersey's FAIR Act and the Santa Ana ordinance are in other jurisdictions and do not count. Based on these excerpts, Massachusetts had no state law banning algorithmic rent-setting software in force as of 2026-10-01."
+      },
+      "quotes": 0,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0003:Newark:rent_increase_limits",
+      "q": "As of 2026-10-01, does Newark, N.J., Code § 19:2-3.1; § 19:2-3.2 (rent increase limits (rent control or rent caps)) cover the rental building at 876-878 S 14TH ST, Newark, NJ? Building facts from public records: year built not available, units not available. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "Newark, N.J., Code § 19:2-10.2",
+            "in_force": true,
+            "quote": "The powers of the Rent Control Board shall include but not be limited to the following: a. To grant a rental increase, decrease, or surcharge under the provisions of this chapter;"
+          },
+          {
+            "citation": "Newark, N.J., Code § 19:2-18.6",
+            "in_force": true,
+            "quote": "All applications for rent control exemption must be made through the Rent Control Board, City Hall, Newark, New Jersey."
+          }
+        ],
+        "explanation": "The excerpts show that Newark has a rent control chapter (Chapter 19:2) that is in force. It was amended as recently as 2024 and 2026. However, the excerpts do not include the text of §§ 19:2-3.1 or 19:2-3.2, so they do not say which buildings are covered. They also say nothing about exemptions based on the number of units or when a building was built. In addition, the public records for 876-878 S 14th St give neither the year built nor the number of units. Without the coverage criteria or those building facts, it cannot be determined whether the building is covered. To find out, contact Newark's Office of Rent Control or Rent Control Board."
+      },
+      "quotes": 2,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0005:Berkeley:rent_increase_limits",
+      "q": "As of 2026-10-01, does Berkeley Mun. Code ch. 13.76 (rent increase limits (rent control or rent caps)) cover the rental building at 1609 ADDISON ST, Berkeley, CA? Building facts from public records: year built not available, units 5-?. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "Berkeley Rent Stabilization Board, Guide to Coverage under Berkeley's Rent Stabilization and Eviction for Just Cause Ordinance",
+            "in_force": true,
+            "quote": "Most units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes"
+          },
+          {
+            "citation": "Berkeley Rent Stabilization Board, Guide to Coverage under Berkeley's Rent Stabilization and Eviction for Just Cause Ordinance",
+            "in_force": true,
+            "quote": "New construction: units that were built and received a Certificate of Occupancy after June 1980** Partially Covered Yes No Yes Yes"
+          },
+          {
+            "citation": "Berkeley Rent Stabilization Board Public Notice, 2026 AGA (Regulation 1148; BMC 13.76.110A)",
+            "in_force": true,
+            "quote": "adopted the Annual General Adjustment (AGA) Order for Year 2026 which will allow eligible landlords to increase the 2025 permanent rent ceilings by 1.0% no earlier than January 1, 2026."
+          }
+        ],
+        "explanation": "Berkeley's rent ordinance (BMC ch. 13.76) caps rent increases for most units in multifamily buildings built before 1980. Units built and given a Certificate of Occupancy after June 1980 are only partially covered: they get just-cause eviction protection but no rent control. This building has 5 or more units, so it is multifamily. However, its year built is not available, so I can't tell whether it falls under the pre-1980 rent control or the post-June 1980 new-construction exemption. Condominium status or certain government subsidies could also remove rent control. For these reasons, coverage cannot be determined from the information provided. To confirm, you could contact the Berkeley Rent Board at (510) 981-7368 or rent@berkeleyca.gov, or look up the property in its registry."
+      },
+      "quotes": 3,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0019:San Diego:just_cause_eviction",
+      "q": "As of 2026-10-01, does San Diego Mun. Code §§ 98.0701–98.0710 (just-cause eviction protections) cover the rental building at 3820 HAINES ST, San Diego, CA? Building facts from public records: year built not available, units 16. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "San Diego Mun. Code § 98.0704",
+            "in_force": true,
+            "quote": "A landlord shall not terminate a tenancy without just cause. For purposes of this Division, just cause includes at-fault just cause and no-fault just cause."
+          },
+          {
+            "citation": "San Diego Mun. Code § 98.0703 (Exemptions)",
+            "in_force": true,
+            "quote": "This property meets the requirements of San Diego Municipal Code section 98.0703(l) and the landlord is not any of the following: (1) a real estate investment trust ... (2) a corporation; (3) a limited liability company in which at least one member is a corporation; or (4) management of a mobilehome park"
+          },
+          {
+            "citation": "San Diego Mun. Code § 98.0701",
+            "in_force": true,
+            "quote": "This Division protects the rights of tenants by requiring just cause for termination of a tenancy consistent with California Civil Code section 1946.2"
+          }
+        ],
+        "explanation": "San Diego's Residential Tenant Protections ordinance took effect June 24, 2023, and nothing in the excerpts suggests it had ended as of 2026-10-01. For covered residential rental property, it requires just cause for any termination of tenancy. However, § 98.0703 lists exemptions, and the excerpts include only part of that section. The full exemption criteria are missing, and some exemptions may depend on building age; for example, state law (Civil Code § 1946.2) exempts housing built within the last 15 years. The building's year built is unknown, as are the owner type and any facts about an exemption notice. With only the 16-unit count, I cannot confirm whether this building is covered or exempt."
+      },
+      "quotes": 3,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0040:Hoboken:rent_increase_limits",
+      "q": "As of 2026-10-01, does Hoboken City Code Ch. 155 (rent increase limits (rent control or rent caps)) cover the rental building at 69-75 JACKSON ST, Hoboken, NJ? Building facts from public records: year built not available, units 24-31. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "Hoboken City Code § 155-2 (Limitation of applicability)",
+            "in_force": true,
+            "quote": "§ 155-2 Limitation of applicability."
+          },
+          {
+            "citation": "Hoboken City Code § 155-25",
+            "in_force": true,
+            "quote": "No landlord shall, after the effective date of this chapter, charge any rents in excess of what he was receiving from the effective date of this chapter; nor shall such landlord charge any rents in excess of what he was receiving on January 11, 1973, if such excess is in excess of the rental which is authorized by this chapter."
+          }
+        ],
+        "explanation": "Hoboken's Chapter 155 rent control ordinance is in force and generally limits rent increases. However, the excerpts list § 155-2 \"Limitation of applicability\" only by title. They do not include its text, so the exemptions are not available here. Coverage commonly turns on factors like the building's construction or certificate-of-occupancy date, owner-occupied small buildings, and vacancy decontrol filings (the fee schedule mentions a \"Vacancy decontrol filing\"). The building's year built is not available, and the unit count (24-31) alone does not settle whether an exemption applies. So coverage cannot be determined from these excerpts. Next steps: check the full text of § 155-2, or ask Hoboken's Rent Leveling and Stabilization office whether this building is registered under rent control."
+      },
+      "quotes": 2,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0106:San Francisco:rent_increase_limits",
+      "q": "As of 2026-10-01, does S.F. Admin. Code Ch. 37 (rent increase limits (rent control or rent caps)) cover the rental building at 250 FREMONT ST, San Francisco, CA? Building facts from public records: year built not available, units 60. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "S.F. Admin. Code Ch. 37 (Rent Board annual allowable increase announcement)",
+            "in_force": true,
+            "quote": "For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%."
+          },
+          {
+            "citation": "S.F. Admin. Code § 37.10C",
+            "in_force": true,
+            "quote": "Legislation adding Section 37.10C to the Rent Ordinance went into effect on October 14, 2024. The law prohibits the sale or use of algorithmic devices to set rents or manage occupancy levels for residential units in San Francisco."
+          }
+        ],
+        "explanation": "The excerpts confirm that San Francisco's Rent Ordinance (Chapter 37) sets an annual allowable increase of 1.6% for the March 1, 2026 to February 28, 2027 period. That limit applies only to \"rent-controlled units.\" However, the excerpts do not say which buildings count as rent-controlled. In San Francisco, coverage generally turns on the building's construction date or certificate of occupancy date. The public records here do not give a year built for 250 Fremont St, so coverage can't be determined from the provided material. The building's 60 units alone don't settle the question. You could confirm coverage with the SF Rent Board by providing the building's certificate of occupancy date. Note that Section 37.10C, the ban on algorithmic rent-setting, applies to residential units generally, but it is not a rent increase limit."
+      },
+      "quotes": 2,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0107:Los Angeles:just_cause_eviction",
+      "q": "As of 2026-10-01, does Los Angeles Municipal Code § 151.09 (just-cause eviction protections) cover the rental building at 10635 SHERMAN GROVE AVE, Los Angeles, CA? Building facts from public records: year built 1978, units 20. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "LAHD RSO Overview (D041)",
+            "in_force": true,
+            "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under LAMC Section 151.28"
+          },
+          {
+            "citation": "LAHD JCO page (D040)",
+            "in_force": true,
+            "quote": "The JCO covers most residential properties in the City of Los Angeles that are not regulated by the City's Rent Stabilization Ordinance (RSO)."
+          },
+          {
+            "citation": "Relocation Assistance Bulletin A (D043), citing LAMC 151.09.A.8, 165.03.H",
+            "in_force": true,
+            "quote": "The landlord evicts for the occupancy of her/himself, spouse, grandchildren, children, parents or grandparents, or a resident manager (Los Angeles Municipal Code (LAMC) 151.09.A.8, 165.03.H.)."
+          }
+        ],
+        "explanation": "LAMC § 151.09 contains the eviction protections of the Rent Stabilization Ordinance (RSO). The RSO generally covers apartment buildings first built on or before October 1, 1978. Public records give only the year built, 1978, for this 20-unit building. That does not show whether it was completed before or after the October 1, 1978 cutoff. If it was built on or before that date, § 151.09 likely applies unless an exemption exists, such as a luxury exemption. If it was built after that date, the building would instead fall under the Just Cause Ordinance (LAMC Chapter 165), not § 151.09. To confirm, check the certificate of occupancy date or look up the property's RSO status with LAHD (ZIMAS)."
+      },
+      "quotes": 3,
+      "notFound": 0,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    },
+    {
+      "id": "B:A0107:Los Angeles:rent_increase_limits",
+      "q": "As of 2026-10-01, does Los Angeles Municipal Code Chapter XV, Article 1 (rent increase limits (rent control or rent caps)) cover the rental building at 10635 SHERMAN GROVE AVE, Los Angeles, CA? Building facts from public records: year built 1978, units 20. Answer yes, no or unknown.",
+      "truth": "unknown",
+      "baseline": {
+        "answer": "unknown",
+        "rules": [
+          {
+            "citation": "LAHD RSO Overview (LAMC Chapter XV, Art. 1 – Rent Stabilization Ordinance)",
+            "in_force": true,
+            "quote": "Generally, the RSO applies to rental properties that were first built on or before October 1, 1978, as well as replacement units under LAMC Section 151.28"
+          },
+          {
+            "citation": "LAHD RSO Rent Increase Calculator",
+            "in_force": true,
+            "quote": "Annual rent increases for rental units subject to the City of Los Angeles Rent Stabilization Ordinance (RSO), effective July 1, 2025, through June 30, 2026 is 3%."
+          },
+          {
+            "citation": "LAHD Just Cause For Eviction Ordinance page",
+            "in_force": true,
+            "quote": "The JCO can apply to buildings that are newer than October 1, 1978."
+          }
+        ],
+        "explanation": "The RSO's rent increase limits apply to rental properties first built on or before October 1, 1978. This 20-unit building's records show only the year 1978, so we can't tell whether it was built before or after the October 1, 1978 cutoff. If it was built (certificate of occupancy) on or before October 1, 1978, it is likely covered. Coverage also depends on exemptions, such as a luxury exemption or replacement status. To confirm, check the address on zimas.lacity.org or text \"RSO\" to 1(855) 880-7368. If it is covered, the 2025–26 allowable increase was 3%."
+      },
+      "quotes": 3,
+      "notFound": 1,
+      "inventedInForce": 0,
+      "confidentOnUnknown": 0
+    }
+  ]
+}

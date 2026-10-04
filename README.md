@@ -1,5 +1,7 @@
 # Proofline
 
+[![CI](https://github.com/usv240/proofline/actions/workflows/ci.yml/badge.svg)](https://github.com/usv240/proofline/actions/workflows/ci.yml)
+
 **Proofline reads housing law, turns each rule into a test, runs it on any address, and proves every answer with the law's own words. When it cannot be sure, it names the one fact that would settle it.**
 
 RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Hackathon · **Not legal advice.**
@@ -10,6 +12,9 @@ RealPage challenge: Rental Housing Law Navigator · Hack-Nation 7th Global AI Ha
 | Code | https://github.com/usv240/proofline |
 | Submission files | [`out/rules.json`](out/rules.json) · [`out/lookups.json`](out/lookups.json) · [`out/changes.json`](out/changes.json) |
 | Check it yourself | `npm run verify` |
+| Method note (one page) | [/method-note](https://proofline-opal.vercel.app/method-note) · [PDF](public/proofline-method-note.pdf) |
+| For judges | [Five things to try in three minutes](https://proofline-opal.vercel.app/judges) |
+| Status | [/status](https://proofline-opal.vercel.app/status) · [`/api/health`](https://proofline-opal.vercel.app/api/health) |
 
 > **Scoring note.** The organizers confirmed in Discord that `score.py` and the dev answer key are judge-only and the hour-16 ordinance (T6) was removed. Our own validation is `npm test` (golden checks from the organizers' statements) and `npm run verify`.
 
@@ -78,7 +83,8 @@ npm install
 npm run dev                 # web app on http://localhost:3000 (uses the committed outputs)
 # .env: ANTHROPIC_API_KEY (pipeline, Bring your own) and PROOFLINE_KEY_SECRET (API keys)
 npm run verify              # audit chain, quotes, engine reproduces lookups.json, negative control
-npm test                    # engine unit tests
+npm test                    # engine unit tests and golden checks
+BASE=http://localhost:3000 npm run e2e   # every page, light and dark, desktop and phone: axe, console, layout, key flows
 ```
 
 Re-run the pipeline (needs `ANTHROPIC_API_KEY` in `.env`):
@@ -105,6 +111,14 @@ npm run new-law -- --file ordinance.pdf --place "Bayonne, NJ" --test J1 --real -
 - `npm test`: engine unit tests plus 20 golden checks taken only from the organizers' own statements (the brief's San Francisco example, the README certificate-of-occupancy cutoffs, the T1 to T5 expectations, the official schema). They caught two real bugs during the event (Los Angeles rent control applying to no building; San Francisco rent control applying to post-1979 buildings), both fixed.
 - `npm run verify`: audit chain, every quote found in its source, engine reproduces `lookups.json`, failed or pending measures never "applies".
 - The audit log is written under an exclusive lock. An earlier segment broken by two concurrent runs is kept unchanged in `out/` and recorded in the first entry of the current chain.
+
+## Production readiness
+- **CI** on every push ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)): typecheck, `npm test`, `npm run verify`, production build.
+- **End-to-end** (`npm run e2e`): 15 pages in light and dark, desktop and phone. Fails on any script error, console error, security-policy block, sideways scroll on a phone, or serious accessibility issue (axe, WCAG 2.2 AA), then runs the key flows (what-if, receipt and tamper, Pre-Flight, audit, API, health).
+- **Security headers** on every response ([`next.config.ts`](next.config.ts)): Content-Security-Policy with no third-party scripts, HSTS, frame blocking, nosniff, strict referrer, no camera, microphone or location. The API sends CORS headers so other tools can call it.
+- **Health and status**: `/api/health` reports each part (lookups, Census Geocoder, law reader, key issuing, optional bill sources) and the data version (`rules_sha256`) being served; `/status` shows the same for people. When the model or geocoder is down, lookups and Pre-Flight keep working because they need neither.
+- **API**: OpenAPI 3.1 at `/api/openapi.json`, stateless signed keys, rate limits with `429` and limits in headers, `X-Not-Legal-Advice` on every response, and an MCP server over the same engine.
+- **Share and search**: generated share image, icon, sitemap and robots file.
 
 ## Added during the event
 - **New place, live (stretch goal):** Bayonne, NJ, read from the city's own 28-page rent control ordinance PDF with one command (`npm run new-law -- --real`). Shown on the site and in live lookups; kept out of the submission files, which cover the 13 places in the brief.

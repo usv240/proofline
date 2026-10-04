@@ -1,0 +1,338 @@
+{
+  "BK-ALG-01": {
+    "en": "Your Berkeley landlord may not use software that sets or suggests your rent using private data from competing landlords, and you can sue for up to $1,000 per violation if they do.",
+    "es": "Su arrendador en Berkeley no puede usar programas que fijen o sugieran su renta usando datos privados de otros arrendadores que compiten con él. Si lo hace, usted puede demandarlo por hasta $1,000 por cada violación."
+  },
+  "BK-FEE-01": {
+    "en": "Before you pay a screening fee in Berkeley, your landlord must give you a written notice of your fee rights and the highest fee allowed.",
+    "es": "Antes de que usted pague una tarifa de evaluación en Berkeley, su arrendador debe darle un aviso por escrito sobre sus derechos y sobre la tarifa más alta permitida."
+  },
+  "BK-FEE-02": {
+    "en": "If you already rent in Berkeley, your landlord cannot charge you a non-refundable fee to renew your lease or to add, replace or remove a roommate.",
+    "es": "Si usted ya renta en Berkeley, su arrendador no puede cobrarle un cargo no reembolsable por renovar su contrato ni por agregar, cambiar o quitar a un compañero de vivienda."
+  },
+  "BK-EVICT-01": {
+    "en": "If your landlord evicts you so they can move in, they must pay you $19,413 in 2026, plus $6,471 more if your household qualifies.",
+    "es": "Si su arrendador lo desaloja para mudarse él a la vivienda, debe pagarle $19,413 en 2026, más $6,471 adicionales si su hogar califica."
+  },
+  "BK-EVICT-02": {
+    "en": "Your Berkeley landlord can only evict you for a reason allowed by law, cannot evict you for owing less than one month's Fair Market Rent, and must file any eviction notice with the Rent Board.",
+    "es": "Su dueño en Berkeley solo puede desalojarle por una razón que la ley permite, no puede desalojarle por deber menos de un mes de Fair Market Rent, y debe presentar cualquier aviso de desalojo ante la Rent Board."
+  },
+  "BK-EVICT-03": {
+    "en": "If your landlord evicts you to take the building off the rental market, they must pay you $19,413 in 2026, plus $6,471 more if your household qualifies.",
+    "es": "Si su dueño le desaloja para sacar el edificio del mercado de alquiler, debe pagarle $19,413 en 2026, más $6,471 adicionales si su hogar califica."
+  },
+  "BK-EVICT-04": {
+    "en": "If your landlord evicts you so the owner can move in, they must pay you $19,413 starting January 1, 2026, plus $6,471 more if your household qualifies.",
+    "es": "Si su arrendador lo desaloja para que el dueño se mude a la vivienda, debe pagarle $19,413 a partir del 1 de enero de 2026, más $6,471 adicionales si su hogar califica."
+  },
+  "BK-RENT-01": {
+    "en": "If your Berkeley unit is fully covered by rent control, your yearly rent increase is limited to the Rent Board's annual adjustment, which can never be more than 5%.",
+    "es": "Si su vivienda en Berkeley está totalmente cubierta por el control de rentas, el aumento anual de su renta no puede ser mayor que el ajuste anual de la Junta de Rentas (Rent Board), que nunca puede pasar del 5%."
+  },
+  "BK-RENT-02": {
+    "en": "Your rent is limited by Berkeley rent control if you live in most apartments built before 1980 or in a single-family home where your tenancy began before 1996, but not in most newer buildings or condos.",
+    "es": "El control de rentas de Berkeley limita su renta si usted vive en la mayoría de los apartamentos construidos antes de 1980, o en una casa para una sola familia donde empezó a rentar antes de 1996. No cubre la mayoría de los edificios más nuevos ni los condominios."
+  },
+  "BK-RENT-03": {
+    "en": "If you rent a covered unit in Berkeley, your landlord can raise your rent ceiling by no more than 1.0% for 2026, and not before January 1, 2026.",
+    "es": "Si usted renta una unidad cubierta en Berkeley, su arrendador puede subir el límite máximo de su renta no más de 1.0% para 2026, y no antes del 1 de enero de 2026."
+  },
+  "BK-SCREEN-01": {
+    "en": "Your Berkeley landlord cannot ask about or use your criminal record to decide whether to rent to you, how much to charge, or whether to end your tenancy, with a few exceptions.",
+    "es": "Su arrendador en Berkeley no puede preguntar por sus antecedentes penales ni usarlos para decidir si le renta, cuánto le cobra o si termina su contrato, salvo algunas excepciones."
+  },
+  "BK-DEP-01": {
+    "en": "If your Berkeley unit is covered by the Rent Ordinance, your landlord must pay you interest on your security deposit every year, and a partial amount if you move out mid-year.",
+    "es": "Si su vivienda en Berkeley está cubierta por la Ordenanza de Rentas (Rent Ordinance), su arrendador debe pagarle intereses sobre su depósito de garantía cada año, y una parte si usted se muda a mitad de año."
+  },
+  "BOS-EVICT-01": {
+    "en": "If your Boston landlord sends you a notice to leave or says they won't renew your lease, they must also give you a notice explaining your rights and where to get help, at the same time.",
+    "es": "Si el dueño de su vivienda en Boston le envía un aviso para que se vaya o le dice que no va a renovar su contrato de alquiler, también debe darle, al mismo tiempo, un aviso que explique sus derechos y dónde puede conseguir ayuda."
+  },
+  "BOS-EVICT-P1": {
+    "en": "You do not get eviction protections from this bill, because it was sent to a study and never became law.",
+    "es": "Este proyecto de ley no le da protecciones contra el desalojo, porque se envió a estudio y nunca se convirtió en ley."
+  },
+  "BOS-RENT-P1": {
+    "en": "Your rent in Boston is not capped by this bill, because it was sent to a study and never became law.",
+    "es": "Este proyecto de ley no pone un límite a su renta en Boston, porque se envió a estudio y nunca se convirtió en ley."
+  },
+  "BOS-SCREEN-01": {
+    "en": "If you apply for city-funded or income-restricted housing in Boston, the landlord cannot automatically reject you for a criminal record, cannot look at arrests without a conviction, sealed or juvenile records, or convictions over 5 years old, and cannot use your credit score to decide.",
+    "es": "Si usted solicita una vivienda pagada por la ciudad o con límites de ingresos en Boston, el arrendador no puede rechazarlo automáticamente por tener antecedentes penales. No puede revisar arrestos sin condena, registros sellados o de menores, ni condenas de hace más de 5 años. Tampoco puede usar su puntaje de crédito para decidir."
+  },
+  "BOS-SCREEN-02": {
+    "en": "In Boston, a landlord cannot turn you down or treat you differently because you pay rent with a Section 8 voucher or other rental help.",
+    "es": "En Boston, un arrendador no puede rechazarlo ni tratarlo diferente porque usted paga la renta con un vale de la Sección 8 (Section 8) u otra ayuda para la renta."
+  },
+  "CA-ALG-01": {
+    "en": "Your landlord may not use shared pricing software that uses competitors' data to set or coordinate rents in an anticompetitive way, or pressure others to follow the software's price.",
+    "es": "Su arrendador no puede usar programas de precios compartidos que usen datos de la competencia para fijar o coordinar rentas de forma injusta para la competencia. Tampoco puede presionar a otros para que sigan el precio del programa."
+  },
+  "CA-FEE-01": {
+    "en": "Your screening fee can't be more than $68.96 in 2026, and you have the right to a receipt, a copy of your credit report, and a refund of any money not used.",
+    "es": "Su tarifa de evaluación no puede ser mayor de $68.96 en 2026. Usted tiene derecho a un recibo, a una copia de su reporte de crédito y a que le devuelvan el dinero que no se usó."
+  },
+  "CA-EVICT-01": {
+    "en": "If you have lived in your California rental for at least a year, your landlord can only end your lease for a reason allowed by law and must write that reason in the notice, and for no-fault reasons must give you one month's rent in moving help or a free last month.",
+    "es": "Si usted ha vivido en su vivienda de alquiler en California por al menos un año, su arrendador solo puede terminar su contrato por una razón que permita la ley y debe escribir esa razón en el aviso. Si la razón no es su culpa, debe darle un mes de renta como ayuda para mudarse o no cobrarle el último mes."
+  },
+  "CA-EVICT-02": {
+    "en": "If you must leave your home for less than 20 days for repair work, your landlord must pay you $446 a day plus your actual moving costs.",
+    "es": "Si usted tiene que salir de su casa por menos de 20 días por reparaciones, su arrendador debe pagarle $446 por día más sus gastos reales de mudanza."
+  },
+  "CA-EVICT-03": {
+    "en": "If you are a lower income tenant in California and your home is torn down for new construction, state law says you must get relocation benefits like those paid by government agencies.",
+    "es": "Si usted es un inquilino de bajos ingresos en California y derrumban su casa para una nueva construcción, la ley estatal dice que usted debe recibir beneficios de reubicación parecidos a los que pagan las agencias del gobierno."
+  },
+  "CAM-ALG-P1": {
+    "en": "Cambridge is only starting work on a ban on rent-pricing software, so it is not yet a law that protects you.",
+    "es": "Cambridge apenas está empezando a trabajar en una prohibición de los programas que fijan precios de renta, así que todavía no es una ley que lo proteja."
+  },
+  "CAM-SCREEN-01": {
+    "en": "In Cambridge, a landlord cannot turn you down or treat you differently because you pay with a Section 8 voucher or public benefits, unless the owner lives in a two-family home.",
+    "es": "En Cambridge, un arrendador no puede rechazarlo ni tratarlo diferente porque usted paga con un vale de la Sección 8 (Section 8) o con beneficios públicos, a menos que el dueño viva en una casa para dos familias."
+  },
+  "CA-RENT-01": {
+    "en": "Your landlord can raise your rent by no more than 5% plus local inflation, or 10%, whichever is lower, in any 12 months, in no more than two steps, unless your home is exempt.",
+    "es": "Su arrendador puede subirle la renta como máximo un 5% más la inflación local, o un 10%, lo que sea menor, en cualquier período de 12 meses, y en no más de dos aumentos, a menos que su vivienda esté exenta."
+  },
+  "CA-SCREEN-01": {
+    "en": "Your landlord cannot reject you just for having any criminal record, and cannot look at arrests without a conviction, sealed records, or juvenile records.",
+    "es": "Su dueño no puede rechazarle solo por tener cualquier antecedente penal, y no puede revisar arrestos que no terminaron en una condena, antecedentes sellados ni antecedentes juveniles."
+  },
+  "CA-SCREEN-02": {
+    "en": "Your landlord cannot turn you down or treat you differently because you pay rent with a Section 8 voucher, benefits, or other help.",
+    "es": "Su dueño no puede rechazarle ni tratarle de forma diferente porque usted paga la renta con un vale de Section 8, beneficios u otra ayuda."
+  },
+  "CA-SCREEN-03": {
+    "en": "If you have a rent subsidy, the landlord must let you show proof like bank statements or benefit payments instead of your credit history.",
+    "es": "Si usted tiene un subsidio de renta, el dueño debe dejarle mostrar pruebas como estados de cuenta del banco o pagos de beneficios en lugar de su historial de crédito."
+  },
+  "CA-DEP-01": {
+    "en": "Your landlord usually can't charge a deposit of more than one month's rent (two months for some small landlords, but never for service members), and must return what is left with an itemized list within 21 days after you move out.",
+    "es": "Por lo general, su arrendador no puede cobrarle un depósito de más de un mes de renta (dos meses para algunos arrendadores pequeños, pero nunca para miembros de las fuerzas armadas). Además, debe devolverle lo que sobre, con una lista detallada de los gastos, dentro de los 21 días después de que usted se mude."
+  },
+  "HOB-ALG-01": {
+    "en": "Your landlord in Hoboken is not allowed to use software that shares private data with competing landlords to set or suggest your rent.",
+    "es": "Su arrendador en Hoboken no puede usar programas que compartan datos privados con otros arrendadores que compiten con él para fijar o sugerir su renta."
+  },
+  "HOB-RENT-01": {
+    "en": "If your landlord wants to raise your rent by more than 10% when you renew, they must first tell you in writing why, whether a computer program set the price, and that you can take legal action if it seems unfair.",
+    "es": "Si su arrendador quiere subirle la renta más de un 10% al renovar el contrato, primero debe decirle por escrito por qué, si un programa de computadora fijó el precio, y que usted puede tomar acción legal si le parece injusto."
+  },
+  "HOB-RENT-02": {
+    "en": "If your Hoboken apartment is rent controlled, your landlord can raise your rent only when your lease ends, only once a year, by no more than 5% or the inflation rate (whichever is lower), and must tell you in writing at least 30 days before.",
+    "es": "Si su apartamento en Hoboken tiene control de renta, su arrendador solo puede subirle la renta cuando termine su contrato, solo una vez al año y no más del 5% o de la tasa de inflación (la que sea más baja). Además, debe avisarle por escrito al menos 30 días antes."
+  },
+  "HOB-RENT-03": {
+    "en": "If your Hoboken apartment is rent controlled, your landlord can raise your rent only when your lease ends, only once a year, by no more than 5% or the inflation rate (whichever is lower), and must tell you in writing at least 30 days before.",
+    "es": "Si su apartamento en Hoboken tiene control de rentas, su arrendador solo puede subirle la renta cuando termine su contrato, solo una vez al año y como máximo un 5% o la tasa de inflación (lo que sea menor). Debe avisarle por escrito al menos 30 días antes."
+  },
+  "JC-ALG-01": {
+    "en": "Your landlord in Jersey City is not allowed to use software services that coordinate rents with other landlords, and breaking this rule can lead to fines of up to $2,000 per day.",
+    "es": "Su arrendador en Jersey City no puede usar servicios de programas que coordinan las rentas con otros arrendadores. Romper esta regla puede causar multas de hasta $2,000 por día."
+  },
+  "JC-RENT-01": {
+    "en": "If your Jersey City building has 5 or more units, your rent increases may be limited by the city's rent control law, but buildings with 1 to 4 units are not covered.",
+    "es": "Si su edificio en Jersey City tiene 5 o más unidades, los aumentos de su renta pueden estar limitados por la ley de control de rentas de la ciudad. Los edificios de 1 a 4 unidades no están cubiertos."
+  },
+  "LA-ALG-P1": {
+    "en": "Los Angeles has only asked for a study of banning rent-setting software, so there is no ban in this document yet.",
+    "es": "Los Ángeles solo ha pedido un estudio sobre prohibir los programas que fijan rentas, así que en este documento todavía no hay una prohibición."
+  },
+  "LA-EVICT-01": {
+    "en": "If you rent in Los Angeles and your unit is not under rent control, your landlord usually needs a legal reason to evict you and may have to pay you to move if it is not your fault.",
+    "es": "Si usted alquila en Los Ángeles y su unidad no tiene control de renta, su dueño por lo general necesita una razón legal para desalojarle y es posible que tenga que pagarle para mudarse si no es su culpa."
+  },
+  "LA-EVICT-02": {
+    "en": "If your Los Angeles building is being torn down for new construction and you are a lower income tenant, you may get a much larger relocation payment (up to $115,480) and the right to stay until about 6 months before construction starts.",
+    "es": "Si su edificio en Los Ángeles va a ser demolido para una construcción nueva y usted es un inquilino de bajos ingresos, es posible que reciba un pago de reubicación mucho más grande (hasta $115,480) y el derecho a quedarse hasta unos 6 meses antes de que empiece la construcción."
+  },
+  "LA-EVICT-03": {
+    "en": "If your landlord in Los Angeles evicts you from a rent-stabilized or just-cause-covered unit for a reason that is not your fault, they must file with the city and pay you relocation money, usually $11,000 to $27,400 depending on your age, disability, children, income and how long you have lived there.",
+    "es": "Si usted vive en Los Ángeles en una unidad con renta estabilizada o protegida por causa justa, y su arrendador lo desaloja por una razón que no es su culpa, el arrendador debe presentar un aviso ante la ciudad y pagarle dinero de reubicación. Por lo general, la cantidad es de $11,000 a $27,400, según su edad, si tiene una discapacidad, si tiene hijos, sus ingresos y cuánto tiempo ha vivido allí."
+  },
+  "LA-RENT-01": {
+    "en": "If your Los Angeles apartment was built on or before October 1, 1978, your rent can usually go up only once a year, and only by the percentage the city allows.",
+    "es": "Si su apartamento en Los Ángeles se construyó el 1 de octubre de 1978 o antes, por lo general su renta solo puede subir una vez al año y solo en el porcentaje que permite la ciudad."
+  },
+  "LA-DEP-01": {
+    "en": "If you live in a rent-stabilized unit in Los Angeles, the RSO covers interest your landlord pays on your security deposit.",
+    "es": "Si usted vive en una vivienda con renta estabilizada en Los Ángeles, la RSO cubre los intereses que su arrendador paga sobre su depósito de garantía."
+  },
+  "MA-ALG-P1": {
+    "en": "Massachusetts lawmakers are considering a bill to stop landlords from using software to fix rents, but it is not law yet.",
+    "es": "Los legisladores de Massachusetts están considerando un proyecto de ley para impedir que los arrendadores usen programas para fijar rentas, pero todavía no es ley."
+  },
+  "MA-ALG-P2": {
+    "en": "Your state is considering a bill to ban landlords from using software to set rents, but it is not law yet.",
+    "es": "Su estado está considerando un proyecto de ley para prohibir que los arrendadores usen programas para fijar rentas, pero todavía no es ley."
+  },
+  "MA-ALG-P3": {
+    "en": "Massachusetts lawmakers are considering bills to ban rent-setting software, but they have not become law.",
+    "es": "Los legisladores de Massachusetts están considerando propuestas de ley para prohibir los programas que fijan rentas, pero todavía no son ley."
+  },
+  "MA-FEE-01": {
+    "en": "Only a licensed broker can charge you a fee to find an apartment, and they must tell you the fee in writing at your first meeting.",
+    "es": "Solo un corredor con licencia puede cobrarle una tarifa por encontrarle un apartamento, y debe decirle la tarifa por escrito en su primera reunión."
+  },
+  "MA-FEE-02": {
+    "en": "You only have to pay a broker fee if you are the one who hired the broker; if the landlord hired the broker, the landlord pays.",
+    "es": "Usted solo tiene que pagar la tarifa de un corredor si usted fue quien lo contrató. Si el arrendador contrató al corredor, el arrendador paga."
+  },
+  "MA-FEE-03": {
+    "en": "Your landlord or the landlord's agent can only make you pay first month's rent, last month's rent, a security deposit, and the cost of a new lock and key before you move in, so application fees and agent fees for the landlord are not allowed.",
+    "es": "Antes de que usted se mude, su arrendador o su agente solo pueden cobrarle el primer mes de renta, el último mes de renta, un depósito de garantía y el costo de una cerradura y llave nuevas. Por eso no se permiten tarifas de solicitud ni tarifas de agentes del arrendador."
+  },
+  "MA-EVICT-01": {
+    "en": "If you rent without a lease, your landlord must give you written notice of at least one rent period or 30 days (whichever is longer) to end your tenancy, or 14 days if you owe rent, and you can usually stop a nonpayment eviction by paying all the rent you owe within 10 days.",
+    "es": "Si usted alquila sin contrato, su arrendador debe darle un aviso por escrito de por lo menos un período de renta o 30 días (lo que sea más largo) para terminar su alquiler, o 14 días si usted debe renta. Por lo general, usted puede detener un desalojo por falta de pago si paga toda la renta que debe dentro de 10 días."
+  },
+  "MA-EVICT-02": {
+    "en": "If you rent without a lease, your landlord must give you written notice of at least one rent period or 30 days (whichever is longer) to end your tenancy, or 14 days if you owe rent, and you can usually stop a nonpayment eviction by paying all the rent you owe within 10 days.",
+    "es": "Si usted renta sin contrato, su arrendador debe darle un aviso por escrito de al menos un período de renta o 30 días (lo que sea más largo) para terminar su alquiler, o de 14 días si usted debe renta. Por lo general, usted puede detener un desalojo por falta de pago si paga toda la renta que debe dentro de 10 días."
+  },
+  "MA-RENT-P1": {
+    "en": "Your rent is not capped by this proposed statewide rent control measure, because the state's highest court blocked it from the November 2026 ballot.",
+    "es": "Esta propuesta de control de rentas para todo el estado no pone un límite a su renta, porque la corte más alta del estado la sacó de la boleta de noviembre de 2026."
+  },
+  "MA-SCREEN-01": {
+    "en": "Your landlord cannot turn you down or treat you differently because you get public assistance or use a housing voucher or rental subsidy, or because of that program's rules.",
+    "es": "Su arrendador no puede rechazarlo ni tratarlo diferente porque usted recibe asistencia pública o usa un vale de vivienda o un subsidio de renta, ni por las reglas de ese programa."
+  },
+  "MA-DEP-01": {
+    "en": "Your landlord can charge a security deposit of no more than one month's rent, must keep it in a separate bank account that earns you interest, and must return it within 30 days after you move out.",
+    "es": "Su arrendador puede cobrar un depósito de garantía de no más de un mes de renta. Debe guardarlo en una cuenta de banco aparte que le genere intereses a usted, y debe devolvérselo dentro de los 30 días después de que usted se mude."
+  },
+  "NWK-RENT-01": {
+    "en": "If you rent in Newark, your rent can go up only once a year by the inflation rate, and never more than 4%, unless your building is newly built or otherwise exempt.",
+    "es": "Si usted renta en Newark, su renta solo puede subir una vez al año según la tasa de inflación, y nunca más de un 4%, a menos que su edificio sea nuevo o esté exento por otra razón."
+  },
+  "NWK-RENT-02": {
+    "en": "If you rent a HOME-assisted unit in a Newark rehab program home, your rent cannot go above federal HOME limits and you must get 30 days' written notice before a raise.",
+    "es": "Si usted renta una vivienda con ayuda de HOME en un programa de rehabilitación de casas de Newark, su renta no puede pasar los límites federales de HOME, y le deben dar un aviso por escrito 30 días antes de un aumento."
+  },
+  "NWK-RENT-03": {
+    "en": "Your landlord's rent increase may be unconscionable in Newark if it is far higher than the landlord's rising costs and higher than rents at similar places.",
+    "es": "En Newark, un aumento de renta puede ser abusivo si es mucho mayor que el aumento de los costos del arrendador y más alto que las rentas de lugares parecidos."
+  },
+  "NWK-SCREEN-01": {
+    "en": "In Newark, a landlord or broker cannot ask about your criminal record until you turn in a full rental application, and even then can only look at certain recent convictions and must consider your rehabilitation.",
+    "es": "En Newark, un arrendador o corredor no puede preguntar por sus antecedentes penales hasta que usted entregue una solicitud de renta completa. Aun así, solo puede revisar ciertas condenas recientes y debe tomar en cuenta su rehabilitación."
+  },
+  "NWK-SCREEN-02": {
+    "en": "In Newark, a landlord cannot ask about your criminal record until you turn in a full application, must tell you in writing before checking, can only look back a limited number of years for most crimes, and must explain in writing if they turn you down because of it.",
+    "es": "En Newark, un arrendador no puede preguntar sobre sus antecedentes penales hasta que usted entregue una solicitud completa. Debe avisarle por escrito antes de revisarlos, solo puede revisar un número limitado de años hacia atrás para la mayoría de los delitos, y debe explicarle por escrito si lo rechaza por esa razón."
+  },
+  "NJ-ALG-01": {
+    "en": "Starting July 1, 2027, your New Jersey landlord cannot use software that sets rents using other landlords' private data to raise your rent, and you can report it to the Attorney General.",
+    "es": "A partir del 1 de julio de 2027, su arrendador en Nueva Jersey no puede usar programas que fijen rentas con datos privados de otros arrendadores para subirle la renta. Usted puede reportarlo al Fiscal General (Attorney General)."
+  },
+  "NJ-FEE-01": {
+    "en": "Your landlord in New Jersey cannot charge you more than $50 (adjusted each year for inflation) to apply for a rental, unless the home is in a one- or two-family house.",
+    "es": "Su arrendador en New Jersey no puede cobrarle más de $50 (ajustado cada año por la inflación) para solicitar una vivienda de renta, a menos que la vivienda esté en una casa para una o dos familias."
+  },
+  "NJ-EVICT-01": {
+    "en": "Your landlord can only evict you or refuse to renew your lease for a reason the law allows, and must prove that reason in court.",
+    "es": "Su arrendador solo puede desalojarlo o negarse a renovar su contrato por una razón que permita la ley, y debe probar esa razón en la corte."
+  },
+  "NJ-RENT-01": {
+    "en": "Your rent increase cannot be so large that it is unfair or shocking, must follow any local rent rules, and cannot happen in the middle of your lease.",
+    "es": "El aumento de su renta no puede ser tan grande que sea injusto o escandaloso. Debe seguir las reglas locales de renta y no puede hacerse a mitad de su contrato."
+  },
+  "NJ-RENT-02": {
+    "en": "If your apartment building was finished less than 30 years ago, local rent control usually does not cover it.",
+    "es": "Si su edificio de apartamentos se terminó hace menos de 30 años, por lo general el control de rentas local no lo cubre."
+  },
+  "NJ-SCREEN-01": {
+    "en": "Your landlord cannot refuse to rent to you just because you pay rent with a Section 8 voucher or another legal source of income.",
+    "es": "Su arrendador no puede negarse a rentarle solo porque usted paga la renta con un vale de la Sección 8 (Section 8) u otra fuente legal de ingresos."
+  },
+  "NJ-SCREEN-02": {
+    "en": "Your landlord cannot ask about your criminal record until after offering you the apartment, and even then can only look at certain recent serious convictions.",
+    "es": "Su arrendador no puede preguntar por sus antecedentes penales hasta después de ofrecerle el apartamento. Aun así, solo puede revisar ciertas condenas graves y recientes."
+  },
+  "NJ-DEP-01": {
+    "en": "Your landlord cannot ask for a security deposit bigger than one and a half months' rent, and must give it back with interest within 30 days after you move out.",
+    "es": "Su arrendador no puede pedirle un depósito de garantía mayor que un mes y medio de renta, y debe devolvérselo con intereses dentro de los 30 días después de que usted se mude."
+  },
+  "NJ-DEP-02": {
+    "en": "New Jersey's security deposit rules protect you in almost every rental home. If you rent in a building where the owner lives and there are only one or two rental units, you get these protections only after you give the landlord 30 days' written notice that you are invoking the law.",
+    "es": "Las reglas de depósitos de garantía de Nueva Jersey lo protegen en casi todas las viviendas de alquiler. Si usted renta en un edificio donde vive el dueño y hay solo una o dos unidades de alquiler, usted recibe estas protecciones solo después de darle al arrendador un aviso por escrito de 30 días diciendo que usted usa esta ley."
+  },
+  "SD-ALG-01": {
+    "en": "San Diego has proposed a ban on landlords using rent-setting software that relies on private competitor data, but this document does not show the ban has passed.",
+    "es": "San Diego ha propuesto prohibir que los arrendadores usen programas para fijar rentas que usan datos privados de la competencia, pero este documento no muestra que la prohibición se haya aprobado."
+  },
+  "SD-EVICT-01": {
+    "en": "Your landlord in San Diego can only end your tenancy for a reason the law allows, and if it is not your fault they must pay you at least two months' rent (three if you are a senior or disabled) to help you move.",
+    "es": "Su arrendador en San Diego solo puede terminar su alquiler por una razón que permita la ley. Si no es su culpa, debe pagarle al menos dos meses de renta (tres si usted es una persona mayor o tiene una discapacidad) para ayudarle a mudarse."
+  },
+  "SF-ALG-01": {
+    "en": "Your landlord in San Francisco cannot use software that looks at private rent data from other landlords to set your rent, and you can sue if they do.",
+    "es": "Su arrendador en San Francisco no puede usar un programa que revisa datos privados de renta de otros arrendadores para fijar su renta, y usted puede demandarlo si lo hace."
+  },
+  "SF-EVICT-01": {
+    "en": "Your landlord can only evict you for one of 17 reasons listed in the San Francisco Rent Ordinance, and the end of your lease or a new owner is not enough.",
+    "es": "Su arrendador solo puede desalojarlo por una de las 17 razones que aparecen en la Ordenanza de Rentas de San Francisco (San Francisco Rent Ordinance). Que termine su contrato o que haya un dueño nuevo no es suficiente."
+  },
+  "SF-EVICT-02": {
+    "en": "If you are evicted in San Francisco because the owner is taking the building off the rental market under the Ellis Act, your landlord must pay you $11,110.05, up to $33,330.13 per unit, plus $7,443.90 more if you are 62 or older or disabled (for notices served 3/1/26–2/28/27).",
+    "es": "Si lo desalojan en San Francisco porque el dueño va a dejar de rentar el edificio bajo la Ley Ellis (Ellis Act), su arrendador debe pagarle $11,110.05, hasta $33,330.13 por unidad, más $7,443.90 adicionales si usted tiene 62 años o más o tiene una discapacidad (para avisos entregados del 3/1/26 al 2/28/27)."
+  },
+  "SF-EVICT-03": {
+    "en": "If you are evicted in San Francisco so the owner or a relative can move in, or for demolition or major repair work, your landlord must pay you relocation money: $8,245 per tenant, up to $24,733 per unit, plus $5,497 more if you are 60 or older, disabled, or have children (for notices served 3/1/26–2/28/27).",
+    "es": "Si lo desalojan en San Francisco para que el dueño o un familiar se mude, o por demolición o reparaciones grandes, su arrendador debe pagarle dinero de reubicación: $8,245 por inquilino, hasta $24,733 por unidad, más $5,497 adicionales si usted tiene 60 años o más, tiene una discapacidad o tiene hijos (para avisos entregados del 3/1/26 al 2/28/27)."
+  },
+  "SF-RENT-01": {
+    "en": "If your San Francisco unit is rent-controlled, your landlord can raise your base rent by no more than 1.6% for the yearly increase between March 1, 2026 and February 28, 2027.",
+    "es": "Si su unidad en San Francisco tiene control de renta, su arrendador solo puede subir su renta base hasta un 1.6% como aumento anual entre el 1 de marzo de 2026 y el 28 de febrero de 2027."
+  },
+  "SF-SCREEN-01": {
+    "en": "If you have an arrest or conviction record, San Francisco law limits how affordable housing providers can use it when deciding on your housing.",
+    "es": "Si usted tiene antecedentes de arrestos o condenas, la ley de San Francisco limita cómo los proveedores de vivienda asequible pueden usarlos al decidir sobre su vivienda."
+  },
+  "SF-DEP-01": {
+    "en": "Your landlord must pay you 4.2% interest on your security deposit for March 1, 2026 to February 28, 2027.",
+    "es": "Su arrendador debe pagarle un 4.2% de intereses sobre su depósito de garantía del 1 de marzo de 2026 al 28 de febrero de 2027."
+  },
+  "SA-ALG-01": {
+    "en": "Your landlord in Santa Ana may not use AI software to set your rent, and landlords who do can be fined $1,000.",
+    "es": "Su arrendador en Santa Ana no puede usar programas de inteligencia artificial (IA) para fijar su renta, y los arrendadores que lo hagan pueden recibir una multa de $1,000."
+  },
+  "SA-EVICT-01": {
+    "en": "After you have lived in your unit for 30 days, your landlord can only evict you for a reason allowed by law, and must pay you 3 months of relocation help or waive 3 months of rent if the eviction is not your fault.",
+    "es": "Después de que usted haya vivido en su vivienda por 30 días, su arrendador solo puede desalojarlo por una razón que permita la ley. Si el desalojo no es su culpa, debe pagarle 3 meses de ayuda para reubicarse o no cobrarle 3 meses de renta."
+  },
+  "SA-RENT-01": {
+    "en": "Your landlord can raise your rent each year by no more than 3% or 80% of inflation, whichever is lower, unless your building was built after February 1, 1995.",
+    "es": "Su arrendador puede subirle la renta cada año como máximo un 3% o el 80% de la inflación, lo que sea menor, a menos que su edificio se haya construido después del 1 de febrero de 1995."
+  },
+  "CAM-ALG-01": {
+    "en": "Starting March 1, 2027, your landlord cannot use software that sets rents using private data from other landlords to decide your rent.",
+    "es": "A partir del 1 de marzo de 2027, su arrendador no puede usar programas de computadora que fijan los alquileres con información privada de otros arrendadores para decidir cuánto paga usted de alquiler."
+  },
+  "CAM-FEE-01": {
+    "en": "Starting March 1, 2027, your landlord cannot charge you more than $25 to screen or process your rental application, and must give you a written receipt within three business days.",
+    "es": "A partir del 1 de marzo de 2027, su arrendador no puede cobrarle más de $25 por revisar o procesar su solicitud de alquiler, y debe darle un recibo por escrito dentro de los tres días hábiles siguientes."
+  },
+  "LA-EVICT-04": {
+    "en": "If you live in a rent-stabilized unit in Los Angeles, your landlord can evict you only for reasons the city allows, and must pay you to move if the eviction is not your fault.",
+    "es": "Si usted vive en una vivienda con renta estabilizada en Los Ángeles, su arrendador solo puede desalojarlo por razones que permite la ciudad, y debe pagarle para mudarse si el desalojo no es su culpa."
+  },
+  "SF-RENT-02": {
+    "en": "If your building first got its certificate of occupancy after June 13, 1979, San Francisco's rent increase limits do not cover your unit, but you still have just cause eviction protection.",
+    "es": "Si su edificio recibió su primer certificado de ocupación después del 13 de junio de 1979, los límites de aumento de renta de San Francisco no cubren su vivienda, pero usted sigue teniendo protección contra desalojos sin causa justa."
+  },
+  "SD-SCREEN-01": {
+    "en": "Your landlord in San Diego cannot turn you down, end your lease, or treat you differently because you pay rent with a housing voucher or other rental help.",
+    "es": "Su dueño o arrendador en San Diego no puede rechazarlo, terminar su contrato de alquiler ni tratarlo de forma diferente porque usted paga la renta con un vale de vivienda u otra ayuda para el alquiler."
+  },
+  "LA-SCREEN-01": {
+    "en": "Your landlord in Los Angeles cannot refuse to rent to you, treat you differently, or evict you because you pay rent with a Section 8 voucher or other lawful income or rental help.",
+    "es": "En Los Ángeles, su arrendador no puede negarse a rentarle, tratarlo de forma diferente ni desalojarlo porque usted paga la renta con un vale de la Sección 8 (Section 8) u otro ingreso legal o ayuda para la renta."
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "model": "claude-opus-5-5",
+  "cells": {
+    "Berkeley, CA|algorithmic_rent_setting": {
+      "hash": "e7cd27ae3216c8de",
+      "groups": [
+        [
+          "D001#0",
+          "D002#0"
+        ]
+      ]
+    },
+    "Berkeley, CA|just_cause_eviction": {
+      "hash": "55fa6b061b866160",
+      "groups": [
+        [
+          "D004#0"
+        ],
+        [
+          "D004#1"
+        ],
+        [
+          "D006#1",
+          "D009#1"
+        ]
+      ]
+    },
+    "CA|application_screening_fees": {
+      "hash": "7ca0bd88e1353682",
+      "groups": [
+        [
+          "D005#0",
+          "D017#0",
+          "D026#0"
+        ]
+      ]
+    },
+    "Berkeley, CA|application_screening_fees": {
+      "hash": "5422f0fd117cab4f",
+      "groups": [
+        [
+          "D005#1"
+        ],
+        [
+          "D005#2"
+        ]
+      ]
+    },
+    "Berkeley, CA|rent_increase_limits": {
+      "hash": "760a79cb674d8c39",
+      "groups": [
+        [
+          "D006#0",
+          "D008#0"
+        ],
+        [
+          "D009#0"
+        ]
+      ]
+    },
+    "CA|security_deposits": {
+      "hash": "7af10b10e196b32a",
+      "groups": [
+        [
+          "D007#0",
+          "D025#0"
+        ]
+      ]
+    },
+    "Berkeley, CA|security_deposits": {
+      "hash": "ca00af4c9096e792",
+      "groups": [
+        [
+          "D007#1",
+          "D009#2"
+        ]
+      ]
+    },
+    "Boston, MA|screening_restrictions": {
+      "hash": "e66d9e077ebdefbb",
+      "groups": [
+        [
+          "D010#0"
+        ],
+        [
+          "D012#0"
+        ]
+      ]
+    },
+    "Boston, MA|just_cause_eviction": {
+      "hash": "4ea6daa2d99f551b",
+      "groups": [
+        [
+          "D011#1"
+        ],
+        [
+          "D013#0",
+          "D014#0"
+        ]
+      ]
+    },
+    "CA|screening_restrictions": {
+      "hash": "d77d2e31fae892d3",
+      "groups": [
+        [
+          "D015#0",
+          "D016#1"
+        ],
+        [
+          "D015#1",
+          "D016#0",
+          "D027#0"
+        ],
+        [
+          "D015#2",
+          "D027#1"
+        ]
+      ]
+    },
+    "CA|algorithmic_rent_setting": {
+      "hash": "1a6c260027ec02cb",
+      "groups": [
+        [
+          "D022#0",
+          "D028#0"
+        ]
+      ]
+    },
+    "CA|just_cause_eviction": {
+      "hash": "d2eff3163cc37b19",
+      "groups": [
+        [
+          "D023#0"
+        ],
+        [
+          "D043#2"
+        ],
+        [
+          "D083#4"
+        ]
+      ]
+    },
+    "CA|rent_increase_limits": {
+      "hash": "24f60d4326c46c7a",
+      "groups": [
+        [
+          "D024#0",
+          "D040#1"
+        ]
+      ]
+    },
+    "Hoboken, NJ|rent_increase_limits": {
+      "hash": "77d899e785c54f37",
+      "groups": [
+        [
+          "D032#0"
+        ],
+        [
+          "D033#0"
+        ],
+        [
+          "D034#0"
+        ]
+      ]
+    },
+    "Jersey City, NJ|algorithmic_rent_setting": {
+      "hash": "dec6694a4ca69c52",
+      "groups": [
+        [
+          "D035#0",
+          "D037#0"
+        ]
+      ]
+    },
+    "Los Angeles, CA|just_cause_eviction": {
+      "hash": "7e257e8d2b31636d",
+      "groups": [
+        [
+          "D040#0"
+        ],
+        [
+          "D041#1"
+        ],
+        [
+          "D043#0"
+        ],
+        [
+          "D043#1"
+        ]
+      ]
+    },
+    "Los Angeles, CA|rent_increase_limits": {
+      "hash": "c34684d49024bb61",
+      "groups": [
+        [
+          "D041#0",
+          "D042#0"
+        ]
+      ]
+    },
+    "Los Angeles, CA|security_deposits": {
+      "hash": "6b87448f2cbd7862",
+      "groups": [
+        [
+          "D041#2",
+          "D044#0"
+        ]
+      ]
+    },
+    "MA|algorithmic_rent_setting": {
+      "hash": "d20497175754c94f",
+      "groups": [
+        [
+          "D045#0"
+        ],
+        [
+          "D046#0",
+          "D047#0"
+        ]
+      ]
+    },
+    "MA|just_cause_eviction": {
+      "hash": "16e01e15e3ac77f0",
+      "groups": [
+        [
+          "D051#0"
+        ],
+        [
+          "D058#0"
+        ]
+      ]
+    },
+    "MA|application_screening_fees": {
+      "hash": "3dfac36306e2002d",
+      "groups": [
+        [
+          "D052#1",
+          "D054#0"
+        ],
+        [
+          "D054#1"
+        ],
+        [
+          "D057#0"
+        ]
+      ]
+    },
+    "MA|rent_increase_limits": {
+      "hash": "e11bdafd38bc9717",
+      "groups": [
+        [
+          "D055#0",
+          "D059#0"
+        ]
+      ]
+    },
+    "NJ|algorithmic_rent_setting": {
+      "hash": "f2e6f9f15cbc9328",
+      "groups": [
+        [
+          "D060#0",
+          "D069#0"
+        ]
+      ]
+    },
+    "NJ|screening_restrictions": {
+      "hash": "af55f8f5fc1cf38d",
+      "groups": [
+        [
+          "D061#0",
+          "D067#4",
+          "D068#0"
+        ],
+        [
+          "D065#0"
+        ]
+      ]
+    },
+    "NJ|just_cause_eviction": {
+      "hash": "09ae7a38ef085d3a",
+      "groups": [
+        [
+          "D062#0",
+          "D067#1"
+        ]
+      ]
+    },
+    "NJ|security_deposits": {
+      "hash": "7b994750e1ffe269",
+      "groups": [
+        [
+          "D063#0",
+          "D067#0"
+        ],
+        [
+          "D064#0"
+        ]
+      ]
+    },
+    "NJ|rent_increase_limits": {
+      "hash": "12d831f804b6707e",
+      "groups": [
+        [
+          "D067#2"
+        ],
+        [
+          "D067#3"
+        ]
+      ]
+    },
+    "Newark, NJ|rent_increase_limits": {
+      "hash": "d1dd6e801a125ead",
+      "groups": [
+        [
+          "D070#0"
+        ],
+        [
+          "D071#0"
+        ],
+        [
+          "D071#1"
+        ]
+      ]
+    },
+    "San Diego, CA|just_cause_eviction": {
+      "hash": "27baea3abaeac9ed",
+      "groups": [
+        [
+          "D073#0",
+          "D077#0"
+        ]
+      ]
+    },
+    "San Diego, CA|algorithmic_rent_setting": {
+      "hash": "35dca51b33d7f6ba",
+      "groups": [
+        [
+          "D074#0",
+          "D076#0"
+        ]
+      ]
+    },
+    "San Francisco, CA|just_cause_eviction": {
+      "hash": "ab675e81cf5ac160",
+      "groups": [
+        [
+          "D079#0"
+        ],
+        [
+          "D082#0",
+          "D083#2"
+        ],
+        [
+          "D082#1",
+          "D083#3"
+        ]
+      ]
+    },
+    "San Francisco, CA|rent_increase_limits": {
+      "hash": "df96903f8a50b7b5",
+      "groups": [
+        [
+          "D080#0",
+          "D083#0"
+        ],
+        [
+          "D079#1"
+        ]
+      ]
+    },
+    "Santa Ana, CA|rent_increase_limits": {
+      "hash": "4144a9ae46b1abc6",
+      "groups": [
+        [
+          "D084#0",
+          "D085#0"
+        ]
+      ]
+    },
+    "Santa Ana, CA|just_cause_eviction": {
+      "hash": "1cad0fa80eb6ee20",
+      "groups": [
+        [
+          "D084#1",
+          "D085#1"
+        ]
+      ]
+    },
+    "Santa Ana, CA|algorithmic_rent_setting": {
+      "hash": "d6e18d087a339f44",
+      "groups": [
+        [
+          "D086#0",
+          "D087#0"
+        ]
+      ]
+    }
+  }
+}

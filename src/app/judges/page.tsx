@@ -83,10 +83,11 @@ export default function JudgesPage() {
       <section className="panel mt-8 p-6">
         <h2 className="text-[20px] font-bold">If you have one more minute</h2>
         <ul className="mt-2 space-y-1.5 text-[15.5px] text-text-2">
-          <li><Link className="text-brand underline-offset-4 hover:underline" href="/byo">Bring your own</Link>: paste any ordinance (or the fictional practice one) and watch it go through the full pipeline live.</li>
-          <li><Link className="text-brand underline-offset-4 hover:underline" href="/developers">Developers</Link>: create an API key in one click and call the same engine.</li>
-          <li><Link className="text-brand underline-offset-4 hover:underline" href="/how-it-works#scale">A new city added live</Link>: Bayonne, NJ, read from its official ordinance with one command.</li>
-          <li><a className="text-brand underline-offset-4 hover:underline" href="https://github.com/usv240/proofline" target="_blank" rel="noreferrer">Source code</a>: <code>npm test</code> and <code>npm run verify</code> reproduce every number.</li>
+          <li><Link className="text-brand underline underline-offset-4" href="/byo">Bring your own</Link>: paste any ordinance (or the fictional practice one) and watch it go through the full pipeline live.</li>
+          <li><Link className="text-brand underline underline-offset-4" href="/developers">Developers</Link>: create an API key in one click and call the same engine.</li>
+          <li><Link className="text-brand underline underline-offset-4" href="/how-it-works#scale">A new city added live</Link>: Bayonne, NJ, read from its official ordinance with one command.</li>
+          <li><Link className="text-brand underline underline-offset-4" href="/method-note">Method note</Link>: the whole method on one page (also as a <a className="text-brand underline underline-offset-4" href="/proofline-method-note.pdf">PDF</a>).</li>
+          <li><a className="text-brand underline underline-offset-4" href="https://github.com/usv240/proofline" target="_blank" rel="noreferrer">Source code</a>: <code>npm test</code> and <code>npm run verify</code> reproduce every number.</li>
         </ul>
       </section>
     </div>

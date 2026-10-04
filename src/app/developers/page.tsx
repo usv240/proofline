@@ -58,7 +58,7 @@ export default function DevelopersPage() {
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-[14px] text-muted">Machine-readable description: <a className="text-brand underline-offset-4 hover:underline" href="/api/openapi.json">/api/openapi.json</a></p>
+        <p className="mt-2 text-[14px] text-muted">Machine-readable description: <a className="text-brand underline underline-offset-4" href="/api/openapi.json">/api/openapi.json</a></p>
       </section>
 
       <section className="mt-10" aria-labelledby="ex-h">
@@ -92,7 +92,7 @@ const { verdict, lines, disclaimer } = await r.json();
         <h2 id="mcp-h" className="text-[22px] font-bold">Prefer MCP?</h2>
         <p className="mt-1 text-text-2">
           Run <code>npm run mcp</code> from the repository to expose <code>lookup_address</code>, <code>preflight_check</code> and <code>list_changes</code> to any
-          MCP-capable assistant. Same engine, same disclaimer. See <Link className="text-brand underline-offset-4 hover:underline" href="/how-it-works#api">How it works</Link>.
+          MCP-capable assistant. Same engine, same disclaimer. See <Link className="text-brand underline underline-offset-4" href="/how-it-works#api">How it works</Link>.
         </p>
       </section>
     </div>

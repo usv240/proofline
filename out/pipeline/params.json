@@ -1,0 +1,614 @@
+{
+  "BK-ALG-01": {
+    "hash": "42aed8bc32e06146",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "It shall be unlawful for a landlord to use a coordinated pricing algorithm described \nin subsection A when setting rents or occupancy levels for residential dwelling units in \nthe City of Berkeley."
+    },
+    "quote_ok": true
+  },
+  "BK-FEE-01": {
+    "hash": "808f5b0be460476d",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "the owner must provide, either in the rental application or in a separate disclosure before receiving the fee, a clear and conspicuous tenant screening fee rights statement and a statement of the maximum fee cap permitted under"
+    },
+    "quote_ok": true
+  },
+  "BK-FEE-02": {
+    "hash": "3689ad283a82d0b1",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "An owner of residential rental property (or the owner’s agent) cannot charge a non-refundable fee to any existing tenant for the purpose of renewing a tenancy, in whole or in part, including any fee associated with the departure of a roommate or to request to add or replace a roommate in a pre-existing household."
+    },
+    "quote_ok": true
+  },
+  "BK-RENT-01": {
+    "hash": "72cc81bca0f37e65",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": 0,
+        "max_percent": 5,
+        "formula": "AGA set annually by the Rent Board using a formula in the Rent Ordinance tied to the Consumer Price Index, capped at a maximum of 5%; banked (unused) prior AGAs may still be used to exceed 5% up to the rent ceiling"
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "The maximum AGA is 5%. This means that, if the formula in the Rent Ordinance results in an AGA that is greater than 5%, the AGA approved by the Board for that year can be no more than 5%."
+    },
+    "quote_ok": true
+  },
+  "BK-RENT-02": {
+    "hash": "c5aa8a72478fa340",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Most units in multifamily properties built before 1980** Fully Covered Yes Yes Yes Yes"
+    },
+    "quote_ok": true
+  },
+  "BK-DEP-01": {
+    "hash": "a1f08e88c4fd30cb",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "For tenancies in units fully or partially covered by Berkeley's Rent Ordinance, landlords must pay tenants interest on their security deposit at the end of each year and a prorated amount if the tenant moves out before the end of the year."
+    },
+    "quote_ok": true
+  },
+  "BOS-RENT-P1": {
+    "hash": "b2946d9834d1d3c6",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "An Act petition for a special law authorizing the city of Boston to implement rent stabilization and tenant eviction protections"
+    },
+    "quote_ok": true
+  },
+  "CA-ALG-01": {
+    "hash": "55dd6623ff51e81f",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": false,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "It shall be unlawful for a person to use or distribute a common pricing algorithm as part of a contract, combination in the form of a trust, or conspiracy to restrain trade or commerce in violation of this chapter."
+    },
+    "quote_ok": true
+  },
+  "CA-FEE-01": {
+    "hash": "2950fffc7e6c5925",
+    "params": {
+      "check": "fee",
+      "rent": null,
+      "deposit": null,
+      "fee": {
+        "prohibited": false,
+        "max_usd": 68.96,
+        "max_note": "Maximum tenant screening fee for 2026 under Cal. Civ. Code § 1950.6 ($30 base adjusted annually for CPI); fee may not exceed actual out-of-pocket screening costs."
+      },
+      "pricing_tool": null,
+      "quote": "The maximum tenant screening fee for 2026 is\n$68.96"
+    },
+    "quote_ok": true
+  },
+  "CAM-ALG-P1": {
+    "hash": "d5e1f0db8afb169f",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "City council also unanimously passed a policy order initiating steps to ban residential property management companies from contracting companies that use algorithmic and AI-driven models to recommend what they should charge for rent."
+    },
+    "quote_ok": true
+  },
+  "CA-RENT-01": {
+    "hash": "576ba52469fb0c33",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": null,
+        "max_percent": 10,
+        "formula": "lesser of (5% + percentage change in regional CPI-U) or 10%, over any 12-month period, measured from the lowest gross rental rate charged in the prior 12 months; at most two increments per 12 months for the same tenant"
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Subject to subdivision (b), an owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower, of the lowest gross rental rate charged for that dwelling or unit at any time during the 12 months prior to the effective date of the increase."
+    },
+    "quote_ok": true
+  },
+  "CA-DEP-01": {
+    "hash": "f33fdecdf721d513",
+    "params": {
+      "check": "deposit",
+      "rent": null,
+      "deposit": {
+        "max_months": 1,
+        "exception_months": 2,
+        "exception": "Landlord is a natural person (including family trust settlor/beneficiary) or an LLC in which all members are natural persons, and owns no more than two residential rental properties that collectively include no more than four dwelling units offered for rent; does not apply if the prospective tenant is a service member. Cap does not apply to security collected or demanded before July 1, 2024."
+      },
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Except as provided in paragraph (2), (3), or (5), a landlord shall not demand or receive security, however denominated, in an amount or value in excess of an amount equal to one month’s rent, in addition to any rent for the first month paid on or before initial occupancy."
+    },
+    "quote_ok": true
+  },
+  "HOB-ALG-01": {
+    "hash": "9c80e7356932d14b",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "For purposes of this chapter, \"price fixing using algorithmic pricing\" shall be defined as the use of software, algorithms, or data-sharing platforms to collect and analyze nonpublic competitor information from other real estate lessors in order to coordinate, recommend, or implement rental prices, lease terms, or occupancy levels for residential dwelling units among competing real estate lessors."
+    },
+    "quote_ok": true
+  },
+  "HOB-RENT-01": {
+    "hash": "83dc6e3464b11821",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "All residential landlords seeking to increase rent by more than 10% upon a renewal of a lease with a current tenant year over year shall be required to make the following disclosures to existing tenants either in the lease upon renewal (must be clearly indicated on the first page) or on a form provided by the Hoboken Division of Housing prior to the increase being implemented:"
+    },
+    "quote_ok": true
+  },
+  "HOB-RENT-02": {
+    "hash": "86a0625d30709dc3",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": 0,
+        "max_percent": 5,
+        "formula": "Lesser of 5% or the percentage change in CPI between three months prior to lease expiration/termination and three months prior to commencement of the lease term; at most one cost-of-living increase per 12-month period"
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "At the expiration of a lease or at the termination of a lease of a periodic tenant, no landlord may request or receive a percentage increase in rent which is greater than 5% or the percentage difference between the consumer price index three months prior to the expiration or termination of the lease and three months prior to the commencement of the lease term, whichever is less."
+    },
+    "quote_ok": true
+  },
+  "JC-ALG-01": {
+    "hash": "b0f77c4a44e0aa5c",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "Prohibits a landlord’s use of algorithmic rent coordination services; includes public and private enforcement; fines up to $2,000 per day."
+    },
+    "quote_ok": true
+  },
+  "JC-RENT-01": {
+    "hash": "4aae45de82e0462e",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Please Note: All 1-4 Unit Properties are exempt from rent control"
+    },
+    "quote_ok": true
+  },
+  "LA-ALG-P1": {
+    "hash": "f429fe95e310b5ad",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "I THEREFORE MOVE that the City Council instruct the Los Angeles Housing Department to \nreport on the number of ownership and management entities that are using algorithm-based \nsoftware to establish rents and the feasibility of instituting a ban on the use of this software to set \nrents in the City."
+    },
+    "quote_ok": true
+  },
+  "LA-RENT-01": {
+    "hash": "a885181f20f83377",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": null,
+        "max_percent": null,
+        "formula": "Rent may be increased once every 12 months by the LAHD allowable rent increase percentage (published separately; not stated in source). Effective 2026-02-02, no additional percentage increase for utilities."
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Rent may be increased once every 12 months by the allowable rent increase percentage"
+    },
+    "quote_ok": true
+  },
+  "LA-DEP-01": {
+    "hash": "f34efbbd772a2662",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Interest Payments on Security Deposits"
+    },
+    "quote_ok": true
+  },
+  "MA-ALG-P1": {
+    "hash": "682499cfd330e6db",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "An Act relative to preventing algorithmic rent fixing in the rental housing market"
+    },
+    "quote_ok": true
+  },
+  "MA-ALG-P2": {
+    "hash": "386ce01d5cf3552c",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "An Act prohibiting algorithmic rent setting"
+    },
+    "quote_ok": true
+  },
+  "MA-FEE-01": {
+    "hash": "841c89dace444958",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "In addition to holding a valid license, the broker has to tell the applicant in writing the amount of the broker’s fee, the time and manner of payment, and whether it is contingent on the owner and applicant actually entering into a lease or rental agreement."
+    },
+    "quote_ok": true
+  },
+  "MA-FEE-02": {
+    "hash": "cca930998491d65f",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Any fee shall only be paid by the party, lessor or tenant who originally engaged and entered into a contract with the licensed broker or salesperson."
+    },
+    "quote_ok": true
+  },
+  "MA-FEE-03": {
+    "hash": "6f24e946bb4eca97",
+    "params": {
+      "check": "fee",
+      "rent": null,
+      "deposit": {
+        "max_months": 1,
+        "exception_months": null,
+        "exception": null
+      },
+      "fee": {
+        "prohibited": true,
+        "max_usd": null,
+        "max_note": "At or before the start of a tenancy, the landlord or the landlord's agent may charge only first month's rent, last month's rent, a security deposit equal to one month's rent, and the purchase and installation cost of a key and lock. Any other upfront charge, such as an application fee, is not allowed. Coverage of the landlord's agent (e.g., broker fees) applies from 2025-08-01."
+      },
+      "pricing_tool": null,
+      "quote": "(b) At or prior to the commencement of any tenancy, no lessor or agent of the lessor may require a tenant or prospective tenant to pay, to the lessor or to an agent of the lessor, any amount in excess of the following:"
+    },
+    "quote_ok": true
+  },
+  "MA-RENT-P1": {
+    "hash": "bcb1c8612b05ca2d",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "In a major decision affecting the future of Massachusetts housing policy, the Supreme Judicial Court today has ruled that the proposed statewide rent control ballot initiative may not appear on the November 2026 ballot."
+    },
+    "quote_ok": true
+  },
+  "MA-DEP-01": {
+    "hash": "3f863de1c5b00a92",
+    "params": {
+      "check": "deposit",
+      "rent": null,
+      "deposit": {
+        "max_months": 1,
+        "exception_months": null,
+        "exception": null
+      },
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "(iii) a security deposit equal to the first month's rent provided that such security deposit is deposited as required by subsection (3) and that the tenant is given the statement of condition as required by subsection (2)"
+    },
+    "quote_ok": true
+  },
+  "NWK-RENT-01": {
+    "hash": "eab217863b75251c",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": null,
+        "max_percent": 4,
+        "formula": "CPI-U (NY-northern NJ-Long Island) percentage change from the CPI 15 months prior to the month of the proposed increase to the CPI 3 months prior, capped at 4%; once per consecutive 12-month period regardless of tenant turnover, ownership change or vacancy"
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "At the expiration of a lease or at the termination of the lease of a periodic tenant, no landlord may request or receive an increase greater than the percentage increase in the Consumer Price Index (CPI) from the CPI 15 months prior to the month of the proposed rent increase to the CPI three months prior to the month of the proposed rent increase. In no case shall the allowable rent increase exceed 4%."
+    },
+    "quote_ok": true
+  },
+  "NWK-RENT-02": {
+    "hash": "04a9f918d84940a4",
+    "params": {
+      "check": "none",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": null,
+        "max_percent": null,
+        "formula": "Rent may not exceed the maximum HOME rent limit: the lesser of (i) HUD fair market rent for comparable units, or (ii) 30% of the adjusted income of a family whose annual income equals 65% of area median income, adjusted for number of bedrooms. Increases are subject to outstanding leases and require at least 30 days' prior written notice."
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "(ii) A rent that does not exceed 30% of the adjusted income of a family whose annual income equals 65% of the median income for the area, as determined by HUD, with adjustments for number of bedrooms in the unit."
+    },
+    "quote_ok": true
+  },
+  "NWK-RENT-03": {
+    "hash": "a841d1dac01482da",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Shall mean any rental increase for residential properties including but not limited to market and unsubsidized units, whose rental increases are exceedingly harsh or unreasonable that exceed the increase in the landlord’s expenses; and is not comparable to rents charged at similar properties."
+    },
+    "quote_ok": true
+  },
+  "NJ-ALG-01": {
+    "hash": "9734932e3a691363",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "a.     a rental property owner, or any agent,\nrepresentative, or subcontractor thereof, to receive, subscribe to, contract\nfor, or otherwise exchange any form of consideration in return for the use of,\nthe services of a coordinator;"
+    },
+    "quote_ok": true
+  },
+  "NJ-FEE-01": {
+    "hash": "3b97c65bf6cb0ef5",
+    "params": {
+      "check": "fee",
+      "rent": null,
+      "deposit": null,
+      "fee": {
+        "prohibited": false,
+        "max_usd": 50,
+        "max_note": "$50 base cap, adjusted each January 1 (beginning the year after enactment) by the CPI-U NY-Northern NJ-Long Island change over the 12 months ending October 31 of the prior year; adjusted only if CPI change > 0; current cap published on the Division of Consumer Affairs website. Exempt: units in one- or two-family dwellings, and NJ Real Estate Commission licensees unless the licensee is the landlord."
+      },
+      "pricing_tool": null,
+      "quote": "A landlord, or\nagent thereof, shall not require an application or other similar fee to apply\nto lease or sublease a residential rental property for dwelling purposes, which\nexceeds $50."
+    },
+    "quote_ok": true
+  },
+  "NJ-RENT-01": {
+    "hash": "7dc723a95fc4d2c8",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "The increase in rent must not be \nunconscionable; it must not be so unreasonable as to shock the conscience of a fair and honest \nperson and must comply with any municipal ordinances governing rent increases."
+    },
+    "quote_ok": true
+  },
+  "NJ-RENT-02": {
+    "hash": "3ac7ddab52be394b",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Under the Newly Constructed Multiple Dwellings Law ( N.J.S.A. 2A:42 -84.5), newly \nconstructed multiple dwellings shall be exempt from any local rent control ordinances for a period \nof 30 years following completion of construction of the building."
+    },
+    "quote_ok": true
+  },
+  "NJ-DEP-01": {
+    "hash": "67574c0df4bbefd2",
+    "params": {
+      "check": "deposit",
+      "rent": null,
+      "deposit": {
+        "max_months": 1.5,
+        "exception_months": null,
+        "exception": null
+      },
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "The maximum-security deposit to be collected by the landlord cannot be more than \none and one-half times one month’s rent ( N.J.S.A. 46:8-21.2 )."
+    },
+    "quote_ok": true
+  },
+  "SD-ALG-01": {
+    "hash": "289420062bbd3c5f",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "(b) It is unlawful for a landlord to use an algorithmic device to set rental rates\nor occupancy levels for residential rental property."
+    },
+    "quote_ok": true
+  },
+  "SF-ALG-01": {
+    "hash": "c3657355a4f3d69a",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "The term “algorithmic device” means a device such as a software program that uses algorithms to analyze nonpublic competitor rental data for the purposes of providing a landlord recommendations on what rent to charge for a vacant unit. The law prohibits the sale or use of such algorithmic devices and allows a tenant or the City Attorney to bring a civil action if they believe an entity is in violation of the law."
+    },
+    "quote_ok": true
+  },
+  "SF-RENT-01": {
+    "hash": "fb37176929664766",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": 1.6,
+        "period_from": "2026-03-01",
+        "period_to": "2027-02-28",
+        "floor_percent": null,
+        "max_percent": null,
+        "formula": "multiply the tenant's base rent by .016"
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%."
+    },
+    "quote_ok": true
+  },
+  "SF-DEP-01": {
+    "hash": "5b5957354a5035e6",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "4.2% for March 1, 2026 – February 28, 2027"
+    },
+    "quote_ok": true
+  },
+  "SA-ALG-01": {
+    "hash": "e9416f8799e9e4c5",
+    "params": {
+      "check": "pricing_tool",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": {
+        "bans_nonpublic_competitor_data": true,
+        "bans_all_rent_setting_software": false
+      },
+      "quote": "“The purpose and intent of this [ordinance] is to protect the residents of Santa Ana from artificially inflated rental rates and unfair rent increases by prohibiting the sale, licensing and use of Algorithmic Devices,” according to a staff report."
+    },
+    "quote_ok": true
+  },
+  "SA-RENT-01": {
+    "hash": "ecf7c3bd93613656",
+    "params": {
+      "check": "rent_increase",
+      "rent": {
+        "fixed_percent": null,
+        "period_from": null,
+        "period_to": null,
+        "floor_percent": 0,
+        "max_percent": 3,
+        "formula": "lower of 3% per year or 80% of the percent change in CPI over the most recent 12-month period; no increase if CPI is negative"
+      },
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "Increase in residential rents are limited to the lower of 3% per year, or 80% of the percent change in the Consumer Price Index over the most recent 12-month period. If the CPI is negative, no rent increase is permitted."
+    },
+    "quote_ok": true
+  },
+  "NJ-DEP-02": {
+    "hash": "3b4a615507106a42",
+    "params": {
+      "check": "none",
+      "rent": null,
+      "deposit": null,
+      "fee": null,
+      "pricing_tool": null,
+      "quote": "The exception is an owner-occupied two-, or three-family dwelling."
+    },
+    "quote_ok": true
+  }
+}

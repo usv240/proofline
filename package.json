@@ -12,7 +12,9 @@
     "verify": "tsx scripts/verify.ts",
     "mcp": "tsx mcp/server.mts",
     "test": "vitest run tests/engine.test.ts tests/golden.test.ts",
-    "new-law": "tsx scripts/new_law.ts"
+    "new-law": "tsx scripts/new_law.ts",
+    "e2e": "node tests/e2e/smoke.mjs",
+    "og": "node scripts/og_image.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

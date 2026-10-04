@@ -82,6 +82,9 @@ export function SiteFooter() {
             <li><Link className="text-text-2 underline-offset-4 hover:underline" href="/data">Download the data</Link></li>
             <li><Link className="text-text-2 underline-offset-4 hover:underline" href="/how-it-works#audit">Verify the audit log</Link></li>
             <li><Link className="text-text-2 underline-offset-4 hover:underline" href="/how-it-works#api">API and MCP server</Link></li>
+            <li><Link className="text-text-2 underline-offset-4 hover:underline" href="/method-note">Method note (one page)</Link></li>
+            <li><Link className="text-text-2 underline-offset-4 hover:underline" href="/judges">For judges</Link></li>
+            <li><Link className="text-text-2 underline-offset-4 hover:underline" href="/status">System status</Link></li>
             <li><a className="text-text-2 underline-offset-4 hover:underline" href="https://github.com/usv240/proofline" target="_blank" rel="noreferrer">Source code (Apache-2.0)</a></li>
           </ul>
         </div>
